@@ -1,59 +1,26 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  
-    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  </head>
+    
+    
   <body>
-      <div class="banner">
-      <h1>hi people</h1>
-      </div>
-       <div class="container-fluid" style="background-color:black;height:100vh;">
-    </div>
-    <div id="div1" class="container-fluid innershadow1" style="background-color:black;height:200vh;position:relative;">
-        <img class="scrollable dropshadow1" data-top=0 data-top2=70 data-left=25 data-left2=35 data-width=20 data-width2=30 src="assets/naruto1.png" style="position:absolute;width:20%;top:15%;left:25%;filter:grayscale(.3) blur(0px);">
-        <img class="scrollable dropshadow1" data-top=20 data-top2=80 data-left=50 data-left2=40 data-width=30 data-width2=40 src="assets/sasuke1.png" style="position:absolute;width:30%;top:20%;left:50%;">
-      </div> 
-      <div class="footer">
-          <h2>made by dddd</h2>      
-      </div>
-      
+
     <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-    <script>
-        $(document).ready(function() {
-            var winh = $(window).height();
-            $(window).scroll(function() {
-                var scrolled = $(window).scrollTop();
-                $(".scrollable").each(function() {
-                    var parent_pos = $(this).parent().offset().top;
-                    var next_pos = $(this).parent().next().offset().top;
-                    var parent_height = $(this).parent().height();
-                    var parent_scrolled = scrolled - $(this).parent().offset().top;
-                    if (parent_scrolled > 0 && scrolled < next_pos - winh) {
-
-                        if ($(this).attr("data-left")) {
-                            $(this).css('left', (($(this).data('left2') - $(this).data('left')) * parent_scrolled / winh + $(this).data('left')) + '%');
-                        }
-                        if ($(this).attr("data-top")) {
-                            $(this).css('top', (($(this).data('top2') - $(this).data('top')) * parent_scrolled / winh + $(this).data('top')) + '%');
-                        }
-                        if ($(this).attr("data-width")) {
-                            $(this).css('width', (($(this).data('width2') - $(this).data('width')) * parent_scrolled / winh + $(this).data('width')) + '%');
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>
