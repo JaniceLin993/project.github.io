@@ -1,0 +1,3 @@
+<div class="footer>
+<h1>made by Janice Lin</h1>
+</div>
