@@ -1,0 +1,16 @@
+<div class="banner">My name is Banner!</div>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  background-color: #eee;
+  font-size: 45px;
+  padding: 20px;
+  height: 500px;
+  text-align: center;
+}
+</style>
