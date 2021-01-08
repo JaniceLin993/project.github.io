@@ -214,8 +214,9 @@ $(window).scroll(function () {
 
 // control video
 $(".banner_video").on("timeupdate", function(){
-    if(this.currentTime >= 4) {
+    if(this.currentTime >= 5) {
         this.pause();
+	   	$(".1_note").css("opacity","1");
     }
 });
 
@@ -224,11 +225,17 @@ $(window).scroll(function () {
 	var current_pos = $(window).scrollTop();
 	var section_notes_pos = $("#section_notes").offset().top;
 	var vh = $(window).outerHeight();
+	if(current_pos >0){
+	   	$(".1_note").css("opacity","1");
+	}else{
+	   	$(".1_note").css("opacity","0");
+
+	}
 	if (current_pos + vh >= section_notes_pos) {
-		$(".note").css("transform", "translate(-10vw,60vh) rotate(15deg) scale(3)");
+		$(".note").css("transform", "translate(-10vw,60vh) rotate(15deg) scale(2.5)");
 		$(".note").css("z-index","0");
 	} else {
-		$(".note").css("transform", "translate(0,0) rotate(0deg) scale(1)");
+		$(".note").css("transform", "translate(0,0) rotate(0deg) scale(1.5)");
 		$(".note").css("z-index","0");
 	}
 	if(current_pos >= section_notes_pos){
@@ -264,9 +271,17 @@ $(window).mousemove(function (e) {
 	var pagey = e.pageY;
 	var vw = $(window).outerWidth();
 	if (pagex < vw / 2) {
-		$(".old").css("transform", "translateX(" + -(pagex - vw / 2) / 20 + "px)");
+		$(".old").css("transform", "translate(" + -(pagex - vw / 2) / 10 + "px, -50%)");
+		$(".conversation .line1").css("transform", "translate(-" + -(pagex - vw / 2) / 20 + "px, 0)");
+		$(".conversation .line3").css("transform", "translate(-" + -(pagex - vw / 2) / 16 + "px, 0)");
+		$(".conversation .line5").css("transform", "translate(-" + -(pagex - vw / 2) / 13 + "px, 0)");
+
 	} else {
-		$(".young").css("transform", "translateX(-" + (pagex - vw / 2) / 20 + "px)");
+		$(".young").css("transform", "translate(-" + (pagex - vw / 2) / 10 + "px, -50%)");
+		$(".conversation .line2").css("transform", "translate(" + (pagex - vw / 2) / 20 + "px, 0)");
+		$(".conversation .line4").css("transform", "translate(" + (pagex - vw / 2) / 15 + "px, 0)");
+		$(".conversation .line6").css("transform", "translate(" + (pagex - vw / 2) / 12 + "px, 0)");
+
 	}
 });
 

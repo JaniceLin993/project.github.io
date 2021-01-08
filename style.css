@@ -1,11 +1,12 @@
 section {
   height: 100vh;
   border: solid 1px black;
-  padding-top: 40px;
+  /*padding-top: 40px;*/
 }
 
 * {
   position: relative;
+  user-select: none
 }
 
 html, body {
@@ -24,8 +25,8 @@ html, body {
   z-index: 1;
 }
 .nav_bar img.icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   top: 5px;
   left: 10px;
   border-radius: 100%;
@@ -33,7 +34,7 @@ html, body {
   transition: 0.5s;
 }
 .nav_bar img.icon:hover {
-  background-color: #73a2d0;
+  background-color: #e3e82d;
 }
 .nav_bar .nav_column {
   position: fixed;
@@ -67,7 +68,7 @@ html, body {
   transition: 0.5s;
 }
 .menu .line:hover .line1, .menu .line:hover .line2, .menu .line:hover .line3 {
-  background-color: #73a2d0;
+  background-color: #e3e82d;
 }
 .menu .line .line1, .menu .line .line2, .menu .line .line3 {
   position: absolute;
@@ -93,6 +94,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -106,6 +108,7 @@ html, body {
 }
 .menu .menu_list a {
   text-align: center;
+  text-decoration: none;
   right: 0px;
   margin: 3px;
   font-size: 24px;
@@ -164,6 +167,7 @@ html, body {
 }
 .menu_clicked .menu_list a {
   text-align: center;
+  text-decoration: none;
   right: 0px;
   margin: 3px;
   font-size: 24px;
@@ -175,7 +179,6 @@ html, body {
 }
 
 #header {
-  padding-top: 40px;
   height: 200vh;
 }
 #header .container-fluid {
@@ -187,6 +190,7 @@ html, body {
 }
 #header .container-fluid .banner_video {
   height: 100vh;
+  left: -2vw;
   z-index: -1;
 }
 #header .container-fluid .note {
@@ -196,7 +200,7 @@ html, body {
   bottom: 10vh;
   z-index: 1;
   transform: translate(0, 0) rotate(0) scale(1);
-  transition: 2s;
+  transition: 1s;
 }
 
 #header .container-fluid .explore {
@@ -230,11 +234,17 @@ html, body {
 
 #section_notes .container-fluid{
   height: 100vh;
+  background-image: url("assets/2_backnew.png");
+  background-size: cover;
+  z-index: -1;
+}
+#section_notes .container-fluid .note{
+  transform: translate(0,0) rotate(0deg) scale(1.7);
 }
 #section_notes .container-fluid .word_goodband{
   position: absolute;
-  top: 50%;
-  left: 30%;
+  top: 30%;
+  left: 40%;
   transform: translate(-50%,0);
   width: 40vw;
   font-size: 18px;
@@ -245,14 +255,17 @@ html, body {
 
 #section_conflict {
   height: 200vh;
+  background-image: url("assets/2_backnew.png");
+  background-size: cover;
 }
 #section_conflict .container-fluid {
   height: 100vh;
 }
 #section_conflict .container-fluid .old, #section_conflict .container-fluid .young {
   position: absolute;
-  bottom: 3vh;
-  height: 80vh;
+  bottom: 0;
+  transform: translate(0, -50%);
+  height: 50vh;
 }
 #section_conflict .container-fluid .old {
   left: 0;
@@ -264,36 +277,34 @@ html, body {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  width: 30vw;
   height: 100vh;
   padding: 5vh 0;
   padding-top: 8vh;
 }
 #section_conflict .container-fluid .conversation .line {
-  margin-bottom: 3vh;
+  margin-bottom: 1vh;
   display: flex;
   justify-content: center;
   opacity: 0;
   transition: 0.5s;
 }
 #section_conflict .container-fluid .conversation .line img {
-  width: 35vw;
-  height: auto;
+  height: 12.5vh;
+  width: auto;
 }
-#section_conflict .container-fluid .conversation .line p {
-  position: absolute;
-  height: 10vh;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
+#section_conflict .container-fluid .conversation .line1{
+  transform: translate(0, 0);
+  left: -15%;
 }
-#section_conflict .container-fluid .conversation .line5 img, #section_conflict .container-fluid .conversation .line6 img {
-  transform: scale(1, -1);
+ #section_conflict .container-fluid .conversation .line3, #section_conflict .container-fluid .conversation .line5 {
+  transform: translate(0, 0);
+  left: -10%;
 }
-#section_conflict .container-fluid .conversation .line1, #section_conflict .container-fluid .conversation .line3, #section_conflict .container-fluid .conversation .line5 {
-  transform: translate(-3vw, 0);
+#section_conflict .container-fluid .conversation .line4, #section_conflict .container-fluid .conversation .line6 {
+  transform: translate(0, 0);
+  left: 30%;
 }
-#section_conflict .container-fluid .conversation .line2, #section_conflict .container-fluid .conversation .line4, #section_conflict .container-fluid .conversation .line6 {
-  transform: translate(3vw, 0);
+#section_conflict .container-fluid .conversation .line2{
+  transform: translate(0, 0);
+  left: 42%;
 }
