@@ -1,26 +1,70 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - [網頁敘事設計] Project</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  </head>
-    
-    
-  <body>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div class="nav_bar"><a href="#header"> <img class="icon" src="https://www.flaticon.com/svg/static/icons/svg/882/882602.svg" alt=""/></a>
+    <div class="menu">
+      <div class="line">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <div class="menu_list"><a href="#{{ section }}" v-for="section in sections">{{ section }}</a></div>
+    </div>
+    <div class="nav_column">
+      <div class="content {{section}}" v-for="section in sections"></div>
+    </div>
+  </div>
+</div>
+<header id="header">
+  <div class="container-fluid fixed"><img class="banner_video" src="https://i.imgur.com/6gf2WuW.png" alt=""/><img class="note" src="https://i.imgur.com/xVkZ5Py.png" alt=""/>
+    <div class="explore">SCROLL</div>
+  </div>
+</header>
+<section id="section_notes">section_notes</section>
+<section id="section_conflict">
+  <div class="container-fluid"><img class="old" src="https://i.imgur.com/H4qhuiz.png" alt=""/><img class="young" src="https://i.imgur.com/KYoskji.png" alt=""/>
+    <div class="conversation">
+      <div class="line line1"><img src="https://i.imgur.com/Mxgajaa.png" alt=""/>
+        <p>say somthing</p>
+      </div>
+      <div class="line line2"><img src="https://i.imgur.com/00XNJY7.png" alt=""/>
+        <p>say somthing</p>
+      </div>
+      <div class="line line3"><img src="https://i.imgur.com/Mxgajaa.png" alt=""/>
+        <p>say somthing</p>
+      </div>
+      <div class="line line4"><img src="https://i.imgur.com/00XNJY7.png" alt=""/>
+        <p>say somthing</p>
+      </div>
+      <div class="line line5"><img src="https://i.imgur.com/Mxgajaa.png" alt=""/>
+        <p>say somthing</p>
+      </div>
+      <div class="line line6"><img src="https://i.imgur.com/00XNJY7.png" alt=""/>
+        <p>say somthing</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section3">section3</section>
+<section id="section4">section4</section>
+<section id="section5">section5</section>
+<section id="section6">section6</section>
+<section id="section7">section7</section>
+<section id="section8">section8</section>
+<section id="section9">section9</section>
+<section id="section10">section10</section>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
-  </body>
+</body>
 </html>
