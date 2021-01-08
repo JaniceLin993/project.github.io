@@ -212,7 +212,14 @@ $(window).scroll(function () {
 	}
 });
 
-// note control
+// control video
+$(".banner_video").on("timeupdate", function(){
+    if(this.currentTime >= 4) {
+        this.pause();
+    }
+});
+
+// control note 
 $(window).scroll(function () {
 	var current_pos = $(window).scrollTop();
 	var section_notes_pos = $("#section_notes").offset().top;
@@ -223,6 +230,11 @@ $(window).scroll(function () {
 	} else {
 		$(".note").css("transform", "translate(0,0) rotate(0deg) scale(1)");
 		$(".note").css("z-index","0");
+	}
+	if(current_pos >= section_notes_pos){
+		$(".1_band").css("opacity","1");
+	}else{		
+		$(".1_band").css("opacity","0");
 	}
 });
 
@@ -295,4 +307,9 @@ $(window).scroll(function () {
 	} else {
 		$(".conversation .line6").css("opacity", 0);
 	}
+
+//scroller
+$(document).ready(function () {
+	var s = skrollr.init();
+});
 });

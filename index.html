@@ -10,7 +10,7 @@
 <body>
 <!-- partial:index.partial.html -->
 <div id="app">
-  <div class="nav_bar"><a href="#header"> <img class="icon" src="https://www.flaticon.com/svg/static/icons/svg/882/882602.svg" alt=""/></a>
+  <div class="nav_bar"><a href="#header"> <img class="icon" src="assets/Banner_icon.png" alt=""/></a>
     <div class="menu">
       <div class="line">
         <div class="line1"></div>
@@ -25,30 +25,42 @@
   </div>
 </div>
 <header id="header">
-  <div class="container-fluid fixed"><img class="banner_video" src="https://i.imgur.com/6gf2WuW.png" alt=""/><img class="note" src="https://i.imgur.com/xVkZ5Py.png" alt=""/>
+  <div class="container-fluid fixed">
+  	<video class="banner_video" src="assets\1_video.mp4" autoplay=""></video>
+  	<div class="note">
+	  	<img class="1_note" src="assets/1_keynote.svg" alt="" style="width: 100%;" />
+	  	<img class="1_band" src="assets/1_band.jpg" alt="" style="position: absolute;width: 60%; left: 50%;top: 50%; transform: translate(-50%,-50%); opacity:0; transition: .5s" />
+  	</div>
     <div class="explore">SCROLL</div>
   </div>
 </header>
-<section id="section_notes">section_notes</section>
+<section id="section_notes">section_notes
+	<div class="container-fluid">
+	  	<img class="note_2" src="assets/2_note.svg" alt="" style="position: absolute; width: 50%; left: 0;" />
+	  	<p class="word_goodband" data-bottom-top="transform: translateX(-50%) translateY(100%) ;opacity: 0",
+		data-center="transform: translateX(-50%) translateY(0) ;opacity: 1">好樂團近期一首「他們說我是沒有用的年輕人」在獨立音樂平台廣獲年輕聽眾的歡迎，歌詞中寫盡了年輕人的苦楚，「我們只喜歡小確幸，放棄去改變不公平…」和厭世語錄一般，或許這樣的題材正反映了這個時代低薪結構下說不出的辛酸與無奈。</p>
+	</div>
+
+</section>
 <section id="section_conflict">
   <div class="container-fluid"><img class="old" src="https://i.imgur.com/H4qhuiz.png" alt=""/><img class="young" src="https://i.imgur.com/KYoskji.png" alt=""/>
     <div class="conversation">
-      <div class="line line1"><img src="https://i.imgur.com/Mxgajaa.png" alt=""/>
+      <div class="line line1"><img src="assets/3_youngtalk.svg" alt=""/>
         <p>say somthing</p>
       </div>
-      <div class="line line2"><img src="https://i.imgur.com/00XNJY7.png" alt=""/>
+      <div class="line line2"><img src="assets/3_oldtalk.svg" alt=""/>
         <p>say somthing</p>
       </div>
-      <div class="line line3"><img src="https://i.imgur.com/Mxgajaa.png" alt=""/>
+      <div class="line line3"><img src="assets/3_youngtalk.svg" alt=""/>
         <p>say somthing</p>
       </div>
-      <div class="line line4"><img src="https://i.imgur.com/00XNJY7.png" alt=""/>
+      <div class="line line4"><img src="assets/3_oldtalk.svg" alt=""/>
         <p>say somthing</p>
       </div>
-      <div class="line line5"><img src="https://i.imgur.com/Mxgajaa.png" alt=""/>
+      <div class="line line5"><img src="assets/3_youngtalk.svg" alt=""/>
         <p>say somthing</p>
       </div>
-      <div class="line line6"><img src="https://i.imgur.com/00XNJY7.png" alt=""/>
+      <div class="line line6"><img src="assets/3_oldtalk.svg" alt=""/>
         <p>say somthing</p>
       </div>
     </div>
@@ -64,6 +76,7 @@
 <section id="section10">section10</section>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js'></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
 
 </body>

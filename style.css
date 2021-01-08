@@ -186,18 +186,19 @@ html, body {
   bottom: 0;
 }
 #header .container-fluid .banner_video {
-  width: 1920px;
-  height: 1080px;
+  height: 100vh;
+  z-index: -1;
 }
 #header .container-fluid .note {
   width: 10%;
   position: absolute;
   right: 5vw;
   bottom: 10vh;
-  z-index: 0;
+  z-index: 1;
   transform: translate(0, 0) rotate(0) scale(1);
   transition: 2s;
 }
+
 #header .container-fluid .explore {
   position: absolute;
   left: 50%;
@@ -227,6 +228,21 @@ html, body {
   bottom: 0;
 }
 
+#section_notes .container-fluid{
+  height: 100vh;
+}
+#section_notes .container-fluid .word_goodband{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%,0);
+  width: 40vw;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+}
+
+
 #section_conflict {
   height: 200vh;
 }
@@ -254,7 +270,7 @@ html, body {
   padding-top: 8vh;
 }
 #section_conflict .container-fluid .conversation .line {
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
   display: flex;
   justify-content: center;
   opacity: 0;
