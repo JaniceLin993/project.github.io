@@ -12,31 +12,8 @@
 
 section {
   height: 100vh;
-}
-.container-fluid {
-  padding: 0;
-}
-
-h1 {
-  font-size: 40px;
-  line-height: 1.2;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 30px;
-  line-height: 1.2;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-p {
-  font-size: 18px;
-  line-height: 36px;
+  border: solid 1px black;
+  /*padding-top: 40px;*/
 }
 
 * {
@@ -48,7 +25,6 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  color: white;
 }
 
 .nav_bar {
@@ -287,7 +263,6 @@ html, body {
   font-size: 18px;
   line-height: 40px;
   text-align: center;
-  color: #333;
 }
 
 
@@ -334,7 +309,7 @@ html, body {
   transform: translate(0, 0);
   left: -15%;
 }
-#section_conflict .container-fluid .conversation .line3, #section_conflict .container-fluid .conversation .line5 {
+ #section_conflict .container-fluid .conversation .line3, #section_conflict .container-fluid .conversation .line5 {
   transform: translate(0, 0);
   left: -10%;
 }
@@ -346,75 +321,3 @@ html, body {
   transform: translate(0, 0);
   left: 42%;
 }
-
-#section_simple .container-fluid{
-  height: 100%;
-}
-.fixed_photo{
-  position: fixed;
-  bottom: 3vh;
-}
-.abs_photo{
-  position: absolute;
-  bottom: 3vh;
-}
-
-#section_lowwage_question{
-  background-color: rgb(0,0,40);
-  height: 120vh;
-}
-section#section_lowwage_question .container-fluid{
-  text-align: center;
-  padding: 10px 150px;
-  height: 100%;
-  width: 100%;
-}
-
-section#section_realwage_1 .container-fluid{
-  background-image: url("assets/4_back.svg");
-  background-repeat: repeat;
-  padding: 10px 30px;
-}
-section#section_realwage_1 .container-fluid{
-  padding-top: 70px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.fixed_sticky{
-  position: fixed;
-  bottom: 5vh;
-}
-.abs_sticky{
-  position: absolute;
-  bottom: 5vh;
-}
-section#section_reason .container-fluid{
-  padding: 80px 130px 80px 130px;
-}
-section#section_reason.content1 {
-  padding: 14px 100px 8px 100px;
-  margin-top: 1%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 80%;
-
-}
-
-section#section_reason.content2 {
-  margin-top: 800px;
-  padding: 0px 100px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 80%;
-
-}
-section#section_reason .p1{
-  font-size: 15px;
-  line-height: 36px;
-  color: #666;
-  width: 80%;
-  left: 50%;
-  transform: translate(-50%,0);
-}
-
-
