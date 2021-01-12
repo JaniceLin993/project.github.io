@@ -18,7 +18,16 @@ var sections = [
 "section_notes",
 "section_conflict",
 "section_simple",
-"section_lowwage_question"
+"section_lowwage_question",
+"section_realwage_1",
+"section_realwage_2",
+"section_reason",
+"section_todo",
+"section_road",
+"section_youngppl",
+"section_conclusion",
+"section_contact",
+
 ];
 
 var vm = new Vue({
@@ -47,6 +56,9 @@ $(window).scroll(function () {
 	var header_pos = $("#header").offset().top;
 	if (current_pos >= header_pos + $("#header").outerHeight() - window_h_half) {
 		$(".nav_column").css("transform", "translate(0%,-50%)");
+		if(current_pos >= $("#section_contact").offset().top-window_h_half*2){
+		$(".nav_column").css("transform", "translate(-280%,-50%)");
+		}
 	} else {
 		$(".nav_column").css("transform", "translate(-280%,-50%)");
 	}
@@ -60,16 +72,94 @@ $(window).scroll(function () {
 	var section_conflict_pos = $("#section_conflict").offset().top;
 	var section_simple_pos = $("#section_simple").offset().top;
 	var section_lowwage_question_pos = $("#section_lowwage_question").offset().top;
+	var section_realwage_1_pos = $("#section_realwage_1").offset().top;
+	var section_realwage_2_pos = $("#section_realwage_2").offset().top;
+	var section_reason_pos = $("#section_reason").offset().top;
+	var section_todo_pos = $("#section_todo").offset().top;
+	var section_road_pos = $("#section_road").offset().top;
+	var section_youngppl_pos = $("#section_youngppl").offset().top;
+	var section_conclusion_pos = $("#section_conclusion").offset().top;
+	var section_contact_pos = $("#section_contact").offset().top;
 	if (
-		current_pos >= section_notes_pos &&
-		current_pos <= section_notes_pos + $("#section_notes").outerHeight()
+		current_pos >= section_realwage_1_pos &&
+		current_pos <= section_realwage_1_pos + $("#section_realwage_1").outerHeight()
 		) {
-		$(".nav_bar .nav_column .content.section_notes").css(
+		$(".nav_bar .nav_column .content.section_realwage_1").css(
 			"background-color",
 			"#9ECCFB"
 			);
 } else {
-	$(".nav_bar .nav_column .content.section_notes").css("background-color", "#666");
+	$(".nav_bar .nav_column .content.section_realwage_1").css("background-color", "#666");
+}if (
+	current_pos >= section_realwage_2_pos &&
+	current_pos <= section_realwage_2_pos + $("#section_realwage_2").outerHeight()
+	) {
+	$(".nav_bar .nav_column .content.section_realwage_2").css(
+		"background-color",
+		"#9ECCFB"
+		);
+} else {
+	$(".nav_bar .nav_column .content.section_realwage_2").css("background-color", "#666");
+}if (
+	current_pos >= section_reason_pos &&
+	current_pos <= section_reason_pos + $("#section_reason").outerHeight()
+	) {
+	$(".nav_bar .nav_column .content.section_reason").css(
+		"background-color",
+		"#9ECCFB"
+		);
+} else {
+	$(".nav_bar .nav_column .content.section_reason").css("background-color", "#666");
+}if (
+	current_pos >= section_todo_pos &&
+	current_pos <= section_todo_pos + $("#section_todo").outerHeight()
+	) {
+	$(".nav_bar .nav_column .content.section_todo").css(
+		"background-color",
+		"#9ECCFB"
+		);
+} else {
+	$(".nav_bar .nav_column .content.section_todo").css("background-color", "#666");
+}if (
+	current_pos >= section_road_pos &&
+	current_pos <= section_road_pos + $("#section_road").outerHeight()
+	) {
+	$(".nav_bar .nav_column .content.section_road").css(
+		"background-color",
+		"#9ECCFB"
+		);
+} else {
+	$(".nav_bar .nav_column .content.section_road").css("background-color", "#666");
+}if (
+	current_pos >= section_youngppl_pos &&
+	current_pos <= section_youngppl_pos + $("#section_youngppl").outerHeight()
+	) {
+	$(".nav_bar .nav_column .content.section_youngppl").css(
+		"background-color",
+		"#9ECCFB"
+		);
+} else {
+	$(".nav_bar .nav_column .content.section_youngppl").css("background-color", "#666");
+}if (
+	current_pos >= section_conclusion_pos &&
+	current_pos <= section_conclusion_pos + $("#section_conclusion").outerHeight()
+	) {
+	$(".nav_bar .nav_column .content.section_conclusion").css(
+		"background-color",
+		"#9ECCFB"
+		);
+} else {
+	$(".nav_bar .nav_column .content.section_conclusion").css("background-color", "#666");
+}if (
+	current_pos >= section_contact_pos &&
+	current_pos <= section_contact_pos + $("#section_contact").outerHeight()
+	) {
+	$(".nav_bar .nav_column .content.section_contact").css(
+		"background-color",
+		"#9ECCFB"
+		);
+} else {
+	$(".nav_bar .nav_column .content.section_contact").css("background-color", "#666");
 }
 if (
 	current_pos >= section_notes_pos - window_h_half &&
@@ -259,53 +349,23 @@ $(window).scroll(function(){
 	var vh = $(window).outerHeight();
 	var section_lowwage_question_pos = $("#section_lowwage_question").offset().top;
 
-	if(current_pos >= section_simple_pos){
-		$("#section_simple .container-fluid .photo").addClass("fixed_photo");
-		if(current_pos + vh >= section_lowwage_question_pos){
-			$("#section_simple .container-fluid .photo").removeClass("fixed_photo_");
-			$("#section_simple .container-fluid .photo").addClass("abs_photo");
-		}else{
-			$("#section_simple .container-fluid .photo").addClass("fixed_photo");
-			$("#section_simple .container-fluid .photo").removeClass("abs_photo");
-		}
-	} else {
-		$("#section_simple .container-fluid .photo").removeClass("fixed_photo");
-	}
+	// if(current_pos >= section_simple_pos){
+	// 	$("#section_simple .container-fluid .photo").addClass("fixed_photo");
+	// 	if(current_pos + vh >= section_lowwage_question_pos){
+	// 		$("#section_simple .container-fluid .photo").removeClass("fixed_photo_");
+	// 		$("#section_simple .container-fluid .photo").addClass("abs_photo");
+	// 	}else{
+	// 		$("#section_simple .container-fluid .photo").addClass("fixed_photo");
+	// 		$("#section_simple .container-fluid .photo").removeClass("abs_photo");
+	// 	}
+	// } else {
+	// 	$("#section_simple .container-fluid .photo").removeClass("fixed_photo");
+	// }
 
-	var section_realwage_1_pos = $("#section_realwage_1").offset().top;
-	var section_realwage_2_pos = $("#section_realwage_2").offset().top;
-    var section_todo_pos= $("#section_todo").offset().top;
-if(current_pos >= section_realwage_1_pos){
-		$("#section_realwage_1 .container-fluid .sticky").addClass("fixed_sticky");
-		if(current_pos +vh >= section_realwage_2_pos){
-			$("#section_realwage_1 .container-fluid .sticky").removeClass("fixed_sticky");
-			$("#section_realwage_1 .container-fluid .sticky").addClass("abs_sticky");
-		}else{
-			$("#section_realwage_1 .container-fluid .sticky").addClass("fixed_sticky");
-			$("#section_realwage_1 .container-fluid .sticky").removeClass("abs_sticky");
-		}
-	} else {
-		$("#section_realwage_1 .container-fluid .sticky").removeClass("fixed_sticky");
-	}
-
-if (current_pos >= section_realwage_2_pos){
-		$("#section_realwage_2 .container-fluid").addClass("fixed");
-         if (current_pos >= section_todo_pos) {
-                    $("#section_realwage_2 .container-fluid").removeClass("fixed");
-
-                } else {
-                    $("#section_realwage_2 .container-fluid").addClass("fixed");
-
-                }
-
-
-	}else{
-		$("#section_realwage_2 .container-fluid").removeClass("fixed");		
-	}
 });
 
-$(".mail .mailbody .btn-primary").on("click", function () {
-	$(".mail .mailcover").css("transform", "translate(-50%,-50%) rotate(0)");
+$(".mail .mailbody .send").on("click", function () {
+	$(".mail .mailcover").css("transform", "translate(-50%,-50%) rotate(27deg)");
 	$(".mail .mailcover").css("width", "80%");
 	$(".mail").animate(
 	{
@@ -334,13 +394,14 @@ $(".mail .mailbody .btn-primary").on("click", function () {
 	},
 	500
 	);
-	$(".great").delay(2500).animate(
+	$(".great").delay(3000).animate(
 	{
 		opacity: "1"
 	},
 	800
 	);
-	
+	$('#section_contact').css("background-image","none");
+
 });
 
 var explain_on = false;
@@ -374,11 +435,11 @@ $(window).mousemove(function (e) {
 	var vh = $(window).outerHeight();
 	if (pagey > vh / 2) {
 		if (pagex < vw / 3) {
-			$(".left_dark").attr("src", "assets/10_tab_on.svg");
 			$(".right_dark").attr("src", "assets/10_com_off.svg");
+			$(".left_dark").attr("src", "assets/10_tab_on.svg");
 		} else if (pagex > (2 * vw) / 3) {
-			$(".left_dark").attr("src", "assets/10_tab_off.svg");
 			$(".right_dark").attr("src", "assets/10_com_on.svg");
+			$(".left_dark").attr("src", "assets/10_tab_off.svg");
 		} else {
 			$(".right_dark").attr("src", "assets/10_com_off.svg");
 			$(".left_dark").attr("src", "assets/10_tab_off.svg");
@@ -395,9 +456,43 @@ $(window).scroll(function () {
 
 	//Move .menu horizontally
 	var move = page_position - section_youngppl;
-	console.log(move);
-	console.log($(".people").outerHeight() - $(window).width());
-	if (move >= 0 && move <= 2.4 * $(window).outerWidth()) {
+	if (move >= 0 && move <= 2.2 * $(window).outerWidth()) {
 		$(".people").css("left", -move);
 	}
+});
+
+$(window).scroll(function(){
+	var current_pos = $(window).scrollTop();
+	var section_simple_pos = $("#section_simple").offset().top;
+	var vh = $(window).outerHeight();
+	if(current_pos >= section_simple_pos - vh/3){
+		$(".photo0").css("transform","translate(50%,-50%)");
+		$(".photo0").css("opacity","1");
+	}else{
+		$(".photo0").css("transform","translate(0,0)");
+		$(".photo0").css("opacity","0");	
+	}	
+
+	if(current_pos >= section_simple_pos + 2*vh/3){
+		$(".photo1").css("transform","translate(50%,-50%)");
+		$(".photo1").css("opacity","1");
+		$(".photo0").css("opacity","0");
+	}else{
+		$(".photo1").css("transform","translate(0,0)");
+		$(".photo1").css("opacity","0");	
+	}
+});
+
+$(window).scroll(function(){
+	var current_pos = $(window).scrollTop();
+	var section_lowwage_question_pos = $("#section_lowwage_question").offset().top;
+	var section_realwage_1_h = $("#section_realwage_1").outerHeight();
+	var section_lowwage_question_h = $("#section_lowwage_question").outerHeight();
+
+	if(current_pos >= section_lowwage_question_pos &&current_pos<= section_lowwage_question_pos + section_realwage_1_h +section_lowwage_question_h){
+		$("#cat_wavehand").css("display","initial");
+	}else{
+		$("#cat_wavehand").css("display","none");
+	}
+
 });

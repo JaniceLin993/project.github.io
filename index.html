@@ -20,7 +20,14 @@
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-                <div class="menu_list"><a href="#{{ section }}" v-for="section in sections">{{ section }}</a></div>
+                <div class="menu_list">
+                    <a class="a1" href="#section_notes"> 引言 </a>
+                    <a class="a2" href="#section_simple"> 社會現況</a>
+                    <a class="a3" href="#section_lowwage_question"> 低薪？</a>
+                    <a class="a4" href="#section_reason"> 薪水那檔事 </a>
+                    <a class="a5" href="#section_youngppl"> 年輕人心聲 </a>
+                </div>
+
             </div>
             <div class="nav_column">
                 <div class="content {{section}}" v-for="section in sections"></div>
@@ -28,10 +35,14 @@
         </div>
     </div>
     <section id="cat_explain">
-        <div class="explain">what is real wage
-            <div class="close"><hr>我知道了</div>
+        <div class="explain">
+            <p  style="position: absolute; left: 50%; transform:translateX(-50%);top: 25%;color: #333;z-index: 2;font-weight: bold;">實質薪資VS名目薪資</p>
+            <p style="position: absolute; left: 50%; transform:translateX(-50%);top: 30%;color: #333;z-index: 2;width: 70%;"><br> 
+            名目薪資是我們消費當下的金額，而實質薪資則要考慮通貨膨脹。舉例而言，一包衛生紙在10年前只需要20元就能買到，但是在如今可能需要50元，這就是所謂的通貨膨脹。換而言之，實質薪資比起名目薪資更能體現薪資的樣貌以及我們的薪資是否有所成長。 </p>
+            <img src="assets/spec_frame.svg" alt="">
+            <img class="close" src="assets/check.png">
         </div>
-    </section><img id="cat_wavehand" src="https://i.imgur.com/G1yQGFH.png" alt=""/>
+    </section><img id="cat_wavehand" title="點我！"src="https://i.imgur.com/G1yQGFH.png" alt=""/ style="display: none;">
     <header id="header">
         <div class="container-fluid fixed">
             <video class="banner_video" src="assets\1_videonew.mp4" autoplay=""></video>
@@ -69,17 +80,13 @@
         </div>
     </section>
 
-    <section id="section_simple" style="padding-left: 0px;padding-right:0px;position: relative; height: 220vh;background-color: cadetblue;">
+    <section id="section_simple" style="padding-left: 0px;padding-right:0px;position: relative; height: 220vh; background-image: url(assets/4_back.svg);">
         <div class="container-fluid">
-            <div class="photo" style="width: 40vw; height: 100vh;margin: 0px;">
-
-                <img class="photo0" style="margin-left: 5%;top: 10vh;width: 80%; position: absolute;" src="assets/5_note.svg" data-0="opacity:0;" data-300="opacity:1;">
-
-                <img class="photo1" style="margin-left: 3%;margin-top: 10%;width: 80%; position: absolute;" src="assets/5_youtube.svg">
+            <div class="photo" style="position: sticky; top: 0px;width: 40vw; height: 100vh;margin: 0px;">
+                <img class="photo0" src="assets/5_note.svg" style="position:absolute;width:70%;top:55%;left:-22%; transition: .8s;opacity: 0;">
+                <img class="photo1" src="assets/5_youtube.svg" style="position:absolute;width:90%;top:50%;left:-32%; transition: .8s;opacity: 0;">
             </div>
-            <div class="contentdouble" style="margin:6% 4% 3% 3%; padding-left: 20px; position: absolute;width: 100vh;left: 40%; top:0px;" >
-                <p><br></p>
-                <p><br></p>
+            <div class="contentdouble" style="margin:6% 4% 3% 3%; padding-left: 20px; position: absolute;width: 100vh;left: 40%; top:0px;" > 
                 <h3 class="title">當單純不再單純
                 </h3>
                 <br>
@@ -105,18 +112,16 @@
             <img class="papernote1" src="assets/5_keynote.svg" style="width: 75%;position: absolute;z-index: 1; left: 50%;transform: translate(-50%,0);margin-top: 10%;">
             <div class="content" style="z-index: 2;position: absolute;left: 50%;transform: translate(-50%,0);width: 100%;height: 100%;margin-top: 4%;">
                 <h3 class="green-title" style="color: #333; position: absolute;left: 50%; margin-top: 13%; transform: translate(-50%,0); font-size: 36px;">低薪？現在真的是低薪世代嗎？</h3>
-                <p><br></p>
-                <p><br></p>
-                <p style="width: 60%; position: absolute; bottom: 30%;left: 50%;transform: translate(-50%,0);"> 「如何走出崩世代厭世代的宿命」、「青年低薪困境」，這些新聞標題已不足為奇，似乎已是這個社會共同接受的事實，在調查中我們卻發現認為低薪不存在的人們不在少數，甚至認為這僅僅只是抱怨或是媒體的扭曲，但是社會新鮮人卻飽受其苦，那近三十年的薪資成長幅度究竟是什麼呢？</p>
+                <p style="width: 60%; position: absolute; bottom: 30%;left: 50%;transform: translate(-50%,60%);"> 「如何走出崩世代厭世代的宿命」、「青年低薪困境」，這些新聞標題已不足為奇，似乎是這個社會早已接受的事實。然而在調查中，我們發現認為低薪不存在的人並不在少數，甚有人認為是媒體的操作；那究竟這近三十年實際的薪資成長幅度是什麼呢？</p>
             </div>
         </div>
     </section>
     <section id="section_realwage_1" style="height: initial;">
         <div class="container-fluid" style="padding: 5%;">
             <div class="w-1024 mx-auto rwd">
-                <div class="sticky" style="width: 45vw; height: 100vh;margin: 0px;">
+                <div class="sticky" style="position: sticky; top: 0px;width: 45vw; height: 100vh;margin: 0px;">
 
-                    <img src="assets/6_data.png" scrolling="no" frameborder="0" width="100%" height="400px">
+                    <img src="assets/6_data.png" scrolling="no" frameborder="0" width="100%" height="400px"style="margin-top: 100px; z-index: 3;">
                 </div>
 
                 <div class="row" style="margin:5em 0 15em 5em;left:0px;">
@@ -133,89 +138,106 @@
                 </div>
                 <div class="row1" style="margin:15em 0 15em 5em">
                     <div class="offset-md-6 col-md-6">
-                        <p style="font-size: 32px;width: 100%;left: 0%">那真實的薪資數據呢？</p>
+                        <p style="font-size: 28px; font-weight:bold;width: 100%;left: 0%; text-align: center;">「那真實的薪資數據呢？」</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="section_realwage_2" style="height:200vh;padding-top: 5vh;padding-bottom: 5vh;">
-        <div class="container-fluid">
+        <div class="container-fluid" style="position: sticky; top: 0;padding-top:50px;">
             <iframe src="https://cdn.knightlab.com/libs/storyline/latest/embed/index.html?dataURL=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vSAankC4DPIH5gO1dmmFYCDRMBUmjJT2GMs-aRsWSqfm1pYKQaoXIvQZkQjM7UPhgkRiNZd0ffWnqkx%2Fpubhtml&amp;dataYCol=%E6%AF%8F%E4%BA%BA%E6%AF%8F%E6%9C%88%E5%AF%A6%E8%B3%AA%E7%B8%BD%E8%96%AA%E8%B3%87&amp;dataXCol=year&amp;dataDateFormat=%25Y&amp;chartDateFormat=%25Y&amp;chartYLabel=%E6%AF%8F%E4%BA%BA%E6%AF%8F%E6%9C%88%E5%AF%A6%E8%B3%AA%E7%B8%BD%E8%96%AA%E8%B3%87&amp;sliderCardTitleCol=title&amp;sliderCardTextCol=text" style="width:100%;height:650px;" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0">
             </iframe>
         </div>
     </section>
-    <section id="section_reason" style="height: 1500px; background-image: url(assets/4_back.svg);">
-        <div class="container-fluid" style="background-color: rgba(225,225,225,0.4); height: 100%;">
+    <section id="section_reason" style="height: 1500px; background-image: url(assets/4_back.svg);background-size: cover;">
+        <div class="container-fluid" style="background-color: rgba(225,225,225,0.1); height: 100%;">
 
             <div class="content1" style="margin-top: 10%;width: 85%;z-index: 0; left: 50%;transform: translate(-50%,0);text-align: center;">
-                <img class="papernote1" src="assets/6_paper.svg" style="width: 100%;position: absolute;left: 0;border-radius: 2% 2% 0% 0%">
-                <h3 style="color:#333;margin: 5%;top: 0px;">高教擴張與科技化成為實質薪資停滯的兩大主因</h3>
-                <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;臺大經濟系廖珮如教授指出迅速擴張的高等教育是薪資停滯的一大主因，2000年的大學錄取率將近60%，到了2009年時已達97%。大學畢業後，多數青年選擇投身於辦公室白領階級，當企業對人力的需求並沒有因為高教擴張增加，人才的供給卻不斷上升時，不僅拉低了薪資，大量的大學文憑也使企業難以分辨好壞，導致各產業皆採最低薪資聘用新進青年勞工，進而促使低薪與薪資停滯的現象發生。</p>
+                <img class="papernote1" src="assets/6_paper1.png" style="width: 120%;position: absolute;left: -200px;top: -60px;border-radius: 2% 2% 0% 0%">
+                <h3 style="color:#333;margin: 5%;top: 50px;">薪資停滯兩大主因: 高教擴張&科技化實質</h3>
+                <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;臺大經濟系廖珮如教授指出，迅速擴張的高等教育是薪資停滯的一大主因，2000年的大學錄取率將近60%，到了2009年時已達97%。大學畢業後，多數青年投身於辦公室白領階級，當企業的人力需求並沒有因為高教擴張增加，不僅拉低了薪資，大量的大學文憑也使企業難以分辨好壞，導致各產業皆採最低薪資聘用新進青年勞工，進而促使薪資停滯的現象發生。</p>
 
-                <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;另一主因源自機器化與自動化，機器大量取代人力，導致企業大幅降低對人力的需求。在高等教育擴張與機器化下，人的被取代性增加，這也造就現在的薪資停滯不前。除了兩項因素以外，許多結構性的因素如全球化、國內產業升級面臨瓶頸都強化了此一趨勢，使得現在的實質薪資再難如1990年代一樣不斷上升。
+                <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;隨著資訊發展，機械與自動化大量取代人力，由於人的可替代性激增，使得企業大幅降低對人力的需求，導致薪資難以上漲。同時，許多結構性的因素如全球化、國內產業轉型瓶頸都強化了此一趨勢，使得現在的實質薪資再難如1990年代一樣不斷上升。
                 </p>
 
             </div>
-            <div class="content2" style="margin-top: 10%;width: 85%;z-index: 0; left: 50%;transform: translate(-50%,0);text-align: center;">
-                <img class="papernote1" src="assets/6_paper.svg" style="height: 50vh; width: 100%; position: absolute;left: 0;border-radius: 2% 2% 0% 0%">
-                <h3 style="color:#333;margin: 10%;top: 0px;line-height: 36px;">為什麼實質薪資停滯讓年輕人這麼痛？<br>實質薪資停滯代表著低薪嗎？</h3>
-                <p class="p1">
-                    &nbsp;&nbsp;&nbsp;&nbsp; 近兩年的實質薪資儘管逐步回升，但不能忽視的是在2009後的這十年內，實質薪資相比與1990年代是倒退許多的，而對於剛出社會的年輕人來說25-35歲是累積資本的一大黃金時期，或許正象徵著低薪時代的強勢來襲。除此之外，台大經濟系廖珮如教授亦指出時代的改變，使得這個世代的年輕人更難以累積資本。在過去，不會有滿街的餐廳、飲料店，更不需要人人一台手機、平板，現代需要消費的物品更多，因此消費型態的變化與實質薪資停滯的交織下，才會使年輕人的痛感更深。
+            <div class="content2" style="margin-top: 25%;width: 85%;z-index: 0; left: 50%;transform: translate(-50%,0);text-align: center;">
+                <img class="papernote1" src="assets/6_paper2.png" style=" width: 120%; position: absolute;left: -60px;border-radius: 2% 2% 0% 0%">
+                <h3 style="color:#333;margin: 9%;top: 50px;line-height: 36px;">為什麼實質薪資停滯讓年輕人這麼痛？</h3>
+                <p class="p1" style="margin-top:11%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp; 近兩年的實質薪資儘管逐步回升，但不能忽視的是在2009後的這十年內，實質薪資相比與1990年代是倒退許多的，而對於剛出社會的年輕人來說25-35歲是累積資本的一大黃金時期，或許正象徵著低薪時代的強勢來襲。除此之外，廖珮如教授亦指出時代的改變，使得這個世代的年輕人更難以累積資本。在過去，不會有滿街的餐廳、飲料店，更不需要人人一台手機、平板，現代需要消費的物品更多，因此消費型態的變化與實質薪資停滯的交織下，才會使年輕人的痛感更深。
                 </p>
             </div>
         </div>
     </section>
-    <section id="section_todo" style="overflow: hidden">
-        <div class="container-fluid" style="background-image: url(assets/4_back.svg);height: 650px;padding-top: 5%;position: absolute;">
-            <img src="assets/8_todo.svg" style="width: 90%;margin-left: 55px;margin-bottom: 0px;z-index: 0;">
-            <div class="content3" style="z-index:1;margin-top: -70vh;width: 60%;left:20%;color: black;">
-                <h3>年輕人該怎麼做？</h3>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;「低薪是現在社會結構下的平均現象」廖珮如教授肯定地說，由於社會中仍存在著高薪結構，如研發專業人員； 相較之下製造業在過去受到產業外移影響，使得平均薪資較低；服務業則受到高教擴張與科技化的影響，薪水有下降的趨勢。因此，廖珮如教授建議年輕人能多增加自身附加價值，去抵抗高教擴張、全球化、科技化等不可逆的社會現象，以突破現狀實現自身理想。
+    <section id="section_todo" style="background-image: url(assets/4_back.svg);background-size: cover; ;height: 120vh;">
+        <div class="container-fluid" style="padding-top: 10%;position: absolute;background-color: rgba(225,225,225,0.1);height: 100%;">
+            <img src="assets/8_todo.svg" style="width: 75%; left: 52%;transform: translate(-50%,0);margin-bottom: 0px;z-index: 0;">
+            <div class="content3" style="z-index:1;margin-top: -70vh;width: 50%;left:50%;transform: translate(-50%,0);color: black;">
+                <h3 style="margin-left: 10%;">年輕人該怎麼做？</h3>
+                <p style="font-size: 14px; width: 80%; margin-left: 10%;color: #333">&nbsp;&nbsp;&nbsp;&nbsp;「低薪是現在社會結構下的平均現象」廖珮如教授肯定地說，由於社會中仍存在著高薪結構，如研發專業人員； 相較之下製造業在過去受到產業外移影響，使得平均薪資較低；服務業則受到高教擴張與科技化的影響，薪水有下降的趨勢。因此，廖珮如教授建議年輕人能多增加自身附加價值，去抵抗高教擴張、全球化、科技化等不可逆的社會現象，以突破現狀實現自身理想。
                 </p>
             </div>
         </div>
     </section>
     <section id="section_road" style="";>
-        <iframe frameborder="0" class="juxtapose" width="100%" height="100%" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2bf1a0be-54ce-11eb-83c8-ebb5d6f907df"></iframe></section>
+        <iframe frameborder="0" class="juxtapose" width="100%" height="100%" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e5dd0764-5520-11eb-83c8-ebb5d6f907df"></iframe></section>
 
         <section id="section_youngppl">
             <div class="container-fluid">
                 <div class="people">
-                    <div class="youngs p1"><img src="https://i.imgur.com/xVkZ5Py.png" alt=""/></div>
-                    <div class="youngs p2"><img src="https://i.imgur.com/xVkZ5Py.png" alt=""/></div>
-                    <div class="youngs p3"><img src="https://i.imgur.com/xVkZ5Py.png" alt=""/></div>
-                </div>
-            </div>
-        </section>
+                    <div class="youngs p1">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邱小姐，27歲，電視台從業人員，大學畢業後即選擇投身職場，每天早上從桃園通勤到台北上班，一路從早工作到晚，事情一件接著一件，趕腳本、聯絡人事、進棚錄影…工作幾乎耗光一天心力。她無奈地說:「我其實沒有不愛我的工作，我一直都覺得我選擇了我想努力的方向，但工作真的佔了滿多時間與心力」聊到薪水，她反映低薪是她真實所見的普遍現象，包括自己另一伴和身邊的朋友們，同時也表示自己真的要很努力一年才能存下個10來萬，平常光是住宿、交通伙食等必要花費就佔掉快八成，一成拿來犒賞自己幾乎就已經快吃不消，不過她也很肯定地說: 「比起薪水，我其實更在意我有沒有在做我想做的事。」<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;隨著台灣整體經濟環境的改善，對現在的年輕世代來說，生活可能不再是主要的煩惱，更大的煩惱或許來自不知道該走哪條路，哪條路才能走得更遠。問到有沒有創業夢想，邱小姐給了個有趣的答案:「有想過，但創業畢竟要投資不少，再加上自己當老闆很容易沒有方向，所以沒有真的踏出那一步，不過現在有在經營自己主持人的個人品牌，也許也算是另類的創業吧！」對於低薪的年輕一族來說，要用創業來為生活創造新的可能也許不再如過去容易，但經營個人品牌卻成為資訊時代的新選擇。</p><p class="short">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在訪談的最後，邱小姐提到未來打算暫時離開電視圈，重新回到校園學習心理諮商相關的知識，期望能用別的角度為人生增添色彩。「我沒有經歷過過去的時代，不能妄下定論，但想必每個時代必然有各自的困難與挑戰需要努力面對」她淡淡地說。</p>
+                        <img class="background" src="assets/11_paper.svg" alt=""/>
+                        <img class="man" src="assets/pic1.png" alt=""></div>
+                        <div class="youngs p2">
+                            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;「『賺這麼多錢有什麼用，都花在醫藥費身上了』他當時就是這麼跟我說的」兩年前小草的友人因為高壓高時的工作，身體承受不住而住進醫院，作為事件的旁觀者，看著朋友在出社會後的短短幾年內，健康被工作慢慢吞噬，她看清了社會的現實。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;諷刺的是，如今小草也成為了這些事件的其中一員，「從轉進行銷業後，身體開始容易生病、免疫力下降了很多，大部分平均每日工作10-12小時，同期的朋友也是如此，大家都工作到很晚，但是為了把工作做好也無可奈何」，他落寞地說，「直到開始神經失調連帶胃痙攣，我才真正意識到身體不行了。」<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因為工作而使健康惡化的小草不是單一個案，科技化時代讓現帶人半夜或是假日都會接到工作相關的電話或消息，時時處在一個緊繃的狀態，各個因素加在一起加速了健康的惡化。</p><p class="short">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;儘管如此，小草卻不後悔來到這個行業，「在這份工作中，所得到的磨練很多，機會也很多，蠻像魔鬼訓練的，很多人出去後累積下來的經驗資本都非常豐富。」他笑著說。『敢講才會敢面對』是小草對於厭世時代的想法與標語，「我希望他們(指上一輩)也能看到我們的努力，每一代都有每一代不同的問題，上一代也一樣有他們辛苦的地方，這是肯定的。」在出社會的這幾年，他見證同儕努力度過迷茫時刻，並且在這資訊氾濫的時代下依舊努力保持各自的初衷與熱情。</p>
+                            <img class="background" src="assets/11_paper.svg" alt=""/>
+                            <img class="man" src="assets/pic2.png" alt=""></div>
+                            <div class="youngs p3">
+                                <p style="top:130px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;甫踏入職場的何小姐說，從學生時期她便是個相對務實的人，擔心學業成績、規劃職涯發展，努力參加課程及活動充實自己。雖然知道即使忙的焦頭爛額，也不一定能確保未來一片光明，但比起待在宿舍安逸，她仍選擇四處尋覓機會。相對實際的她沒有太多浮濫的夢想泡泡，只希望能盡心完成分內工作，好好努力提升自己，若行有餘力，再以自身影響力貢獻關注已久的心理健康領域。<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;談到初入職場遭遇的困難，「最困難不是任何一項單一事件，而是認知轉變。小時候對世界有美好的想像，長大才發現，現實是安身度日都不容易。」但她也說即使認知到現實不盡理想，也不將自己滯留於負面情緒，而是盡量參加活動、課程爭取機會，腳踏實地的過完每一天。</p><br><p class="short">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;「只以結果論，或許真的一代不如一代，在20世紀的現在，前人已經完成太多關鍵性的進步，要再有一個突飛猛進的時刻並像從前容易，現在就業環境對年輕人不像以前那麼友善，經濟不再能如從前般飛躍成長。雖然如此，這樣的時代又有許多新興事物正在發生，年輕人也正努力以自身學習能力適應著這個環境」她淡淡地說。</p>
+                                <img  class="background" src="assets/11_paper.svg" alt=""/>
+                                <img class="man" src="assets/pic3.png" alt=""></div>
+                            </div>
+                        </div>
+                    </section>
 
 
-        <section id="section_conclusion">
-            <p class="conclusion">「在夢想的泥沼中辛苦打滾，卻從來沒有放棄希望，你也是吧？」</p><img class="left_dark" src="assets/10_tab_off.svg" alt=""/><img class="right_dark" src="assets/10_com_off.svg" alt=""/>
-        </section>
+                    <section id="section_conclusion" style="background-image: url(assets/4_back.svg);background-size: cover;">
+                        <div class="conclusion">「 在夢想的泥沼中辛苦打滾，<br>卻從來沒有放棄希望，<br>你也是吧？」<img class="right_dark" src="assets/10_com_off.svg" alt=""/><img class="left_dark" src="assets/10_tab_off.svg" alt=""/></div>
+                    </section>
 
-        <section id="section_contact">
-            <div class="container-fluid">
-                <div class="great">Great</div>
-                <div class="mail">
-                    <div class="mailcover"><img src="assets/envelope.svg" alt=""/></div>
-                    <div class="mailbody">
-                        <label>Say something</label>
-                        <textarea></textarea>
-                        <button class="btn-primary">Send</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <section id="section_contact">
+                        <div class="container-fluid">
+                            <div class="great">「笑一個吧！」</div>
+                            <div class="mail">
+                                <div class="mailcover"><img src="assets/envelope.svg" alt=""/></div>
+                                <div class="mailbody">
+                                    <img src="assets/envolope_paper.svg" alt="" style="width: 100%;">
+                                    <h1 style="position: absolute; font-size: 54px; color: #333; top: 10%;letter-spacing: 15px">心情留言</h1>
+                                    <textarea style="position: absolute; top: 60%; transform: translateY(-50%);"></textarea>
+                                    <img src="assets/envolope_send.svg" title="點我！" class="send" style="width: 10%;position: absolute; bottom: 15%;right: 15%; cursor: pointer;">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="footer">
+                        <div class="end">
+                            <p style="margin-top: 10px;">製作 / 劉有容 徐慶毅 林哲如</p>
+                            <p>指導老師 / 謝吉隆</p>
+                            <p>部分素材使用- www.freepik.com</p>
+                            <p>Copyright©2021 版權所有 禁止擅自轉貼節錄</p>
+                        </div>
+                    </section>
 
 
+                    <!-- partial -->
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js'></script>
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+                    <script src="./script.js"></script>
 
-    <!-- partial -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src="./script.js"></script>
+                </body>
 
-</body>
-
-</html>
+                </html>
