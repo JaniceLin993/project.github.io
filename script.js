@@ -274,9 +274,10 @@ $(window).scroll(function(){
 
 	var section_realwage_1_pos = $("#section_realwage_1").offset().top;
 	var section_realwage_2_pos = $("#section_realwage_2").offset().top;
+    var section_todo_pos= $("#section_todo").offset().top;
 if(current_pos >= section_realwage_1_pos){
 		$("#section_realwage_1 .container-fluid .sticky").addClass("fixed_sticky");
-		if(current_pos + vh >= section_realwage_2_pos){
+		if(current_pos +vh >= section_realwage_2_pos){
 			$("#section_realwage_1 .container-fluid .sticky").removeClass("fixed_sticky");
 			$("#section_realwage_1 .container-fluid .sticky").addClass("abs_sticky");
 		}else{
@@ -287,8 +288,17 @@ if(current_pos >= section_realwage_1_pos){
 		$("#section_realwage_1 .container-fluid .sticky").removeClass("fixed_sticky");
 	}
 
-	if (current_pos >= section_realwage_2_pos){
+if (current_pos >= section_realwage_2_pos){
 		$("#section_realwage_2 .container-fluid").addClass("fixed");
+         if (current_pos >= section_todo_pos) {
+                    $("#section_realwage_2 .container-fluid").removeClass("fixed");
+
+                } else {
+                    $("#section_realwage_2 .container-fluid").addClass("fixed");
+
+                }
+
+
 	}else{
 		$("#section_realwage_2 .container-fluid").removeClass("fixed");		
 	}

@@ -1,174 +1,185 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>[網頁敘事設計] Project</title>
-	<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap'>
-	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <title>[網頁敘事設計] Project</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
-	<!-- partial:index.partial.html -->
-	<div id="app">
-		<div class="nav_bar"><a href="#header"> <img class="icon" src="assets/Banner_icon.png" alt=""/></a>
-			<div class="menu">
-				<div class="line">
-					<div class="line1"></div>
-					<div class="line2"></div>
-					<div class="line3"></div>
-				</div>
-				<div class="menu_list"><a href="#{{ section }}" v-for="section in sections">{{ section }}</a></div>
-			</div>
-			<div class="nav_column">
-				<div class="content {{section}}" v-for="section in sections"></div>
-			</div>
-		</div>
-	</div>
-	<header id="header">
-		<div class="container-fluid fixed">
-			<video class="banner_video" src="assets\1_videonew.mp4" autoplay=""></video>
-			<div class="note">
-				<img class="1_note" src="assets/1_keynote.svg" alt="" style="width: 100%; opacity: 0; transition: 0.5s" />
-				<img class="1_band" src="assets/1_band.jpg" alt="" style="position: absolute;width: 60%; left: 50%;top: 50%; transform: translate(-50%,-50%) rotate(12deg); opacity:0; transition: 1s" />
-			</div>
-			<div class="explore">SCROLL</div>
-		</div>
-	</header>
-	<section id="section_notes">
-		<div class="container-fluid">
-			<img class="note_2" src="assets/2_note.svg" alt="" style="position: absolute; width: 30%; left: 7%; top: 5%;" />
-			<p class="word_goodband" data-300="transform: translateX(-50%) translateY(100%) ;opacity: 0",
-			data-center="transform: translateX(-50%) translateY(0) ;opacity: 1">好樂團近期一首「他們說我是沒有用的年輕人」在獨立音樂平台廣獲年輕聽眾的歡迎，歌詞中寫盡了年輕人的苦楚，「我們只喜歡小確幸，放棄去改變不公平…」和厭世語錄一般，或許這樣的題材正反映了這個時代低薪結構下說不出的辛酸與無奈。<br><br>「厭」世代這個詞泛指35歲以下，甫在職場站穩腳步的年輕人；他們煩惱著如何才能積累更多的社會、經濟資源，來過上好一點點的人生；他們糾結著未來，思考著如何才能走得更遠，而買房、結婚生子則成了不敢想像的事情…</p>
+    <!-- partial:index.partial.html -->
+    <div id="app">
+        <div class="nav_bar"><a href="#header"> <img class="icon" src="assets/Banner_icon.png" alt="" /></a>
+            <div class="menu">
+                <div class="line">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <div class="menu_list"><a href="#{{ section }}" v-for="section in sections">{{ section }}</a></div>
+            </div>
+            <div class="nav_column">
+                <div class="content {{section}}" v-for="section in sections"></div>
+            </div>
+        </div>
+    </div>
+    <header id="header">
+        <div class="container-fluid fixed">
+            <video class="banner_video" src="assets\1_videonew.mp4" autoplay=""></video>
+            <div class="note">
+                <img class="1_note" src="assets/1_keynote.svg" alt="" style="width: 100%; opacity: 0; transition: 0.5s" />
+                <img class="1_band" src="assets/1_band.jpg" alt="" style="position: absolute;width: 60%; left: 50%;top: 50%; transform: translate(-50%,-50%) rotate(12deg); opacity:0; transition: 1s" />
+            </div>
+            <div class="explore">SCROLL</div>
+        </div>
+    </header>
+    <section id="section_notes">
+        <div class="container-fluid">
+            <img class="note_2" src="assets/2_note.svg" alt="" style="position: absolute; width: 30%; left: 7%; top: 5%;" />
+            <p class="word_goodband" data-300="transform: translateX(-50%) translateY(100%) ;opacity: 0" , data-center="transform: translateX(-50%) translateY(0) ;opacity: 1">好樂團近期一首「他們說我是沒有用的年輕人」在獨立音樂平台廣獲年輕聽眾的歡迎，歌詞中寫盡了年輕人的苦楚，「我們只喜歡小確幸，放棄去改變不公平…」和厭世語錄一般，或許這樣的題材正反映了這個時代低薪結構下說不出的辛酸與無奈。<br><br>「厭」世代這個詞泛指35歲以下，甫在職場站穩腳步的年輕人；他們煩惱著如何才能積累更多的社會、經濟資源，來過上好一點點的人生；他們糾結著未來，思考著如何才能走得更遠，而買房、結婚生子則成了不敢想像的事情…</p>
 
-		</div>
+        </div>
 
-	</section>
-	<section id="section_conflict">
-		<div class="container-fluid"><img class="old" src="assets/3_old.svg" alt="" style="font-family: 'Indie Flower', cursive" /><img class="young" src="assets/3_young.svg" alt=""/>
-			<div class="conversation">
-				<div class="line line1"><img src="assets/talk1.svg" alt=""/>
-				</div>
-				<div class="line line2"><img src="assets/talk2.svg" alt=""/>
-				</div>
-				<div class="line line3"><img src="assets/talk3.svg" alt=""/>
-				</div>
-				<div class="line line4"><img src="assets/talk4.svg" alt=""/>
-				</div>
-				<div class="line line5"><img src="assets/talk5.svg" alt=""/>
-				</div>
-				<div class="line line6"><img src="assets/talk6.svg" alt=""/>
-				</div>
-			</div>
-		</div>
-	</section>
+    </section>
+    <section id="section_conflict">
+        <div class="container-fluid"><img class="old" src="assets/3_old.svg" alt="" style="font-family: 'Indie Flower', cursive" /><img class="young" src="assets/3_young.svg" alt="" />
+            <div class="conversation">
+                <div class="line line1"><img src="assets/talk1.svg" alt="" />
+                </div>
+                <div class="line line2"><img src="assets/talk2.svg" alt="" />
+                </div>
+                <div class="line line3"><img src="assets/talk3.svg" alt="" />
+                </div>
+                <div class="line line4"><img src="assets/talk4.svg" alt="" />
+                </div>
+                <div class="line line5"><img src="assets/talk5.svg" alt="" />
+                </div>
+                <div class="line line6"><img src="assets/talk6.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section id="section_simple" style="padding-left: 0px;padding-right:0px;position: relative; height: 220vh;background-color: cadetblue;">
-		<div class="container-fluid">
-			<div class="photo" style="width: 100vw; height: 100vh;transition: 1s">
+    <section id="section_simple" style="padding-left: 0px;padding-right:0px;position: relative; height: 220vh;background-color: cadetblue;">
+        <div class="container-fluid">
+            <div class="photo" style="width: 40vw; height: 100vh;margin: 0px;">
 
-				<img class="photo0" style="margin-left: 5%;top: 10vh;width: 35%; position: absolute;" src="assets/5_note.svg" data-0="opacity:0;" data-300="opacity:1;">
+                <img class="photo0" style="margin-left: 5%;top: 10vh;width: 80%; position: absolute;" src="assets/5_note.svg" data-0="opacity:0;" data-300="opacity:1;">
 
-				<img class="photo1" style="margin-left: 3%;margin-top: 10%;width: 35%; position: absolute;" src="assets/5_youtube.svg">
-			</div>
-			<div class="contentdouble" style="margin:6% 4% 3% 48%; padding-left: 20px; position: absolute;">
-				<p><br></p>
-				<p><br></p>
-				<h3 class="title">當單純不再單純
-				</h3>
-				<br>
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;單純，是很多這一輩中年人對於過去的形容詞。<br>&nbsp;&nbsp;&nbsp;&nbsp;在那個台灣經濟正要起步的年代，很多青年受限於經濟條件不佳，擺在眼前的選擇並不多，「我們以前的生活很單純，就是希望可以學得一技之長，出去工作負擔家計」，白手起家的高雄鐵工廠林老闆回憶到。<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;林老闆興許能代表臺灣六零年代經濟飛速發展的大環境下、只要肯努力就能出頭天的縮影。在過去，雖然選擇不多，但努力即有所成是大家對社會的共感；而今，多數的年輕一代卻受困於定型的經濟環境，普遍認為努力不再能與成功畫上等號。<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;縱然如是，林老闆認為現在年輕人並非沒有出頭的機會，而是要如何把握，「不會說現在的年輕人不認真，但要謙虛、同時學會讓別人看見自己，只有得到認可的努力才有用，埋頭苦幹不是真的努力。」</p>
-				<br>
-				<br>
-				<br>	
-				<h3 class="title">資訊變多，誘惑也跟著變多
+                <img class="photo1" style="margin-left: 3%;margin-top: 10%;width: 80%; position: absolute;" src="assets/5_youtube.svg">
+            </div>
+            <div class="contentdouble" style="margin:6% 4% 3% 3%; padding-left: 20px; position: absolute;width: 100vh;left: 40%; top:0px;" >
+                <p><br></p>
+                <p><br></p>
+                <h3 class="title">當單純不再單純
+                </h3>
+                <br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;單純，是很多這一輩中年人對於過去的形容詞。<br>&nbsp;&nbsp;&nbsp;&nbsp;在那個台灣經濟正要起步的年代，很多青年受限於經濟條件不佳，擺在眼前的選擇並不多，「我們以前的生活很單純，就是希望可以學得一技之長，出去工作負擔家計」，白手起家的高雄鐵工廠林老闆回憶到。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;林老闆興許能代表臺灣六零年代經濟飛速發展的大環境下、只要肯努力就能出頭天的縮影。在過去，雖然選擇不多，但努力即有所成是大家對社會的共感；而今，多數的年輕一代卻受困於定型的經濟環境，普遍認為努力不再能與成功畫上等號。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;縱然如是，林老闆認為現在年輕人並非沒有出頭的機會，而是要如何把握，「不會說現在的年輕人不認真，但要謙虛、同時學會讓別人看見自己，只有得到認可的努力才有用，埋頭苦幹不是真的努力。」</p>
+                <br>
+                <br>
+                <br>
+                <h3 class="title">資訊變多，誘惑也跟著變多
 
-				</h3>
-				<br>
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;相比於過去那個沒有手機、沒有網路的年代，資訊發展似乎促使年輕人急於追求成功模板；過度接觸成功訊息，反而忽略失敗和耕耘方為常態。林老闆認為現在的訊息氾濫，「導致年輕人喜歡漂漂亮亮的東西，卻沒有好好的管理自己所擁有的資源，覺得賺到的錢不多不如就拿來享樂。」另一位任職於公家機關的劉先生也說:「資訊流通快速導致有股隱形的壓力存在，促使年輕人下意識認為付出六個月就會獲得等價的收穫，然而事實上收穫往往是呈指數型成長。」<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;資訊時代帶來的影響有利有弊，它創造了許多新的機為等待人們挖掘，但也同時製造了無形的壓力驅使著這個時代向前，讓人們趕著前行，而忘了人際互動的溫度，如同喪屍一般；讓人們看見快樂，也不自覺地陷入資本主義的泥淖不可自拔。
-				</p>
-			</div>
-		</div>
+                </h3>
+                <br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;相比於過去那個沒有手機、沒有網路的年代，資訊發展似乎促使年輕人急於追求成功模板；過度接觸成功訊息，反而忽略失敗和耕耘方為常態。林老闆認為現在的訊息氾濫，「導致年輕人喜歡漂漂亮亮的東西，卻沒有好好的管理自己所擁有的資源，覺得賺到的錢不多不如就拿來享樂。」另一位任職於公家機關的劉先生也說:「資訊流通快速導致有股隱形的壓力存在，促使年輕人下意識認為付出六個月就會獲得等價的收穫，然而事實上收穫往往是呈指數型成長。」<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;資訊時代帶來的影響有利有弊，它創造了許多新的機為等待人們挖掘，但也同時製造了無形的壓力驅使著這個時代向前，讓人們趕著前行，而忘了人際互動的溫度，如同喪屍一般；讓人們看見快樂，也不自覺地陷入資本主義的泥淖不可自拔。
+                </p>
+            </div>
+        </div>
 
-	</section>
-	<section id="section_lowwage_question">
-		<div class="container-fluid">
-			<img class="papernote1" src="assets/5_keynote.svg" style="width: 75%;position: absolute;z-index: 1; left: 50%;transform: translate(-50%,0);margin-top: 10%;">
-			<div class="content" style="z-index: 2;position: absolute;left: 50%;transform: translate(-50%,0);width: 100%;height: 100%;margin-top: 4%;">
-				<h3 class="green-title" style="color: #333; position: absolute;left: 50%; margin-top: 13%; transform: translate(-50%,0); font-size: 36px;">低薪？現在真的是低薪世代嗎？</h3>
-				<p><br></p>
-				<p><br></p>
-				<p style="width: 60%; position: absolute; bottom: 30%;left: 50%;transform: translate(-50%,0);"> 「如何走出崩世代厭世代的宿命」、「青年低薪困境」，這些新聞標題已不足為奇，似乎已是這個社會共同接受的事實，在調查中我們卻發現認為低薪不存在的人們不在少數，甚至認為這僅僅只是抱怨或是媒體的扭曲，但是社會新鮮人卻飽受其苦，那近三十年的薪資成長幅度究竟是什麼呢？</p>
-			</div>
-		</div>
-	</section>
-	<section id="section_realwage_1" style="height: initial;">
-		<div class="container-fluid" style="padding: 5%;">
-			<div class="w-1024 mx-auto rwd">
-				<div class="sticky" id="parallax" style="width: 45vw; height: 100%; top:50px; transition: .5s">
-					<img src="assets/6_data.png" scrolling="no" frameborder="0" width="100%" height="400px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
-				</div>
-				<div class="row" style="margin:5em 0 15em 5em">
-					<div class="offset-md-6 col-md-6">
-						<p style="font-size: 20px;width: 80%;left: 20%">從數據中我們可以看見人們的薪資不斷往上升，但為什麼年輕人依舊感到低薪？
-						</p>
-					</div>
-				</div>
-				<div class="row" style="margin:15em 0 15em 5em">
-					<div class="offset-md-6 col-md-6">
-						<p style="font-size: 20px;width: 80%;left: 20%">從這張圖我們可清楚看見薪資增長幅度並沒有高於物價成長的幅度（也就是通貨膨脹率），也就代表，人們真實拿到的薪資並不如上圖的數據一樣不斷上升。
-						</p>
-					</div>
-				</div>
-				<div class="row1" style="margin:15em 0 15em 5em">
-					<div class="offset-md-6 col-md-6">
-						<p style="font-size: 32px;width: 80%;left: 20%">那真實的薪資數據呢？</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="section_realwage_2" style="height:200vh;">
-		<div class="container-fluid">
-			<iframe src="https://cdn.knightlab.com/libs/storyline/latest/embed/index.html?dataURL=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vSAankC4DPIH5gO1dmmFYCDRMBUmjJT2GMs-aRsWSqfm1pYKQaoXIvQZkQjM7UPhgkRiNZd0ffWnqkx%2Fpubhtml&amp;dataYCol=%E6%AF%8F%E4%BA%BA%E6%AF%8F%E6%9C%88%E5%AF%A6%E8%B3%AA%E7%B8%BD%E8%96%AA%E8%B3%87&amp;dataXCol=year&amp;dataDateFormat=%25Y&amp;chartDateFormat=%25Y&amp;chartYLabel=%E6%AF%8F%E4%BA%BA%E6%AF%8F%E6%9C%88%E5%AF%A6%E8%B3%AA%E7%B8%BD%E8%96%AA%E8%B3%87&amp;sliderCardTitleCol=title&amp;sliderCardTextCol=text" style="width:100%;height:650px;" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0">
-			</iframe>
-		</div>
-	</section>
-	<section id="section_reason" style="height: 1500px; background-image: url(assets/4_back.svg);">
-		<div class="container-fluid" style="background-color: rgba(225,225,225,0.4); height: 100%;">
+    </section>
+    <section id="section_lowwage_question">
+        <div class="container-fluid">
+            <img class="papernote1" src="assets/5_keynote.svg" style="width: 75%;position: absolute;z-index: 1; left: 50%;transform: translate(-50%,0);margin-top: 10%;">
+            <div class="content" style="z-index: 2;position: absolute;left: 50%;transform: translate(-50%,0);width: 100%;height: 100%;margin-top: 4%;">
+                <h3 class="green-title" style="color: #333; position: absolute;left: 50%; margin-top: 13%; transform: translate(-50%,0); font-size: 36px;">低薪？現在真的是低薪世代嗎？</h3>
+                <p><br></p>
+                <p><br></p>
+                <p style="width: 60%; position: absolute; bottom: 30%;left: 50%;transform: translate(-50%,0);"> 「如何走出崩世代厭世代的宿命」、「青年低薪困境」，這些新聞標題已不足為奇，似乎已是這個社會共同接受的事實，在調查中我們卻發現認為低薪不存在的人們不在少數，甚至認為這僅僅只是抱怨或是媒體的扭曲，但是社會新鮮人卻飽受其苦，那近三十年的薪資成長幅度究竟是什麼呢？</p>
+            </div>
+        </div>
+    </section>
+    <section id="section_realwage_1" style="height: initial;">
+        <div class="container-fluid" style="padding: 5%;">
+            <div class="w-1024 mx-auto rwd">
+                <div class="sticky" style="width: 45vw; height: 100vh;margin: 0px;">
 
-			<div class="content1" style="margin-top: 20%;width: 85%;z-index: 0; left: 50%;transform: translate(-50%,0);text-align: center;">
-				<img class="papernote1" src="assets/6_paper.svg" style="width: 100%;position: absolute;left: 0;border-radius: 2% 2% 0% 0%">
-				<h3 style="color:#333;margin: 5%;top: 20px;">高教擴張與科技化成為實質薪資停滯的兩大主因</h3>
-				<p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;臺大經濟系廖珮如教授指出迅速擴張的高等教育是薪資停滯的一大主因，2000年的大學錄取率將近60%，到了2009年時已達97%。大學畢業後，多數青年選擇投身於辦公室白領階級，當企業對人力的需求並沒有因為高教擴張增加，人才的供給卻不斷上升時，不僅拉低了薪資，大量的大學文憑也使企業難以分辨好壞，導致各產業皆採最低薪資聘用新進青年勞工，進而促使低薪與薪資停滯的現象發生。</p>
+                    <img src="assets/6_data.png" scrolling="no" frameborder="0" width="100%" height="400px">
+                </div>
 
-				<p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;另一主因源自機器化與自動化，機器大量取代人力，導致企業大幅降低對人力的需求。在高等教育擴張與機器化下，人的被取代性增加，這也造就現在的薪資停滯不前。除了兩項因素以外，許多結構性的因素如全球化、國內產業升級面臨瓶頸都強化了此一趨勢，使得現在的實質薪資再難如1990年代一樣不斷上升。
-				</p>
+                <div class="row" style="margin:5em 0 15em 5em;left:0px;">
+                    <div class="offset-md-6 col-md-6">
+                        <p style="font-size: 20px;width: 100%;left: 0%">從數據中我們可以看見人們的薪資不斷往上升，但為什麼年輕人依舊感到低薪？
+                        </p>
+                    </div>
+                </div>
+                <div class="row" style="margin:15em 0 15em 5em">
+                    <div class="offset-md-6 col-md-6">
+                        <p style="font-size: 20px;width: 100%;left: 0%">其中的原因在於，薪資增長幅度並沒有高於物價成長的幅度（也就是通貨膨脹率），也就代表，人們真實拿到的薪資並不如上圖的數據一樣不斷上升。
+                        </p>
+                    </div>
+                </div>
+                <div class="row1" style="margin:15em 0 15em 5em">
+                    <div class="offset-md-6 col-md-6">
+                        <p style="font-size: 32px;width: 100%;left: 0%">那真實的薪資數據呢？</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section_realwage_2" style="height:200vh;padding-top: 5vh;padding-bottom: 5vh;">
+        <div class="container-fluid">
+            <iframe src="https://cdn.knightlab.com/libs/storyline/latest/embed/index.html?dataURL=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vSAankC4DPIH5gO1dmmFYCDRMBUmjJT2GMs-aRsWSqfm1pYKQaoXIvQZkQjM7UPhgkRiNZd0ffWnqkx%2Fpubhtml&amp;dataYCol=%E6%AF%8F%E4%BA%BA%E6%AF%8F%E6%9C%88%E5%AF%A6%E8%B3%AA%E7%B8%BD%E8%96%AA%E8%B3%87&amp;dataXCol=year&amp;dataDateFormat=%25Y&amp;chartDateFormat=%25Y&amp;chartYLabel=%E6%AF%8F%E4%BA%BA%E6%AF%8F%E6%9C%88%E5%AF%A6%E8%B3%AA%E7%B8%BD%E8%96%AA%E8%B3%87&amp;sliderCardTitleCol=title&amp;sliderCardTextCol=text" style="width:100%;height:650px;" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0">
+            </iframe>
+        </div>
+    </section>
+    <section id="section_reason" style="height: 1500px; background-image: url(assets/4_back.svg);">
+        <div class="container-fluid" style="background-color: rgba(225,225,225,0.4); height: 100%;">
 
-			</div>
-			<div class="content2" style="margin-top: 30%;width: 85%;z-index: 0; left: 50%;transform: translate(-50%,0);text-align: center;">
-				<img class="papernote1" src="assets/6_paper.svg" style="width: 100%; position: absolute;left: 0;border-radius: 2% 2% 0% 0%">
-				<h3 style="color:#333;margin: 10%;top: 30px;line-height: 36px;">為什麼實質薪資停滯讓年輕人這麼痛？<br>實質薪資停滯代表著低薪嗎？</h3>
-				<p class="p1">
-					&nbsp;&nbsp;&nbsp;&nbsp; 近兩年的實質薪資儘管逐步回升，但不能忽視的是在2009後的這十年內，實質薪資相比與1990年代是倒退許多的，而對於剛出社會的年輕人來說25-35歲是累積資本的一大黃金時期，或許正象徵著低薪時代的強勢來襲。除此之外，台大經濟系廖珮如教授亦指出時代的改變，使得這個世代的年輕人更難以累積資本。在過去，不會有滿街的餐廳、飲料店，更不需要人人一台手機、平板，現代需要消費的物品更多，因此消費型態的變化與實質薪資停滯的交織下，才會使年輕人的痛感更深。
-				</p>
-			</div>
-		</div>
-	</section>
-	<section id="section_todo" style="overflow: hidden">
-		<div class="container-fluid" style="background-image: url(assets/4_back.svg);">
-			<img src="assets/8_todo.svg" style="width: 90%;margin-left: 55px;margin-bottom: 0px;">
-		</div>
-	</section>
+            <div class="content1" style="margin-top: 10%;width: 85%;z-index: 0; left: 50%;transform: translate(-50%,0);text-align: center;">
+                <img class="papernote1" src="assets/6_paper.svg" style="width: 100%;position: absolute;left: 0;border-radius: 2% 2% 0% 0%">
+                <h3 style="color:#333;margin: 5%;top: 0px;">高教擴張與科技化成為實質薪資停滯的兩大主因</h3>
+                <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;臺大經濟系廖珮如教授指出迅速擴張的高等教育是薪資停滯的一大主因，2000年的大學錄取率將近60%，到了2009年時已達97%。大學畢業後，多數青年選擇投身於辦公室白領階級，當企業對人力的需求並沒有因為高教擴張增加，人才的供給卻不斷上升時，不僅拉低了薪資，大量的大學文憑也使企業難以分辨好壞，導致各產業皆採最低薪資聘用新進青年勞工，進而促使低薪與薪資停滯的現象發生。</p>
+
+                <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;另一主因源自機器化與自動化，機器大量取代人力，導致企業大幅降低對人力的需求。在高等教育擴張與機器化下，人的被取代性增加，這也造就現在的薪資停滯不前。除了兩項因素以外，許多結構性的因素如全球化、國內產業升級面臨瓶頸都強化了此一趨勢，使得現在的實質薪資再難如1990年代一樣不斷上升。
+                </p>
+
+            </div>
+            <div class="content2" style="margin-top: 10%;width: 85%;z-index: 0; left: 50%;transform: translate(-50%,0);text-align: center;">
+                <img class="papernote1" src="assets/6_paper.svg" style="height: 50vh; width: 100%; position: absolute;left: 0;border-radius: 2% 2% 0% 0%">
+                <h3 style="color:#333;margin: 10%;top: 0px;line-height: 36px;">為什麼實質薪資停滯讓年輕人這麼痛？<br>實質薪資停滯代表著低薪嗎？</h3>
+                <p class="p1">
+                    &nbsp;&nbsp;&nbsp;&nbsp; 近兩年的實質薪資儘管逐步回升，但不能忽視的是在2009後的這十年內，實質薪資相比與1990年代是倒退許多的，而對於剛出社會的年輕人來說25-35歲是累積資本的一大黃金時期，或許正象徵著低薪時代的強勢來襲。除此之外，台大經濟系廖珮如教授亦指出時代的改變，使得這個世代的年輕人更難以累積資本。在過去，不會有滿街的餐廳、飲料店，更不需要人人一台手機、平板，現代需要消費的物品更多，因此消費型態的變化與實質薪資停滯的交織下，才會使年輕人的痛感更深。
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="section_todo" style="overflow: hidden">
+        <div class="container-fluid" style="background-image: url(assets/4_back.svg);height: 650px;padding-top: 5%;position: absolute;">
+            <img src="assets/8_todo.svg" style="width: 90%;margin-left: 55px;margin-bottom: 0px;z-index: 0;">
+            <div class="content3" style="z-index:1;margin-top: -70vh;width: 60%;left:20%;color: black;">
+                <h3>年輕人該怎麼做？</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;「低薪是現在社會結構下的平均現象」廖珮如教授肯定地說，由於社會中仍存在著高薪結構，如研發專業人員； 相較之下製造業在過去受到產業外移影響，使得平均薪資較低；服務業則受到高教擴張與科技化的影響，薪水有下降的趨勢。因此，廖珮如教授建議年輕人能多增加自身附加價值，去抵抗高教擴張、全球化、科技化等不可逆的社會現象，以突破現狀實現自身理想。
+                </p>
+                </div>
+        </div>
+    </section>
 
 
 
-	<!-- partial -->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="./script.js"></script>
 
 </body>
+
 </html>
