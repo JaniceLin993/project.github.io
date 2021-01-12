@@ -1,3 +1,8 @@
+//scroller
+$(document).ready(function() {
+	var s = skrollr.init();
+});
+
 //control menu
 $(document).on("click", ".menu", function () {
 	$(".menu").addClass("menu_clicked");
@@ -10,16 +15,10 @@ $(document).on("click", ".menu_clicked", function () {
 
 // Store section infos
 var sections = [
-	"section_notes",
-	"section_conflict",
-	"section1",
-	"section2",
-	"section5",
-	"section6",
-	"section7",
-	"section8",
-	"section9",
-	"section10"
+"section_notes",
+"section_conflict",
+"section_simple",
+"section_lowwage_question"
 ];
 
 var vm = new Vue({
@@ -34,10 +33,10 @@ $(document).on("click", "a", function (e) {
 	e.preventDefault();
 	var target = $(this).attr("href");
 	$("html, body").animate(
-		{
-			scrollTop: $(target).offset().top
-		},
-		500
+	{
+		scrollTop: $(target).offset().top
+	},
+	500
 	);
 });
 
@@ -59,135 +58,63 @@ $(window).scroll(function () {
 	var window_h_half = $(window).height() / 2;
 	var section_notes_pos = $("#section_notes").offset().top;
 	var section_conflict_pos = $("#section_conflict").offset().top;
-	var sec3_pos = $("#section1").offset().top;
-	var sec4_pos = $("#section2").offset().top;
-	var sec5_pos = $("#section5").offset().top;
-	var sec6_pos = $("#section6").offset().top;
-	var sec7_pos = $("#section7").offset().top;
-	var sec8_pos = $("#section8").offset().top;
-	var sec9_pos = $("#section9").offset().top;
-	var sec10_pos = $("#section10").offset().top;
+	var section_simple_pos = $("#section_simple").offset().top;
+	var section_lowwage_question_pos = $("#section_lowwage_question").offset().top;
 	if (
 		current_pos >= section_notes_pos &&
 		current_pos <= section_notes_pos + $("#section_notes").outerHeight()
-	) {
+		) {
 		$(".nav_bar .nav_column .content.section_notes").css(
 			"background-color",
 			"#9ECCFB"
-		);
-	} else {
-		$(".nav_bar .nav_column .content.section_notes").css("background-color", "#666");
-	}
-	if (
-		current_pos >= section_notes_pos - window_h_half &&
-		current_pos <= section_notes_pos + $("#section_notes").outerHeight() - window_h_half
+			);
+} else {
+	$(".nav_bar .nav_column .content.section_notes").css("background-color", "#666");
+}
+if (
+	current_pos >= section_notes_pos - window_h_half &&
+	current_pos <= section_notes_pos + $("#section_notes").outerHeight() - window_h_half
 	) {
-		$(".nav_bar .nav_column .content.section_notes").css(
-			"background-color",
-			"#9ECCFB"
+	$(".nav_bar .nav_column .content.section_notes").css(
+		"background-color",
+		"#9ECCFB"
 		);
-	} else {
-		$(".nav_bar .nav_column .content.section_notes").css("background-color", "#666");
-	}
-	if (
-		current_pos >= section_conflict_pos - window_h_half &&
-		current_pos <= section_conflict_pos + $("#section_conflict").outerHeight() - window_h_half
+} else {
+	$(".nav_bar .nav_column .content.section_notes").css("background-color", "#666");
+}
+if (
+	current_pos >= section_conflict_pos - window_h_half &&
+	current_pos <= section_conflict_pos + $("#section_conflict").outerHeight() - window_h_half
 	) {
-		$(".nav_bar .nav_column .content.section_conflict").css(
-			"background-color",
-			"#9ECCFB"
+	$(".nav_bar .nav_column .content.section_conflict").css(
+		"background-color",
+		"#9ECCFB"
 		);
-	} else {
-		$(".nav_bar .nav_column .content.section_conflict").css("background-color", "#666");
-	}
-	if (
-		current_pos >= sec3_pos - window_h_half &&
-		current_pos <= sec3_pos + $("#section1").outerHeight() - window_h_half
+} else {
+	$(".nav_bar .nav_column .content.section_conflict").css("background-color", "#666");
+}
+if (
+	current_pos >= section_simple_pos - window_h_half &&
+	current_pos <= section_simple_pos + $("#section_simple").outerHeight() - window_h_half
 	) {
-		$(".nav_bar .nav_column .content.section1").css(
-			"background-color",
-			"#9ECCFB"
+	$(".nav_bar .nav_column .content.section_simple").css(
+		"background-color",
+		"#9ECCFB"
 		);
-	} else {
-		$(".nav_bar .nav_column .content.section1").css("background-color", "#666");
-	}
-	if (
-		current_pos >= sec4_pos - window_h_half &&
-		current_pos <= sec4_pos + $("#section2").outerHeight() - window_h_half
+} else {
+	$(".nav_bar .nav_column .content.section_simple").css("background-color", "#666");
+}
+if (
+	current_pos >= section_lowwage_question_pos - window_h_half &&
+	current_pos <= section_lowwage_question_pos + $("#section_lowwage_question").outerHeight() - window_h_half
 	) {
-		$(".nav_bar .nav_column .content.section2").css(
-			"background-color",
-			"#9ECCFB"
+	$(".nav_bar .nav_column .content.section_lowwage_question").css(
+		"background-color",
+		"#9ECCFB"
 		);
-	} else {
-		$(".nav_bar .nav_column .content.section2").css("background-color", "#666");
-	}
-	if (
-		current_pos >= sec5_pos - window_h_half &&
-		current_pos <= sec5_pos + $("#section5").outerHeight() - window_h_half
-	) {
-		$(".nav_bar .nav_column .content.section5").css(
-			"background-color",
-			"#9ECCFB"
-		);
-	} else {
-		$(".nav_bar .nav_column .content.section5").css("background-color", "#666");
-	}
-	if (
-		current_pos >= sec6_pos - window_h_half &&
-		current_pos <= sec6_pos + $("#section6").outerHeight() - window_h_half
-	) {
-		$(".nav_bar .nav_column .content.section6").css(
-			"background-color",
-			"#9ECCFB"
-		);
-	} else {
-		$(".nav_bar .nav_column .content.section6").css("background-color", "#666");
-	}
-	if (
-		current_pos >= sec7_pos - window_h_half &&
-		current_pos <= sec7_pos + $("#section7").outerHeight() - window_h_half
-	) {
-		$(".nav_bar .nav_column .content.section7").css(
-			"background-color",
-			"#9ECCFB"
-		);
-	} else {
-		$(".nav_bar .nav_column .content.section7").css("background-color", "#666");
-	}
-	if (
-		current_pos >= sec8_pos - window_h_half &&
-		current_pos <= sec8_pos + $("#section8").outerHeight() - window_h_half
-	) {
-		$(".nav_bar .nav_column .content.section8").css(
-			"background-color",
-			"#9ECCFB"
-		);
-	} else {
-		$(".nav_bar .nav_column .content.section8").css("background-color", "#666");
-	}
-	if (
-		current_pos >= sec9_pos - window_h_half &&
-		current_pos <= sec9_pos + $("#section9").outerHeight() - window_h_half
-	) {
-		$(".nav_bar .nav_column .content.section9").css(
-			"background-color",
-			"#9ECCFB"
-		);
-	} else {
-		$(".nav_bar .nav_column .content.section9").css("background-color", "#666");
-	}
-	if (
-		current_pos >= sec10_pos - window_h_half &&
-		current_pos <= sec10_pos + $("#section10").outerHeight() - window_h_half
-	) {
-		$(".nav_bar .nav_column .content.section10").css(
-			"background-color",
-			"#9ECCFB"
-		);
-	} else {
-		$(".nav_bar .nav_column .content.section10").css("background-color", "#666");
-	}
+} else {
+	$(".nav_bar .nav_column .content.section_lowwage_question").css("background-color", "#666");
+}
 });
 
 // video fixed/abs & explore
@@ -214,10 +141,10 @@ $(window).scroll(function () {
 
 // control video
 $(".banner_video").on("timeupdate", function(){
-    if(this.currentTime >= 5) {
-        this.pause();
-	   	$(".1_note").css("opacity","1");
-    }
+	if(this.currentTime >= 5) {
+		this.pause();
+		$(".1_note").css("opacity","1");
+	}
 });
 
 // control note 
@@ -226,9 +153,9 @@ $(window).scroll(function () {
 	var section_notes_pos = $("#section_notes").offset().top;
 	var vh = $(window).outerHeight();
 	if(current_pos >0){
-	   	$(".1_note").css("opacity","1");
+		$(".1_note").css("opacity","1");
 	}else{
-	   	$(".1_note").css("opacity","0");
+		$(".1_note").css("opacity","0");
 
 	}
 	if (current_pos + vh >= section_notes_pos) {
@@ -250,11 +177,11 @@ $(window).scroll(function () {
 $(window).scroll(function () {
 	var current_pos = $(window).scrollTop();
 	var section_conflict_pos = $("#section_conflict").offset().top;
-	var section1_pos = $("#section1").offset().top;
+	var section_simple_pos = $("#section_simple").offset().top;
 	var vh = $(window).outerHeight();
 	if(current_pos>=section_conflict_pos){
 		$("#section_conflict .container-fluid").addClass("fixed");
-		if (current_pos + vh >= section1_pos) {
+		if (current_pos + vh >= section_simple_pos) {
 			$("#section_conflict .container-fluid").removeClass("fixed");
 			$("#section_conflict .container-fluid").addClass("absolute");
 		} else {
@@ -263,7 +190,7 @@ $(window).scroll(function () {
 		}}else{
 			$("#section_conflict .container-fluid").removeClass("fixed");
 		}
-});
+	});
 
 //people move
 $(window).mousemove(function (e) {
@@ -322,9 +249,48 @@ $(window).scroll(function () {
 	} else {
 		$(".conversation .line6").css("opacity", 0);
 	}
+});
 
-//scroller
-$(document).ready(function () {
-	var s = skrollr.init();
+
+//section_others
+$(window).scroll(function(){
+	var current_pos = $(window).scrollTop();
+	var section_simple_pos = $("#section_simple").offset().top;
+	var vh = $(window).outerHeight();
+	var section_lowwage_question_pos = $("#section_lowwage_question").offset().top;
+
+	if(current_pos >= section_simple_pos){
+		$("#section_simple .container-fluid .photo").addClass("fixed_photo");
+		if(current_pos + vh >= section_lowwage_question_pos){
+			$("#section_simple .container-fluid .photo").removeClass("fixed_photo_");
+			$("#section_simple .container-fluid .photo").addClass("abs_photo");
+		}else{
+			$("#section_simple .container-fluid .photo").addClass("fixed_photo");
+			$("#section_simple .container-fluid .photo").removeClass("abs_photo");
+		}
+	} else {
+		$("#section_simple .container-fluid .photo").removeClass("fixed_photo");
+	}
+	var section_realwage_1_pos = $("#section_realwage_1").offset().top;
+	var section_realwage_2_pos = $("#section_realwage_2").offset().top;
+if(current_pos >= section_realwage_1_pos){
+		$("#section_realwage_1 .container-fluid .sticky").addClass("fixed_sticky");
+		if(current_pos + vh >= section_realwage_2_pos){
+			$("#section_realwage_1 .container-fluid .sticky").removeClass("fixed_sticky");
+			$("#section_realwage_1 .container-fluid .sticky").addClass("abs_sticky");
+		}else{
+			$("#section_realwage_1 .container-fluid .sticky").addClass("fixed_sticky");
+			$("#section_realwage_1 .container-fluid .sticky").removeClass("abs_sticky");
+		}
+	} else {
+		$("#section_realwage_1 .container-fluid .sticky").removeClass("fixed_sticky");
+	}
+
+	if (current_pos >= section_realwage_2_pos){
+		$("#section_realwage_2 .container-fluid").addClass("fixed");
+	}else{
+		$("#section_realwage_2 .container-fluid").removeClass("fixed");		
+	}
 });
-});
+
+
