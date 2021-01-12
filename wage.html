@@ -47,16 +47,16 @@
             line-height: 36px;
         }
 
-        .section {
+        .container {
             background-color: cadetblue;
 
         }
 
-        .section0 {
+        .container0 {
             background-color: cadetblue;
         }
 
-        .section1 {
+        .container1 {
 
             text-align: center;
             padding: 10px 150px;
@@ -70,11 +70,11 @@
             text-align: center;
         }
 
-        .container-fluid {
+        #section1 {
             position: relative;
         }
 
-        .section2 {
+        .container2{
             background-image: url(assets/4_back.svg);
             background-repeat: repeat;
             padding: 10px 50px;
@@ -82,7 +82,7 @@
             z-index: 1;
         }
 
-        .section3 {
+        .container3 {
             background-color: dimgray;
             background-repeat: repeat;
             padding-top: 70px;
@@ -96,7 +96,7 @@
         }
 
 
-        .section4 {
+        .container4 {
             height: 1500px;
 
             padding: 80px 130px 80px 130px;
@@ -109,7 +109,7 @@
 
         }
 
-        .section5 {
+        .container5 {
             background-image: url(assets/4_back.svg);
             position: relative;
             z-index: 1;
@@ -151,6 +151,9 @@
             color: #FFFFFF;
             border-radius: 6px 6px 0 0;
         }
+        .container0 .photo {
+            vertical-align: top;
+        }
 
     </style>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -162,16 +165,16 @@
 </head>
 
 <body>
-    
-    <div class="container-fluid" style="padding-left: 0px;padding-right:0px;position: relative;">
-        <div class="section0" style="height: 200vh;">
+
+    <section id="section1" style="padding-left: 0px;padding-right:0px;position: relative;">
+        <div class="container0" style="height: 200vh;">
             <div class="photo">
 
-                <img class="photo0" style="margin-left: 5%;margin-top: 8%;width: 35%; position: absolute;" src="assets/5_note.svg" data-bottom-top="opacity: 0; transform:translate(-100%,100%) scale(0.7)" data-600="opacity: 1;transform:translate(0,0) scale(1)" data-800="opacity: 0;">
+                <img class="photo0" style="margin-left: 5%;top: 20px;width: 35%; position: absolute;" src="assets/5_note.svg" data-bottom-top="opacity: 0; transform:translate(-8%,80%) scale(0.7)" data-400="opacity: 1;transform:translate(0,0) scale(1)" data-600="opacity: 0;">
 
-                <img class="photo1" style="margin-left: 3%;margin-top: 10%;width: 35%; position: absolute;" src="assets/5_youtube.svg" data-bottom-top="opacity: 0; transform:translate(-180%,200%) scale(0.5)" data-1150="opacity: 1;transform:translate(0,0) scale(1); position:absolute;" data-1600="opacity: 0;">
+                <img class="photo1" style="margin-left: 3%;margin-top: 10%;width: 35%; position: absolute;" src="assets/5_youtube.svg" data-bottom-top="opacity: 0; transform:translate(-100%,100%) scale(0.5)" data-1150="opacity: 1;transform:translate(0,0) scale(1); position:absolute;" data-1600="opacity: 0;">
             </div>
-            <div clas="contentdouble" style="margin:6% 4% 3% 48%; padding-left: 20px; position: absolute;" data-bottom-top="opacity: 0" data-600="opacity: 1" data-1470="opacity: 0.99;" data-1600="opacity: 0;">
+            <div class="contentdouble" style="margin:6% 4% 3% 48%; padding-left: 20px; position: absolute;" data-bottom-top="opacity: 0" data-600="opacity: 1" data-1470="opacity: 0.99;" data-1600="opacity: 0;">
                 <p><br></p>
                 <p><br></p>
                 <h3 class="title">當單純不再單純
@@ -191,9 +194,9 @@
             </div>
         </div>
 
-    </div>
-    <div class="container-fluid" style="padding-left: 0px;padding-right:0px;">
-        <div class="section1" style="height: 500px;">
+    </section>
+    <section class="section2" style="padding-left: 0px;padding-right:0px;">
+        <div class="container1" style="height: 500px;">
             <img class="papernote1" src="assets/5_keynote.svg" style="width: 75%;position: absolute;z-index: 1; left: 50%;transform: translate(-50%,0);margin-top: 4%;">
             <div class="content" style="z-index: 2;position: absolute;left: 50%;transform: translate(-50%,0);width: 80%;margin-top: 4%;">
                 <p><br></p>
@@ -204,7 +207,7 @@
                 <p> 「如何走出崩世代厭世代的宿命」、「青年低薪困境」，這些新聞標題已不足為奇，似乎已是這個社會共同接受的事實，在調查中我們卻發現認為低薪不存在的人們不在少數，甚至認為這僅僅只是抱怨或是媒體的扭曲，但是社會新鮮人卻飽受其苦，那近三十年的薪資成長幅度究竟是什麼呢？</p>
             </div>
         </div>
-        <div class="section2" style="height: 1550px;">
+        <div class="container2" style="height: 1550px;">
 
             <div class="w-1024 mx-auto rwd">
                 <div id="parallax-start"></div>
@@ -239,14 +242,14 @@
             <div style="padding:3em 0"></div>
             <div id="parallax-end"></div>
         </div>
-        <div class="section3">
+        <div class="container3">
             <iframe src="https://cdn.knightlab.com/libs/storyline/latest/embed/index.html?dataURL=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vSAankC4DPIH5gO1dmmFYCDRMBUmjJT2GMs-aRsWSqfm1pYKQaoXIvQZkQjM7UPhgkRiNZd0ffWnqkx%2Fpubhtml&amp;dataYCol=%E6%AF%8F%E4%BA%BA%E6%AF%8F%E6%9C%88%E5%AF%A6%E8%B3%AA%E7%B8%BD%E8%96%AA%E8%B3%87&amp;dataXCol=year&amp;dataDateFormat=%25Y&amp;chartDateFormat=%25Y&amp;chartYLabel=%E6%AF%8F%E4%BA%BA%E6%AF%8F%E6%9C%88%E5%AF%A6%E8%B3%AA%E7%B8%BD%E8%96%AA%E8%B3%87&amp;sliderCardTitleCol=title&amp;sliderCardTextCol=text" style="width:100%;height:650px;" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0">
             </iframe>
 
         </div>
 
-        <div class="section4">>
-            <img class="papernote1" src="assets/6_paper.png" style="width: 72%;height: 34%; position: absolute;z-index: 0; left: 50%;transform: translate(-50%,0);">
+        <div class="container4">>
+            <img class="papernote1" src="assets/6_paper.svg" style="width: 72%;height: 34%; position: absolute;z-index: 0; left: 50%;transform: translate(-50%,0);">
 
             <div class="content1" style="position: absolute;">
 
@@ -259,7 +262,7 @@
 
             </div>
 
-            <img class="papernote1" src="assets/6_paper.png" style="margin-top:750px;width: 72%;height: 27%;position: absolute;z-index: 0; left: 50%;transform: translate(-50%,0);">
+            <img class="papernote1" src="assets/6_paper.svg" style="margin-top:750px;width: 72%;height: 27%;position: absolute;z-index: 0; left: 50%;transform: translate(-50%,0);">
             <div class="content2" style="position: absolute;">
 
                 <h3>為什麼實質薪資停滯讓年輕人這麼痛？實質薪資停滯代表著低薪嗎？</h3>
@@ -270,50 +273,50 @@
 
 
         </div>
-        <div class="section5">
+        <div class="container5">
             <div class="todo">
                 <img src="assets/8_todolist_new.svg" style="width: 90%;margin-left: 55px;margin-bottom: 0px;">
             </div>
         </div>
-    </div>
+    </section>
 
 
     <script>
-        document.querySelector("div.section2 > div.sticky > div > video")
+        document.querySelector("div.container2 > div.sticky > div > video")
 
-        var section3_pos = $('div.section3').offset().top;
-        var section5_pos = $('div.section5').offset().top;
+        var container3_pos = $('div.container3').offset().top;
+        var container5_pos = $('div.container5').offset().top;
 
         $(window).scroll(function() {
             var current_pos = $(window).scrollTop();
             console.log("current scroll position" + current_pos);
 
-            if (current_pos >= section3_pos) {
-                $('div.section3').addClass('fixed');
-                if (current_pos + vh >= section5_pos) {
-                    $('div.section3').removeClass('fixed');
+            if (current_pos >= container3_pos) {
+                $('div.container3').addClass('fixed');
+                if (current_pos + vh >= container5_pos) {
+                    $('div.container3').removeClass('fixed');
                 } else {
-                    $('div.section3').addClass('fixed');
+                    $('div.container3').addClass('fixed');
                 }
 
             } else {
-                $('.section3').removeClass('fixed');
+                $('.container3').removeClass('fixed');
             }
 
         });
         $(document).ready(function() {
             var s = skrollr.init();
         });
-        var section0_pos = $('div.section0').offset().top;
+        var container0_pos = $('div.container0').offset().top;
         var vh = $(window).outerHeight();
 
-        var section1_pos = $('div.section1').offset().top;
+        var container1_pos = $('div.container1').offset().top;
         $(window).scroll(function() {
             var current_pos = $(window).scrollTop();
 
-            if (current_pos >= section0_pos) {
+            if (current_pos >= container0_pos) {
                 $('div.photo').addClass('fixed');
-                if (current_pos >= section1_pos) {
+                if (current_pos >= container1_pos) {
                     $('div.photo').removeClass('fixed');
 
                 } else {
@@ -331,6 +334,7 @@
 
     </script>
     
+
 </body>
 
 </html>
