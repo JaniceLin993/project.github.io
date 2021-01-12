@@ -12,8 +12,8 @@ $(document).on("click", ".menu_clicked", function () {
 var sections = [
 	"section_notes",
 	"section_conflict",
-	"section3",
-	"section4",
+	"section1",
+	"section2",
 	"section5",
 	"section6",
 	"section7",
@@ -59,8 +59,8 @@ $(window).scroll(function () {
 	var window_h_half = $(window).height() / 2;
 	var section_notes_pos = $("#section_notes").offset().top;
 	var section_conflict_pos = $("#section_conflict").offset().top;
-	var sec3_pos = $("#section3").offset().top;
-	var sec4_pos = $("#section4").offset().top;
+	var sec3_pos = $("#section1").offset().top;
+	var sec4_pos = $("#section2").offset().top;
 	var sec5_pos = $("#section5").offset().top;
 	var sec6_pos = $("#section6").offset().top;
 	var sec7_pos = $("#section7").offset().top;
@@ -102,25 +102,25 @@ $(window).scroll(function () {
 	}
 	if (
 		current_pos >= sec3_pos - window_h_half &&
-		current_pos <= sec3_pos + $("#section3").outerHeight() - window_h_half
+		current_pos <= sec3_pos + $("#section1").outerHeight() - window_h_half
 	) {
-		$(".nav_bar .nav_column .content.section3").css(
+		$(".nav_bar .nav_column .content.section1").css(
 			"background-color",
 			"#9ECCFB"
 		);
 	} else {
-		$(".nav_bar .nav_column .content.section3").css("background-color", "#666");
+		$(".nav_bar .nav_column .content.section1").css("background-color", "#666");
 	}
 	if (
 		current_pos >= sec4_pos - window_h_half &&
-		current_pos <= sec4_pos + $("#section4").outerHeight() - window_h_half
+		current_pos <= sec4_pos + $("#section2").outerHeight() - window_h_half
 	) {
-		$(".nav_bar .nav_column .content.section4").css(
+		$(".nav_bar .nav_column .content.section2").css(
 			"background-color",
 			"#9ECCFB"
 		);
 	} else {
-		$(".nav_bar .nav_column .content.section4").css("background-color", "#666");
+		$(".nav_bar .nav_column .content.section2").css("background-color", "#666");
 	}
 	if (
 		current_pos >= sec5_pos - window_h_half &&
@@ -250,11 +250,11 @@ $(window).scroll(function () {
 $(window).scroll(function () {
 	var current_pos = $(window).scrollTop();
 	var section_conflict_pos = $("#section_conflict").offset().top;
-	var section3_pos = $("#section3").offset().top;
+	var section1_pos = $("#section1").offset().top;
 	var vh = $(window).outerHeight();
 	if(current_pos>=section_conflict_pos){
 		$("#section_conflict .container-fluid").addClass("fixed");
-		if (current_pos + vh >= section3_pos) {
+		if (current_pos + vh >= section1_pos) {
 			$("#section_conflict .container-fluid").removeClass("fixed");
 			$("#section_conflict .container-fluid").addClass("absolute");
 		} else {

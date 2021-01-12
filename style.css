@@ -1,3 +1,15 @@
+@keyframes scrollmove {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -20%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
 section {
   height: 100vh;
   border: solid 1px black;
@@ -215,6 +227,7 @@ html, body {
   text-align: center;
   line-height: 18px;
   opacity: 1;
+  animation: scrollmove 1.5s infinite;
 }
 #header .container-fluid .explore:after {
   display: block;
