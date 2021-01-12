@@ -52,8 +52,10 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     color: white;
+}
+body{
+  overflow-x: hidden;
 }
 
 .nav_bar {
@@ -480,4 +482,178 @@ section#section_reason .p1 {
     width: 80%;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+#section_contact {
+  background-image: url("https://i.imgur.com/WWwDpVl.png");
+  background-position: center;
+  height: 100vh;
+  transition: 2.5s;
+  overflow: hidden;
+}
+#section_contact .container-fluid {
+  height: 100vh;
+}
+#section_contact .container-fluid .great {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 150px;
+  opacity: 0;
+}
+#section_contact .container-fluid .mail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+}
+#section_contact .container-fluid .mail .mailcover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  transform: translate(-70%, -60%) rotate(-10deg);
+  transition: 1s;
+}
+#section_contact .container-fluid .mail .mailbody {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eee;
+  z-index: 1;
+  width: 55%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#section_contact .container-fluid .mail .mailbody label {
+  font-size: 36px;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+#section_contact .container-fluid .mail .mailbody textarea {
+  width: 80%;
+  height: 60%;
+}
+#section_contact .container-fluid .mail .mailbody button {
+  margin: 2% 0;
+}
+
+
+#section_road{
+height: 361px;
+overflow: hidden;
+}
+
+@keyframes cat_wavehand {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+section#cat_explain {
+  z-index: -1;
+  opacity: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 1s;
+}
+section#cat_explain .explain {
+  width: 40%;
+  height: 30%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eee;
+}
+section#cat_explain .explain .close {
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+  color: #123;
+  text-align: center;
+  bottom: 0;
+}
+
+img#cat_wavehand {
+  z-index: 10;
+  right: -3%;
+  bottom: 10%;
+  position: fixed;
+  width: 10%;
+  transform: rotate(0deg);
+  transform-origin: right bottom;
+  animation: cat_wavehand 1.5s infinite;
+  cursor: pointer;
+}
+
+.conclusion {
+  color: #333;
+}
+
+#section_conclusion {
+  /*background-image: url("https://i.imgur.com/hKxTaPe.png");*/
+  background-color: #eee;
+}
+#section_conclusion .conclusion {
+  margin: 0;
+  font-size: 36px;
+  text-align: center;
+  top: 40%;
+  width: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#section_conclusion img {
+  position: absolute;
+  width: 25%;
+}
+#section_conclusion .left_dark {
+  bottom: 5%;
+  left: 5%;
+}
+#section_conclusion .right_dark {
+  bottom: 5%;
+  right: 5%;
+}
+
+#section_youngppl {
+  height: 300vw;
+}
+#section_youngppl .container-fluid {
+  background-color: #eee;
+  padding: 0;
+  width: 300vw;
+  height: 100vh;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+#section_youngppl .container-fluid .people {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#section_youngppl .container-fluid .people .youngs {
+  height: 100vh;
+  left: 30vw;
+  transform: translate(-30%, 0);
+}
+#section_youngppl .container-fluid .people .youngs img {
+  height: 80vh;
 }
