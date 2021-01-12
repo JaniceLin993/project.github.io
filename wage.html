@@ -120,7 +120,12 @@
             bottom: 0px;
         }
 
-        .fixed {
+       .fixed_photo {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+        .fixed_container3 {
             position: fixed;
             top: 0px;
             width: 100%;
@@ -194,7 +199,7 @@
         </div>
 
     </section>
-    <section class="section2" style="padding-left: 0px;padding-right:0px;">
+    <section id="section2" style="padding-left: 0px;padding-right:0px;">
         <div class="container1" style="height: 500px;">
             <img class="papernote1" src="assets/5_keynote.svg" style="width: 75%;position: absolute;z-index: 1; left: 50%;transform: translate(-50%,0);margin-top: 4%;">
             <div class="content" style="z-index: 2;position: absolute;left: 50%;transform: translate(-50%,0);width: 80%;margin-top: 4%;">
@@ -291,15 +296,15 @@
             console.log("current scroll position" + current_pos);
 
             if (current_pos >= container3_pos) {
-                $('div.container3').addClass('fixed');
+                $('div.container3').addClass('fixed_container3');
                 if (current_pos + vh >= container5_pos) {
-                    $('div.container3').removeClass('fixed');
+                    $('div.container3').removeClass('fixed_container3');
                 } else {
-                    $('div.container3').addClass('fixed');
+                    $('div.container3').addClass('fixed_container3');
                 }
 
             } else {
-                $('.container3').removeClass('fixed');
+                $('.container3').removeClass('fixed_container3');
             }
 
         });
@@ -314,18 +319,18 @@
             var current_pos = $(window).scrollTop();
 
             if (current_pos >= container0_pos) {
-                $('div.photo').addClass('fixed');
+                $('div.photo').addClass('fixed_photo');
                 if (current_pos >= container1_pos) {
-                    $('div.photo').removeClass('fixed');
+                    $('div.photo').removeClass('fixed_photo');
 
                 } else {
-                    $('div.photo').addClass('fixed');
+                    $('div.photo').addClass('fixed_photo');
 
                 }
 
 
             } else {
-                $('.photo').removeClass('fixed');
+                $('.photo').removeClass('fixed_photo');
             }
 
         });
