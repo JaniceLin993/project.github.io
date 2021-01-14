@@ -233,7 +233,7 @@ $(window).scroll(function () {
 $(".banner_video").on("timeupdate", function(){
 	if(this.currentTime >= 5) {
 		this.pause();
-		$(".1_note").css("opacity","1");
+		$(".1_note").css("opacity","0");
 	}
 });
 
