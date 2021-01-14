@@ -230,12 +230,12 @@ $(window).scroll(function () {
 });
 
 // control video
-$(".banner_video").on("timeupdate", function(){
-	if(this.currentTime >= 5) {
-		this.pause();
-		$(".1_note").css("opacity","0");
-	}
-});
+// $(".banner_video").on("timeupdate", function(){
+// 	if(this.currentTime >= 5) {
+// 		this.pause();
+// 		$(".1_note").css("opacity","0");
+// 	}
+// });
 
 // control note 
 $(window).scroll(function () {
