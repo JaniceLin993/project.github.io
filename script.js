@@ -473,7 +473,7 @@ $(window).scroll(function(){
 		$(".photo0").css("opacity","0");	
 	}	
 
-	if(current_pos >= section_simple_pos + 2*vh/3){
+	if(current_pos >= section_simple_pos +vh/3){
 		$(".photo1").css("transform","translate(50%,-50%)");
 		$(".photo1").css("opacity","1");
 		$(".photo0").css("opacity","0");
