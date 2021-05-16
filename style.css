@@ -26,6 +26,7 @@
 }
 section {
     height: 100vh;
+    width: 100vw;
 }
 
 .container-fluid {
@@ -70,6 +71,7 @@ body {
 }
 body{
   overflow-x: hidden;
+  height: initial;
 }
 
 .nav_bar {
@@ -266,7 +268,7 @@ body{
 }
 
 #header {
-    height: 200vh;
+    height: 120vh;
 }
 
 #header .container-fluid {
@@ -658,6 +660,7 @@ img#cat_wavehand {
 
 #section_youngppl {
   height: 300vw;
+  width: 300vw;
 }
 #section_youngppl .container-fluid {
   background-image: url("assets/2_backnew.png");
