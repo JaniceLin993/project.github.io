@@ -308,33 +308,33 @@ $(window).scroll(function () {
 	var vh = $(window).outerHeight();
 	var section_pos = $("#section_conflict").offset().top;
 	var section_height = $("#section_conflict").outerHeight();
-	var scroll_persent = ((current_pos - section_pos + vh) / section_height) * 100;
-	if (scroll_persent >= 10) {
+	var scroll_percent = ((current_pos - section_pos + vh) / section_height) * 100;
+	if (scroll_percent >= 10) {
 		$(".conversation .line1").css("opacity", 1);
 	} else {
 		$(".conversation .line1").css("opacity", 0);
 	}
-	if (scroll_persent >= 30) {
+	if (scroll_percent >= 30) {
 		$(".conversation .line2").css("opacity", 1);
 	} else {
 		$(".conversation .line2").css("opacity", 0);
 	}
-	if (scroll_persent >= 40) {
+	if (scroll_percent >= 40) {
 		$(".conversation .line3").css("opacity", 1);
 	} else {
 		$(".conversation .line3").css("opacity", 0);
 	}
-	if (scroll_persent >= 60) {
+	if (scroll_percent >= 60) {
 		$(".conversation .line4").css("opacity", 1);
 	} else {
 		$(".conversation .line4").css("opacity", 0);
 	}
-	if (scroll_persent >= 75) {
+	if (scroll_percent >= 75) {
 		$(".conversation .line5").css("opacity", 1);
 	} else {
 		$(".conversation .line5").css("opacity", 0);
 	}
-	if (scroll_persent >= 90) {
+	if (scroll_percent >= 90) {
 		$(".conversation .line6").css("opacity", 1);
 	} else {
 		$(".conversation .line6").css("opacity", 0);

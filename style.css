@@ -68,6 +68,7 @@ body {
     margin: 0;
     padding: 0;
     color: white;
+    overflow-y: visible !important;
 }
 body{
   overflow-x: hidden;
