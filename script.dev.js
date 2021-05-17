@@ -1,8 +1,7 @@
 "use strict";
 
 //scroller
-$(document).ready(function () {
-  var s = skrollr.init();
+$(document).ready(function () {// var s = skrollr.init();
 }); //control menu
 
 $(document).on("click", ".menu", function () {
@@ -193,8 +192,6 @@ $(window).scroll(function () {
 
 $(window).scroll(function () {
   var current_pos = $(window).scrollTop();
-  var section_conflict_pos = $("#section_conflict").offset().top;
-  var section_simple_pos = $("#section_simple").offset().top;
   var vh = $(window).outerHeight();
 
   if (current_pos >= section_conflict_pos) {

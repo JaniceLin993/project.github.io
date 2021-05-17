@@ -45,18 +45,20 @@
 }
 * {
   position: relative;
-  border: solid 0.5px black;
   font-family: "Gen Jyuu Gothic Bold", "Gen Jyuu Gothic Meduim", "Gen Jyuu Gothic Regular";
+}
+
+p {
+  font-family: "Gen Jyuu Gothic Regular";
 }
 
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
-  overflow-x: hidden;
 }
 
-body {
+html {
   background-image: url("assets/2_backnew.png");
 }
 
@@ -293,7 +295,7 @@ section {
 }
 
 #section_conflict .container-fluid {
-  position: sticky;
+  position: absolute;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -316,6 +318,16 @@ section {
 }
 #section_conflict .container-fluid .conversation .line img {
   height: 11vh;
+}
+
+#section_conflict .container-fluid.absolute {
+  position: absolute;
+  bottom: 0;
+}
+
+#section_conflict .container-fluid.fixed {
+  position: fixed;
+  bottom: 0;
 }
 
 #section_conflict .container-fluid .conversation {
@@ -366,34 +378,355 @@ section {
   animation-delay: 0.6s;
 }
 
+#section_simple {
+  color: white;
+  height: 200vh;
+  background-image: url("assets/4_back.svg");
+}
+
 #section_simple .container-fluid {
+  padding: 0;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 #section_simple .container-fluid .photo {
-  flex: 5;
+  position: absolute;
+  left: 0;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #section_simple .container-fluid .photo img {
   position: absolute;
+  transition: 0.5s;
+  transform: translate(-20vw, 20vh);
+  opacity: 0;
 }
 #section_simple .container-fluid .photo .photo0 {
-  width: 20vw;
-}
-#section_simple .container-fluid .photo .photo1 {
   width: 30vw;
 }
+#section_simple .container-fluid .photo .photo1 {
+  width: 35vw;
+}
 #section_simple .container-fluid .contentDouble {
-  flex: 5;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 5vw;
+}
+#section_simple .container-fluid .contentDouble h3 {
+  margin-top: 30vh;
+}
+#section_simple .container-fluid .contentDouble p {
+  margin-top: 5vh;
+  max-width: 85%;
+  line-height: 220%;
+}
+#section_simple .container-fluid .contentDouble h3.title {
+  margin-top: 45vh;
+}
+
+#section_simple .container-fluid .photo.fixed {
+  position: fixed;
+  bottom: 0;
+}
+
+#section_simple .container-fluid .photo.absolute {
+  position: absolute;
+  bottom: 0;
+}
+
+#section_simple .container-fluid .photo img.photo0.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+#section_simple .container-fluid .photo img.photo1.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+#section_lowWage_question {
+  background-image: url("assets/4_back.svg");
+  background-size: cover;
+}
+
+#section_lowWage_question .container-fluid {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#section_lowWage_question .container-fluid .question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section_lowWage_question .container-fluid .question img.paperNote1 {
+  width: 80vw;
+  position: absolute;
+}
+#section_lowWage_question .container-fluid .question h3 {
+  top: 3vh;
+  font-size: 3vw;
+}
+#section_lowWage_question .container-fluid .content {
+  top: -10vh;
+}
+#section_lowWage_question .container-fluid .content p {
+  color: white;
+  width: 70vw;
+  font-size: 1.5vw;
+  line-height: 220%;
+}
+
+#section_realWage_1 {
+  color: white;
+  height: 200vh;
+  background-image: url("assets/4_back.svg");
+  background-size: cover;
+}
+
+#section_realWage_1 .container-fluid {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#section_realWage_1 .container-fluid .figure {
+  position: absolute;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section_realWage_1 .container-fluid .figure img {
+  width: 45vw;
+  right: 0;
+  position: absolute;
+  transition: 0.5s;
+}
+#section_realWage_1 .container-fluid .content {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 5vw;
+  justify-content: space-around;
+}
+#section_realWage_1 .container-fluid .content p {
+  font-size: 1.3vw;
+  margin-top: 5vh;
+  max-width: 85%;
+  line-height: 220%;
+}
+#section_realWage_1 .container-fluid .content .p3 {
+  top: -10vh;
+  align-self: center;
+  font-size: 2vw;
+}
+
+#section_realWage_1 .container-fluid .figure.fixed {
+  position: fixed;
+  bottom: 0;
+}
+
+#section_realWage_1 .container-fluid .figure.absolute {
+  position: absolute;
+  bottom: 0;
+}
+
+#section_realWage_2 {
+  height: 150vh;
+}
+#section_realWage_2 .container-fluid {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+#section_realWage_2 .container-fluid iframe {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 90vh;
+  transform-origin: center center;
+  transform: scale(0.95);
+  overflow-x: hidden;
+}
+
+#section_realWage_2 .container-fluid iframe.fixed {
+  position: fixed;
+}
+
+#section_reason {
+  background-image: url("assets/4_back.svg");
+  background-size: cover;
+  height: 250vh;
+}
+#section_reason .container-fluid {
+  background-color: rgba(225, 225, 225, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#section_reason .container-fluid .content1, #section_reason .container-fluid .content2 {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#section_reason .container-fluid .content1 {
+  align-self: flex-start;
+}
+
+#section_reason h3 {
+  font-size: 2vw;
+}
+#section_reason p {
+  width: 95%;
+  margin-top: 5vh;
+  font-size: 1.2vw;
+  line-height: 180%;
+}
+#section_reason img.paperNote1, #section_reason img.paperNote2 {
+  position: absolute;
+}
+#section_reason img.paperNote1 {
+  left: 0;
+  width: 90vw;
+}
+#section_reason img.paperNote2 {
+  width: 80vw;
+}
+
+#section_reason .content1 {
+  top: -25vh;
+}
+#section_reason .content1 h3, #section_reason .content1 p {
+  left: 25vw;
+  top: 22vh;
+}
+
+#section_reason .content2 {
+  top: -30vh;
+}
+#section_reason .content2 h3, #section_reason .content2 p {
+  top: 10vh;
+}
+#section_reason .content2 p {
+  width: 90%;
+  line-height: 220%;
+}
+
+#section_todo {
+  background-image: url("assets/4_back.svg");
+  background-size: cover;
+  background-color: rgba(225, 225, 225, 0.1);
+}
+#section_todo .container-fluid {
+  background-color: rgba(225, 225, 225, 0.1);
+  height: 100%;
+}
+#section_todo .container-fluid .content3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#section_todo .container-fluid .content3 img {
+  width: 70vw;
+  position: absolute;
+}
+#section_todo .container-fluid .content3 h3 {
+  top: -15vh;
+  font-size: 2vw;
+}
+#section_todo .container-fluid .content3 p {
+  width: 40vw;
+  top: -10vh;
+  font-size: 1vw;
+  line-height: 220%;
+}
+
+#section_road {
+  width: 100vw;
+}
+#section_road iframe {
+  overflow: hidden;
+}
+
+#section_youngPpl {
+  width: 300vw;
+  height: 300vh;
+  background-image: url("assets/2_backnew.png");
+  background-size: cover;
+}
+#section_youngPpl .container-fluid {
+  height: 100vh;
+  width: 100%;
+}
+#section_youngPpl .container-fluid .people {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#section_youngPpl .container-fluid .people .youngs {
+  width: 90vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+#section_youngPpl .container-fluid .people .youngs .background {
+  z-index: 0;
+  width: 100%;
+  position: absolute;
+}
+#section_youngPpl .container-fluid .people .youngs .man {
+  width: 12%;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 12%;
+  right: 4%;
+  transform: rotate(-7deg);
+}
+#section_youngPpl .container-fluid .people .youngs p {
+  left: 15%;
+  width: 70%;
+  z-index: 1;
+  line-height: 220%;
+}
+#section_youngPpl .container-fluid .people .youngs p.short {
+  width: 60%;
 }
 
 section {
   display: none;
 }
 
-#section_conflict, #section_simple {
-  display: initial;
-}
-
 #cat_waveHand {
   display: none;
+}
+
+header {
+  display: none;
+}
+
+#section_youngPpl {
+  display: block;
 }

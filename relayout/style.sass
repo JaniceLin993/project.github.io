@@ -37,17 +37,18 @@
 
 *
     position: relative
-    border: solid .5px black
+    // border: solid .5px black
     font-family: 'Gen Jyuu Gothic Bold', 'Gen Jyuu Gothic Meduim', 'Gen Jyuu Gothic Regular'
 
+p
+    font-family: 'Gen Jyuu Gothic Regular'
 
 html, body
     padding: 0
     margin: 0
     width: 100%
-    // height: 100%
-    overflow-x: hidden
-body
+    // overflow-x: hidden
+html
     background-image: url("assets/2_backnew.png")
 section 
     height: 100vh
@@ -255,7 +256,7 @@ section
 #section_conflict
     height: 200vh
 #section_conflict .container-fluid
-    position: sticky
+    position: absolute
     height: 100vh
     width: 100vw
     display: flex
@@ -273,6 +274,13 @@ section
             opacity: 0
             img
                 height: 11vh
+
+#section_conflict .container-fluid.absolute
+    position: absolute
+    bottom: 0
+#section_conflict .container-fluid.fixed
+    position: fixed
+    bottom: 0
 
 #section_conflict .container-fluid .conversation
     display: flex
@@ -302,27 +310,283 @@ section
         .line#{(2*$i)}
             animation-delay: 0.2s*$i
 
+#section_simple
+    color: white
+    height: 200vh
+    background-image: url("assets/4_back.svg")
 #section_simple .container-fluid
+    padding: 0
+    height: 100%
     display: flex
-    justify-content: space-between
+    justify-content: flex-end
     .photo
-        flex: 5
+        position: absolute
+        left: 0
+        width: 40vw
+        height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
         img
             position: absolute
+            transition: .5s
+            transform: translate(-20vw,20vh)
+            opacity: 0
         .photo0
-            width: 20vw
-        .photo1
             width: 30vw
+        .photo1
+            width: 35vw
     .contentDouble
-        flex: 5
+        width: 60vw
+        display: flex
+        flex-direction: column
+        align-items: start
+        padding-left: 5vw
+        h3
+            margin-top: 30vh
+        p
+            margin-top: 5vh
+            max-width: 85%
+            line-height: 220%
+        h3.title
+            margin-top: 45vh
 
+#section_simple .container-fluid .photo.fixed
+    position: fixed
+    bottom: 0
+#section_simple .container-fluid .photo.absolute
+    position: absolute
+    bottom: 0
+
+#section_simple .container-fluid .photo img.photo0.show
+    transform: translate(0,0)
+    opacity: 1
+#section_simple .container-fluid .photo img.photo1.show
+    transform: translate(0,0)
+    opacity: 1
+
+
+
+#section_lowWage_question
+    background-image: url("assets/4_back.svg")
+    background-size: cover
+#section_lowWage_question .container-fluid
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    .question
+        display: flex
+        justify-content: center
+        align-items: center
+        img.paperNote1
+            width: 80vw
+            position: absolute
+        h3
+            top: 3vh
+            font-size: 3vw
+    .content
+        top: -10vh
+        p
+            color: white
+            width: 70vw
+            font-size: 1.5vw
+            line-height: 220%
+
+
+#section_realWage_1
+    color: white
+    height: 200vh
+    background-image: url("assets/4_back.svg")
+    background-size: cover
+#section_realWage_1 .container-fluid
+    padding: 0
+    height: 100%
+    display: flex
+    justify-content: flex-end
+    .figure
+        position: absolute
+        left: 0
+        width: 50vw
+        height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            width: 45vw
+            right: 0
+            position: absolute
+            transition: .5s
+    .content
+        width: 50vw
+        display: flex
+        flex-direction: column
+        align-items: start
+        padding-left: 5vw
+        justify-content: space-around
+        p
+            font-size: 1.3vw
+            margin-top: 5vh
+            max-width: 85%
+            line-height: 220%
+        .p3
+            top: -10vh
+            align-self: center
+            font-size: 2vw
+#section_realWage_1 .container-fluid .figure.fixed
+    position: fixed
+    bottom: 0
+#section_realWage_1 .container-fluid .figure.absolute
+    position: absolute
+    bottom: 0
+
+#section_realWage_2
+    height: 150vh
+    .container-fluid
+        height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow-x: hidden
+        iframe
+            position: absolute
+            bottom: 0
+            width: 100vw
+            height: 90vh
+            transform-origin: center center
+            transform: scale(0.95)
+            overflow-x: hidden
+#section_realWage_2 .container-fluid iframe.fixed
+    position: fixed
+
+#section_reason
+    background-image: url("assets/4_back.svg")
+    background-size: cover
+    height: 250vh
+    .container-fluid
+        background-color: rgba(225,225,225,0.1)
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        .content1, .content2
+            width: 60vw
+            display: flex
+            flex-direction: column
+            align-items: center
+        .content1
+            align-self: flex-start
+#section_reason
+    h3
+        font-size: 2vw
+    p
+        width: 95%
+        margin-top: 5vh
+        font-size: 1.2vw
+        line-height: 180%
+    img.paperNote1, img.paperNote2
+        position: absolute
+    img.paperNote1
+        left: 0
+        width: 90vw
+    img.paperNote2
+        width: 80vw
+#section_reason .content1
+    top: -25vh
+    h3, p
+        left: 25vw
+        top: 22vh
+#section_reason .content2
+    top: -30vh
+    h3, p
+        top: 10vh
+    p
+        width: 90%
+        line-height: 220%
+    
+#section_todo
+    background-image: url("assets/4_back.svg")
+    background-size: cover
+    background-color: rgba(225,225,225,0.1)
+    .container-fluid
+        background-color: rgba(225,225,225,0.1)
+        height: 100%
+        .content3
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            img
+                width: 70vw
+                position: absolute
+            h3
+                top: -15vh
+                font-size: 2vw
+            p
+                width: 40vw
+                top: -10vh
+                font-size: 1vw
+                line-height: 220%
+
+#section_road
+    width: 100vw
+    iframe
+        overflow: hidden
+
+#section_youngPpl
+    width: 300vw
+    height: 300vh
+    background-image: url("assets/2_backnew.png")
+    background-size: cover
+    .container-fluid
+        height: 100vh
+        width: 100%
+        .people
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: space-between
+            .youngs
+                width: 90vw
+                height: 100%
+                display: flex
+                flex-direction: column 
+                justify-content: center
+                align-items: start
+                .background
+                    z-index: 0
+                    width: 100%
+                    position: absolute
+                    // top: 0
+                .man
+                    width: 12%
+                    align-self: flex-end
+                    position: absolute
+                    bottom: 12%
+                    right: 4%
+                    transform: rotate(-7deg)
+                p   
+                    left: 15%
+                    width: 70%
+                    z-index: 1
+                    line-height: 220%
+                p.short
+                    width: 60%
 
 
 section
     display: none
-#section_conflict, #section_simple
-    display: initial
 #cat_waveHand
     display: none
 header
-    // display: none
+    display: none
+#section_road, #section_todo, #section_reason, #section_realWage_2, #section_realWage_1, #section_conflict, #section_simple, #section_notes, #section_lowWage_question
+    // display: block
+
+#section_youngPpl
+    display: block
+

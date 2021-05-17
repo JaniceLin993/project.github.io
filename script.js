@@ -1,6 +1,6 @@
 //scroller
 $(document).ready(function() {
-	var s = skrollr.init();
+	// var s = skrollr.init();
 });
 
 //control menu
@@ -266,8 +266,6 @@ $(window).scroll(function () {
 // container fixed/absolute
 $(window).scroll(function () {
 	var current_pos = $(window).scrollTop();
-	var section_conflict_pos = $("#section_conflict").offset().top;
-	var section_simple_pos = $("#section_simple").offset().top;
 	var vh = $(window).outerHeight();
 	if(current_pos>=section_conflict_pos){
 		$("#section_conflict .container-fluid").addClass("fixed");
