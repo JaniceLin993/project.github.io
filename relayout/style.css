@@ -45,6 +45,7 @@
 }
 * {
   position: relative;
+  border: solid 0.5px black;
   font-family: "Gen Jyuu Gothic Bold", "Gen Jyuu Gothic Meduim", "Gen Jyuu Gothic Regular";
 }
 
@@ -56,15 +57,16 @@ html, body {
   padding: 0;
   margin: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
-html {
+body {
   background-image: url("assets/2_backnew.png");
 }
 
 section {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .nav_bar {
@@ -76,6 +78,7 @@ section {
   z-index: 1;
 }
 .nav_bar a {
+  margin-left: 0.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,6 +89,13 @@ section {
   border-radius: 100%;
   cursor: pointer;
   transition: 0.5s;
+}
+
+.nav_bar.white .menu .menu_list a {
+  color: #e5e5e5;
+}
+.nav_bar.white .menu .line .line1, .nav_bar.white .menu .line .line2, .nav_bar.white .menu .line .line3 {
+  background-color: #e5e5e5;
 }
 
 .nav_bar .nav_column {
@@ -131,6 +141,7 @@ section {
 .menu .line .line2,
 .menu .line .line3 {
   position: absolute;
+  border-radius: 2px;
   height: 4px;
   width: 40px;
   background-color: #666;
@@ -204,7 +215,6 @@ section {
 }
 #header .container-fluid .banner_video {
   width: 100%;
-  z-index: -1;
 }
 
 #header .container-fluid .note {
@@ -427,7 +437,7 @@ section {
   line-height: 220%;
 }
 #section_simple .container-fluid .contentDouble h3.title {
-  margin-top: 45vh;
+  margin-top: 30vh;
 }
 
 #section_simple .container-fluid .photo.fixed {
@@ -527,8 +537,11 @@ section {
   max-width: 85%;
   line-height: 220%;
 }
+#section_realWage_1 .container-fluid .content .p2 {
+  top: -20vh;
+}
 #section_realWage_1 .container-fluid .content .p3 {
-  top: -10vh;
+  top: -40vh;
   align-self: center;
   font-size: 2vw;
 }
@@ -545,9 +558,11 @@ section {
 
 #section_realWage_2 {
   height: 150vh;
+  background: transparent;
 }
 #section_realWage_2 .container-fluid {
   height: 100vh;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -563,8 +578,14 @@ section {
   overflow-x: hidden;
 }
 
-#section_realWage_2 .container-fluid iframe.fixed {
+#section_realWage_2 .container-fluid.fixed {
   position: fixed;
+  bottom: 0;
+}
+
+#section_realWage_2 .container-fluid.absolute {
+  position: absolute;
+  bottom: 0;
 }
 
 #section_reason {
@@ -663,6 +684,7 @@ section {
 
 #section_road {
   width: 100vw;
+  height: 58vh;
 }
 #section_road iframe {
   overflow: hidden;
@@ -676,13 +698,14 @@ section {
 }
 #section_youngPpl .container-fluid {
   height: 100vh;
-  width: 100%;
+  width: 300vw;
+  position: fixed;
 }
 #section_youngPpl .container-fluid .people {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 #section_youngPpl .container-fluid .people .youngs {
   width: 90vw;
@@ -715,6 +738,132 @@ section {
   width: 60%;
 }
 
+#section_youngPpl .container-fluid {
+  position: absolute;
+}
+
+#section_youngPpl .container-fluid.fixed {
+  position: fixed;
+  bottom: 0;
+}
+
+#section_youngPpl .container-fluid.absolute {
+  position: absolute;
+  bottom: 0;
+}
+
+#section_conclusion .conclusion {
+  background-image: url("assets/4_back.svg");
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#section_conclusion .conclusion img {
+  width: 20vw;
+  top: 20vh;
+}
+#section_conclusion .conclusion .left_dark {
+  order: 1;
+}
+#section_conclusion .conclusion .word {
+  color: white;
+  text-align: center;
+  order: 2;
+  font-size: 2vw;
+  top: -12vh;
+}
+#section_conclusion .conclusion .right_dark {
+  order: 3;
+}
+
+#section_contact {
+  background-image: url("assets/4_back.svg");
+  background-size: cover;
+}
+#section_contact .container-fluid {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section_contact .container-fluid .great {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  text-align: center;
+  color: #2c343c;
+  font-size: 72px;
+  letter-spacing: 30px;
+  opacity: 0;
+}
+
+#section_contact .container-fluid .mail {
+  width: 55vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section_contact .container-fluid .mail .mailCover {
+  position: absolute;
+  width: 80%;
+  transform: translate(-35%, -10%) rotate(5deg);
+  transition: 1s;
+}
+
+#section_contact .container-fluid .mail .mailBody {
+  z-index: 1;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#section_contact .container-fluid .mail .mailBody .paper {
+  position: absolute;
+}
+
+#section_contact .container-fluid .mail .mailBody textarea {
+  width: 80%;
+  height: 35vh;
+  margin-top: 3vh;
+  resize: none;
+}
+
+#section_contact .container-fluid .mail .mailBody .send {
+  width: 8%;
+  position: absolute;
+  bottom: 4%;
+  right: 12%;
+}
+
+section#footer {
+  height: 30vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#footer .end {
+  width: 20%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+section#footer .end p {
+  margin: 1vh;
+  font-size: 1.5vh;
+}
+
 section {
   display: none;
 }
@@ -723,10 +872,10 @@ section {
   display: none;
 }
 
-header {
-  display: none;
+#footer, #section_contact, #section_conclusion, #section_youngPpl, #section_conclusion, #section_road, #section_todo, #section_reason, #section_realWage_2, #section_realWage_1, #section_conflict, #section_simple, #section_notes, #section_lowWage_question {
+  display: block;
 }
 
-#section_youngPpl {
+#footer {
   display: block;
 }

@@ -14,6 +14,33 @@ var section_conclusion_pos = $("#section_conclusion").offset().top;
 var section_contact_pos = $("#section_contact").offset().top;
 
 
+
+function NavColor(current_pos){
+	if(current_pos >= section_simple_pos){
+		$(".nav_bar a .icon").attr("src","assets/Banner_icon_white.png");
+		$(".nav_bar").addClass("white");
+		if(current_pos >= section_realWage_2_pos){
+			$(".nav_bar a .icon").attr("src","assets/Banner_icon.png");
+			$(".nav_bar").removeClass("white");
+			if(current_pos >= section_reason_pos){
+				$(".nav_bar a .icon").attr("src","assets/Banner_icon_white.png");
+				$(".nav_bar").addClass("white");
+				if(current_pos >= section_youngPpl_pos){
+					$(".nav_bar a .icon").attr("src","assets/Banner_icon.png");
+					$(".nav_bar").removeClass("white");
+					if(current_pos >= section_conclusion_pos){
+						$(".nav_bar a .icon").attr("src","assets/Banner_icon_white.png");
+						$(".nav_bar").addClass("white");		
+					}
+				}
+			}
+		}
+	}else{
+		$(".nav_bar a .icon").attr("src","assets/Banner_icon.png");
+		$(".nav_bar").removeClass("white");	
+	}
+}
+
 function ControlVideo(current_pos, vh){
 	if (current_pos > 0) {
 		$(".explore").addClass("scrolled");
@@ -47,7 +74,7 @@ function ConflictFixed(current_pos, vh){
 		$("#section_conflict .container-fluid").removeClass("fixed");
 	}
 };
-function ConflictMove(current_pos, vh){
+function ConflictMove(current_pos){
 	if(current_pos + window_h_half >= section_conflict_pos){
 		$("#section_conflict .container-fluid").addClass("move");
 		if(current_pos + window_h_half*2 >= section_simple_pos){
@@ -122,7 +149,7 @@ function SimpleFadeIn(current_pos, vh){
 
 function RealWage1Fixed(current_pos, vh){
 	if(current_pos>=section_realWage_1_pos){
-		$("#section_realWage_1 .container-fluid .figure").addClass("fixed");
+		$("#section_realWage_1 .container-fluid").addClass("fixed");
 		if (current_pos + vh >= section_realWage_2_pos) {
 			$("#section_realWage_1 .container-fluid .figure").removeClass("fixed");
 			$("#section_realWage_1 .container-fluid .figure").addClass("absolute");
@@ -137,17 +164,44 @@ function RealWage1Fixed(current_pos, vh){
 }
 function RealWage2Fixed(current_pos, vh){
 	if(current_pos>=section_realWage_2_pos){
-		$("#section_realWage_2 .container-fluid iframe").addClass("fixed");
+		$("#section_realWage_2 .container-fluid").addClass("fixed");
 		if (current_pos + vh >= section_reason_pos) {
-			$("#section_realWage_2 .container-fluid iframe").removeClass("fixed");
+			$("#section_realWage_2 .container-fluid").removeClass("fixed");
+			$("#section_realWage_2 .container-fluid").addClass("absolute");
 		} else {
-			$("#section_realWage_2 .container-fluid iframe").addClass("fixed");
+			$("#section_realWage_2 .container-fluid").addClass("fixed");
+			$("#section_realWage_2 .container-fluid").removeClass("absolute");
 		}
 	}else{
-		$("#section_realWage_2 .container-fluid iframe").removeClass("fixed");
+		$("#section_realWage_2 .container-fluid").removeClass("fixed");
 	}
 
 }
+
+function YoungPplFixed(current_pos, vh){
+	if(current_pos>=section_youngPpl_pos){
+		$("#section_youngPpl .container-fluid").addClass("fixed");
+		if (current_pos + vh >= section_conclusion_pos) {
+			$("#section_youngPpl .container-fluid").removeClass("fixed");
+			$("#section_youngPpl .container-fluid").addClass("absolute");
+		} else {
+			$("#section_youngPpl .container-fluid").addClass("fixed");
+			$("#section_youngPpl .container-fluid").removeClass("absolute");
+		}
+	}else{
+		$("#section_youngPpl .container-fluid").removeClass("fixed");
+	}
+};
+function YoungPplMove(current_pos, vh){
+	var vw = $(window).outerWidth();
+	var section_youngPpl_h = $("#section_youngPpl").outerHeight();
+	var move = (current_pos - section_youngPpl_pos)/(section_youngPpl_h-vh);
+	// console.log(move);
+	if (move >= 0 && move<=1){
+		$("#section_youngPpl .container-fluid .people").css("left", -2*vw*move);
+	};
+};
+
 
 
 //control menu
@@ -214,11 +268,13 @@ $(window).scroll(function () {
 	var current_pos = $(window).scrollTop();
 	var vh = $(window).outerHeight();
 
+	//Nav
+	NavColor(current_pos);
 	//Video
 	ControlVideo(current_pos, vh);
 	//sectionConflict --> Fixed or not & move & wordShow
 	ConflictFixed(current_pos, vh);
-	ConflictMove(current_pos, vh);
+	ConflictMove(current_pos);
 	ConflictShowWord(current_pos, vh);
 
 	//sectionSimple
@@ -230,4 +286,8 @@ $(window).scroll(function () {
 
 	//sectionRealWage_2
 	RealWage2Fixed(current_pos, vh);
+
+	//sectionYoungPpl
+	YoungPplFixed(current_pos, vh);
+	YoungPplMove(current_pos, vh);
 });
