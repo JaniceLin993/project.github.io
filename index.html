@@ -1,245 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>[網頁敘事設計] Project</title>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="./style.css">
-
+  <meta charset="UTF-8">
+  <title>[&#x7DB2;&#x9801;&#x6558;&#x4E8B;&#x8A2D;&#x8A08;] Project</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
-
-<body>
-    <!-- partial:index.partial.html -->
-    <div id="app">
-        <div class="nav_bar"><a href="#header"> <img class="icon" src="assets/Banner_icon.png" alt="" /></a>
-            <div class="menu">
-                <div class="line">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-                <div class="menu_list">
-                    <a class="a1" href="#section_notes"> 引言 </a>
-                    <a class="a2" href="#section_simple"> 社會現況</a>
-                    <a class="a3" href="#section_lowwage_question"> 低薪？</a>
-                    <a class="a4" href="#section_reason"> 薪水那檔事 </a>
-                    <a class="a5" href="#section_youngppl"> 年輕人心聲 </a>
-                </div>
-
-            </div>
-            <div class="nav_column">
-                <div class="content {{section}}" v-for="section in sections"></div>
-            </div>
-        </div>
+<div id="app">
+  <div class="nav_bar"><a href="#header"><img class="icon" src="assets/Banner_icon.png" alt=""></a>
+    <div class="menu">
+      <div class="line">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <div class="menu_list"><a class="a1" href="#section_notes"> &#x5F15;&#x8A00; </a><a class="a2" href="#section_simple"> &#x793E;&#x6703;&#x73FE;&#x6CC1;</a><a class="a3" href="#section_lowWage_question"> 低薪真相</a><a class="a4" href="#section_reason"> &#x85AA;&#x6C34;&#x90A3;&#x6A94;&#x4E8B; </a><a class="a5" href="#section_youngPpl"> &#x5E74;&#x8F15;&#x4EBA;&#x5FC3;&#x8072; </a></div>
     </div>
-    <section id="cat_explain">
-        <div class="explain">
-            <p  style="position: absolute; left: 50%; transform:translateX(-50%);top: 25%;color: #333;z-index: 2;font-weight: bold;">實質薪資VS名目薪資</p>
-            <p style="position: absolute; left: 50%; transform:translateX(-50%);top: 30%;color: #333;z-index: 2;width: 70%;"><br> 
-            名目薪資是我們消費當下的金額，而實質薪資則要考慮通貨膨脹。舉例而言，一包衛生紙在10年前只需要20元就能買到，但是在如今可能需要50元，這就是所謂的通貨膨脹。換而言之，實質薪資比起名目薪資更能體現薪資的樣貌以及我們的薪資是否有所成長。 </p>
-            <img src="assets/spec_frame.svg" alt="">
-            <img class="close" src="assets/check.png">
-        </div>
-    </section><img id="cat_wavehand" title="點我！"src="https://i.imgur.com/G1yQGFH.png" alt=""/ style="display: none;">
-    <header id="header">
-        <div class="container-fluid fixed">
-            <video class="banner_video" src="assets\1_videonew.mp4" autoplay=""></video>
-            <div class="note">
-                <img class="1_note" src="assets/1_keynote.svg" alt="" style="width: 100%; opacity: 0; transition: 0.5s" />
-                <img class="1_band" src="assets/1_band.jpg" alt="" style="position: absolute;width: 60%; left: 50%;top: 50%; transform: translate(-50%,-50%) rotate(12deg); opacity:0; transition: 1s" />
-            </div>
-            <div class="explore">SCROLL</div>
-        </div>
-    </header>
-    <section id="section_notes">
-        <div class="container-fluid">
-            <img class="note_2" src="assets/2_note.svg" alt="" style="position: absolute; width: 30%; left: 7%; top: 5%;" />
-            <p class="word_goodband" data-300="transform: translateX(-50%) translateY(100%) ;opacity: 0" , data-center="transform: translateX(-50%) translateY(0) ;opacity: 1">好樂團近期一首「他們說我是沒有用的年輕人」在獨立音樂平台廣獲年輕聽眾的歡迎，歌詞中寫盡了年輕人的苦楚，「我們只喜歡小確幸，放棄去改變不公平…」和厭世語錄一般，或許這樣的題材正反映了這個時代低薪結構下說不出的辛酸與無奈。<br><br>「厭」世代這個詞泛指35歲以下，甫在職場站穩腳步的年輕人；他們煩惱著如何才能積累更多的社會、經濟資源，來過上好一點點的人生；他們糾結著未來，思考著如何才能走得更遠，而買房、結婚生子則成了不敢想像的事情…</p>
-
-        </div>
-
-    </section>
-    <section id="section_conflict">
-        <div class="container-fluid"><img class="old" src="assets/3_old.svg" alt="" style="font-family: 'Indie Flower', cursive" /><img class="young" src="assets/3_young.svg" alt="" />
-            <div class="conversation">
-                <div class="line line1"><img src="assets/talk1.svg" alt="" />
-                </div>
-                <div class="line line2"><img src="assets/talk2.svg" alt="" />
-                </div>
-                <div class="line line3"><img src="assets/talk3.svg" alt="" />
-                </div>
-                <div class="line line4"><img src="assets/talk4.svg" alt="" />
-                </div>
-                <div class="line line5"><img src="assets/talk5.svg" alt="" />
-                </div>
-                <div class="line line6"><img src="assets/talk6.svg" alt="" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="section_simple" style="padding-left: 0px;padding-right:0px;position: relative; height: 220vh; background-image: url(assets/4_back.svg);">
-        <div class="container-fluid">
-            <div class="photo" style="position: sticky; top: 0px;width: 40vw; height: 100vh;margin: 0px;">
-                <img class="photo0" src="assets/5_note.svg" style="position:absolute;width:70%;top:55%;left:-22%; transition: .8s;opacity: 0;">
-                <img class="photo1" src="assets/5_youtube.svg" style="position:absolute;width:90%;top:50%;left:-32%; transition: .8s;opacity: 0;">
-            </div>
-            <div class="contentdouble" style="margin:6% 4% 3% 3%; padding-left: 20px; position: absolute;width: 100vh;left: 40%; top:100px;" > 
-                <h3 class="title">當單純不再單純
-                </h3>
-                <br>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;單純，是很多這一輩中年人對於過去的形容詞。<br>&nbsp;&nbsp;&nbsp;&nbsp;在那個台灣經濟正要起步的年代，很多青年受限於經濟條件不佳，擺在眼前的選擇並不多，「我們以前的生活很單純，就是希望可以學得一技之長，出去工作負擔家計」，白手起家的高雄鐵工廠林老闆回憶到。<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;林老闆興許能代表臺灣六零年代經濟飛速發展的大環境下、只要肯努力就能出頭天的縮影。在過去，雖然選擇不多，但努力即有所成是大家對社會的共感；而今，多數的年輕一代卻受困於定型的經濟環境，普遍認為努力不再能與成功畫上等號。<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;縱然如是，林老闆認為現在年輕人並非沒有出頭的機會，而是要如何把握，「不會說現在的年輕人不認真，但要謙虛、同時學會讓別人看見自己，只有得到認可的努力才有用，埋頭苦幹不是真的努力。」</p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h3 class="title">資訊變多，誘惑也跟著變多
-
-                </h3>
-                <br>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;相比於過去那個沒有手機、沒有網路的年代，資訊發展似乎促使年輕人急於追求成功模板；過度接觸成功訊息，反而忽略失敗和耕耘方為常態。林老闆認為現在的訊息氾濫，「導致年輕人喜歡漂漂亮亮的東西，卻沒有好好的管理自己所擁有的資源，覺得賺到的錢不多不如就拿來享樂。」另一位任職於公家機關的劉先生也說:「資訊流通快速導致有股隱形的壓力存在，促使年輕人下意識認為付出六個月就會獲得等價的收穫，然而事實上收穫往往是呈指數型成長。」<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;資訊時代帶來的影響有利有弊，它創造了許多新的機會等待人們挖掘，但也同時製造了無形的壓力驅使著這個時代向前，讓人們趕著前行，而忘了人際互動的溫度，如同喪屍一般；讓人們看見快樂，也不自覺地陷入資本主義的泥淖不可自拔。
-                </p>
-            </div>
-        </div>
-
-    </section>
-    <section id="section_lowwage_question">
-        <div class="container-fluid">
-            <img class="papernote1" src="assets/5_keynote.svg" style="width: 75%;position: absolute;z-index: 1; left: 50%;transform: translate(-50%,0);margin-top: 10%;">
-            <div class="content" style="z-index: 2;position: absolute;left: 50%;transform: translate(-50%,0);width: 100%;height: 100%;margin-top: 4%;">
-                <h3 class="green-title" style="color: #333; position: absolute;left: 50%; margin-top: 13%; transform: translate(-50%,0); font-size: 36px;">低薪？現在真的是低薪世代嗎？</h3>
-                <p style="width: 60%; position: absolute; bottom: 30%;left: 50%;transform: translate(-50%,60%);"> 「如何走出崩世代厭世代的宿命」、「青年低薪困境」，這些新聞標題已不足為奇，似乎是這個社會早已接受的事實。然而在調查中，我們發現認為低薪不存在的人並不在少數，甚有人認為是媒體的操作；那究竟這近三十年實際的薪資成長幅度是什麼呢？</p>
-            </div>
-        </div>
-    </section>
-    <section id="section_realwage_1" style="height: initial;">
-        <div class="container-fluid" style="padding: 5%;">
-            <div class="w-1024 mx-auto rwd"style="top: 60px">
-                <div class="sticky" style="position: sticky; top: 0px;width: 45vw; height: 100vh;">
-
-                    <img src="assets/6_data.png" scrolling="no" frameborder="0" width="100%" style="margin-top: 100px; z-index: 3;">
-                </div>
-
-                <div class="row" style="margin:5em 0 15em 5em;left:0px; top: -200px">
-                    <div class="offset-md-6 col-md-6">
-                        <p style="font-size: 20px;width: 100%;left: 0%">從數據中我們可以看見人們的薪資不斷往上升，但為什麼年輕人依舊感到低薪？
-                        </p>
-                    </div>
-                </div>
-                <div class="row" style="margin:15em 0 15em 5em">
-                    <div class="offset-md-6 col-md-6">
-                        <p style="font-size: 20px;width: 100%;left: 0%;top: -200px">其中的原因在於，薪資增長幅度並沒有高於物價成長的幅度（也就是通貨膨脹率），也就代表，人們真實拿到的薪資並不如上圖的數據一樣不斷上升。
-                        </p>
-                    </div>
-                </div>
-                <div class="row1" style="margin:15em 0 15em 5em">
-                    <div class="offset-md-6 col-md-6">
-                        <p style="font-size: 28px; font-weight:bold;width: 100%;left: 0%; top:-200px; text-align: center;">「那真實的薪資數據呢？」</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="section_realwage_2" style="height:200vh;padding-top: 5vh;padding-bottom: 5vh;">
-        <div class="container-fluid" style="position: sticky; top: 0;padding-top:50px;">
-            <iframe src="https://cdn.knightlab.com/libs/storyline/latest/embed/index.html?dataURL=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vSAankC4DPIH5gO1dmmFYCDRMBUmjJT2GMs-aRsWSqfm1pYKQaoXIvQZkQjM7UPhgkRiNZd0ffWnqkx%2Fpubhtml&amp;dataYCol=%E6%AF%8F%E4%BA%BA%E6%AF%8F%E6%9C%88%E5%AF%A6%E8%B3%AA%E7%B8%BD%E8%96%AA%E8%B3%87&amp;dataXCol=year&amp;dataDateFormat=%25Y&amp;chartDateFormat=%25Y&amp;chartYLabel=%E6%AF%8F%E4%BA%BA%E6%AF%8F%E6%9C%88%E5%AF%A6%E8%B3%AA%E7%B8%BD%E8%96%AA%E8%B3%87&amp;sliderCardTitleCol=title&amp;sliderCardTextCol=text" style="width:100%;height:650px;" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0">
-            </iframe>
-        </div>
-    </section>
-    <section id="section_reason" style="height: 1500px; background-image: url(assets/4_back.svg);background-size: cover;">
-        <div class="container-fluid" style="background-color: rgba(225,225,225,0.1); height: 100%;">
-
-            <div class="content1" style="margin-top: 4%;width: 85%;z-index: 0; left: 50%;transform: translate(-50%,0);text-align: center;">
-                <img class="papernote1" src="assets/6_paper1.png" style="height:150%;width: 120%;position: absolute;left: -200px;top: -100px;border-radius: 2% 2% 0% 0%">
-                <h3 style="color:#333;margin: 5%;top: 10px;">實質薪資停滯兩大主因: 高教擴張&科技化</h3>
-                <p class="p1" style="margin-top: -2%;"> &nbsp;&nbsp;&nbsp;&nbsp;臺大經濟系廖珮如教授指出，迅速擴張的高等教育是薪資停滯的一大主因，2000年的大學錄取率將近60%，到了2009年時已達97%。大學畢業後，多數青年投身於辦公室白領階級，當企業的人力需求並沒有因為高教擴張增加，不僅拉低了薪資，大量的大學文憑也使企業難以分辨好壞，導致各產業皆採最低薪資聘用新進青年勞工，進而促使薪資停滯的現象發生。</p>
-
-                <p class="p1" style="margin-top: -2%;"> &nbsp;&nbsp;&nbsp;&nbsp;隨著資訊發展，機械與自動化大量取代人力，由於人的可替代性激增，使得企業大幅降低對人力的需求，導致薪資難以上漲。同時，許多結構性的因素如全球化、國內產業轉型瓶頸都強化了此一趨勢，使得現在的實質薪資再難如1990年代一樣不斷上升。
-                </p>
-
-            </div>
-            <div class="content2" style="margin-top: 25%;width: 85%;z-index: 0; left: 50%;transform: translate(-50%,0);text-align: center;">
-                <img class="papernote1" src="assets/6_paper2.png" style=" width: 120%; position: absolute;left: -60px;border-radius: 2% 2% 0% 0%">
-                <h3 style="color:#333;margin: 9%;top: 50px;line-height: 36px;">為什麼實質薪資停滯讓年輕人這麼痛？</h3>
-                <p class="p1" style="margin-top:8%;">
-                    &nbsp;&nbsp;&nbsp;&nbsp; 近兩年的實質薪資儘管逐步回升，但不能忽視的是在2009後的這十年內，實質薪資相比與1990年代是倒退許多的，而對於剛出社會的年輕人來說25-35歲是累積資本的一大黃金時期，或許正象徵著低薪時代的強勢來襲。除此之外，廖珮如教授亦指出時代的改變，使得這個世代的年輕人更難以累積資本。在過去，不會有滿街的餐廳、飲料店，更不需要人人一台手機、平板，現代需要消費的物品更多，因此消費型態的變化與實質薪資停滯的交織下，才會使年輕人的痛感更深。
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="section_todo" style="background-image: url(assets/4_back.svg);background-size: cover; ;height: 120vh;">
-        <div class="container-fluid" style="padding-top: 10%;position: absolute;background-color: rgba(225,225,225,0.1);height: 100%;">
-            <img src="assets/8_todo.svg" style="width: 75%; left: 52%;transform: translate(-50%,0);margin-bottom: 0px;z-index: 0;">
-            <div class="content3" style="z-index:1;margin-top: -70vh;width: 50%;left:50%;transform: translate(-50%,0);color: black;">
-                <h3 style="margin-left: 10%;">年輕人該怎麼做？</h3>
-                <p style="font-size: 14px; width: 80%; margin-left: 10%;color: #333;margin-top:-5%;">&nbsp;&nbsp;&nbsp;&nbsp;<br>「低薪是現在社會結構下的平均現象」廖珮如教授肯定地說，由於社會中仍存在著高薪結構，如研發專業人員； 相較之下製造業在過去受到產業外移影響，使得平均薪資較低；服務業則受到高教擴張與科技化的影響，薪水有下降的趨勢。因此，廖珮如教授建議年輕人能多增加自身附加價值，去抵抗高教擴張、全球化、科技化等不可逆的社會現象，以突破現狀實現自身理想。
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="section_road">
-        <iframe frameborder="0" class="juxtapose" width="100%" height="100%" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e5dd0764-5520-11eb-83c8-ebb5d6f907df"></iframe></section>
-
-        <section id="section_youngppl">
-            <div class="container-fluid">
-                <div class="people">
-                    <div class="youngs p1">
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邱小姐，27歲，電視台從業人員，大學畢業後即選擇投身職場，每天早上從桃園通勤到台北上班，一路從早工作到晚，事情一件接著一件，趕腳本、聯絡人事、進棚錄影…工作幾乎耗光一天心力。她無奈地說:「我其實沒有不愛我的工作，我一直都覺得我選擇了我想努力的方向，但工作真的佔了滿多時間與心力」聊到薪水，她反映低薪是她真實所見的普遍現象，包括自己另一伴和身邊的朋友們，同時也表示自己真的要很努力一年才能存下個10來萬，平常光是住宿、交通伙食等必要花費就佔掉快八成，一成拿來犒賞自己幾乎就已經快吃不消，不過她也很肯定地說: 「比起薪水，我其實更在意我有沒有在做我想做的事。」<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;隨著台灣整體經濟環境的改善，對現在的年輕世代來說，生活可能不再是主要的煩惱，更大的煩惱或許來自不知道該走哪條路，哪條路才能走得更遠。問到有沒有創業夢想，邱小姐給了個有趣的答案:「有想過，但創業畢竟要投資不少，再加上自己當老闆很容易沒有方向，所以沒有真的踏出那一步，不過現在有在經營自己主持人的個人品牌，也許也算是另類的創業吧！」對於低薪的年輕一族來說，要用創業來為生活創造新的可能也許不再如過去容易，但經營個人品牌卻成為資訊時代的新選擇。</p><p class="short" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在訪談的最後，邱小姐提到未來打算暫時離開電視圈，重新回到校園學習心理諮商相關的知識，期望能用別的角度為人生增添色彩。「我沒有經歷過過去的時代，不能妄下定論，但想必每個時代必然有各自的困難與挑戰需要努力面對」她淡淡地說。</p>
-                        <img class="background" src="assets/11_paper.svg" alt=""/>
-                        <img class="man" src="assets/pic1.png" alt=""></div>
-                        <div class="youngs p2">
-                            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;「『賺這麼多錢有什麼用，都花在醫藥費身上了』他當時就是這麼跟我說的」兩年前小草的友人因為高壓高時的工作，身體承受不住而住進醫院，作為事件的旁觀者，看著朋友在出社會後的短短幾年內，健康被工作慢慢吞噬，她看清了社會的現實。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;諷刺的是，如今小草也成為了這些事件的其中一員，「從轉進行銷業後，身體開始容易生病、免疫力下降了很多，大部分平均每日工作10-12小時，同期的朋友也是如此，大家都工作到很晚，但是為了把工作做好也無可奈何」，他落寞地說，「直到開始神經失調連帶胃痙攣，我才真正意識到身體不行了。」<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因為工作而使健康惡化的小草不是單一個案，科技化時代讓現帶人半夜或是假日都會接到工作相關的電話或消息，時時處在一個緊繃的狀態，各個因素加在一起加速了健康的惡化。</p><p class="short">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;儘管如此，小草卻不後悔來到這個行業，「在這份工作中，所得到的磨練很多，機會也很多，蠻像魔鬼訓練的，很多人出去後累積下來的經驗資本都非常豐富。」他笑著說。『敢講才會敢面對』是小草對於厭世時代的想法與標語，「我希望他們(指上一輩)也能看到我們的努力，每一代都有每一代不同的問題，上一代也一樣有他們辛苦的地方，這是肯定的。」在出社會的這幾年，他見證同儕努力度過迷茫時刻，並且在這資訊氾濫的時代下依舊努力保持各自的初衷與熱情。</p>
-                            <img class="background" src="assets/11_paper.svg" alt=""/>
-                            <img class="man" src="assets/pic2.png" alt=""></div>
-                            <div class="youngs p3">
-                                <p style="top:130px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>甫踏入職場的何小姐說，從學生時期她便是個相對務實的人，擔心學業成績、規劃職涯發展，努力參加課程及活動充實自己。雖然知道即使忙的焦頭爛額，也不一定能確保未來一片光明，但比起待在宿舍安逸，她仍選擇四處尋覓機會。相對實際的她沒有太多浮濫的夢想泡泡，只希望能盡心完成分內工作，好好努力提升自己，若行有餘力，再以自身影響力貢獻關注已久的心理健康領域。<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;談到初入職場遭遇的困難，「最困難不是任何一項單一事件，而是認知轉變。小時候對世界有美好的想像，長大才發現，現實是安身度日都不容易。」但她也說即使認知到現實不盡理想，也不將自己滯留於負面情緒，而是盡量參加活動、課程爭取機會，腳踏實地的過完每一天。</p><br><p class="short">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;「只以結果論，或許真的一代不如一代，在20世紀的現在，前人已經完成太多關鍵性的進步，要再有一個突飛猛進的時刻並像從前容易，現在就業環境對年輕人不像以前那麼友善，經濟不再能如從前般飛躍成長。雖然如此，這樣的時代又有許多新興事物正在發生，年輕人也正努力以自身學習能力適應著這個環境」她淡淡地說。</p>
-                                <img  class="background" src="assets/11_paper.svg" alt=""/>
-                                <img class="man" src="assets/pic3.png" alt=""></div>
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section id="section_conclusion" style="background-image: url(assets/4_back.svg);background-size: cover;">
-                        <div class="conclusion">「 在夢想的泥沼中辛苦打滾，<br>卻從來沒有放棄希望，<br>你也是吧？」<img class="right_dark" src="assets/10_com_off.svg" alt=""/><img class="left_dark" src="assets/10_tab_off.svg" alt=""/></div>
-                    </section>
-
-                    <section id="section_contact">
-                        <div class="container-fluid">
-                            <div class="great">「笑一個吧！」</div>
-                            <div class="mail">
-                                <div class="mailcover"><img src="assets/envelope.svg" alt=""/></div>
-                                <div class="mailbody">
-                                    <img src="assets/envolope_paper.svg" alt="" style="width: 100%;">
-                                    <h1 style="position: absolute; font-size: 54px; color: #333; top: 10%;letter-spacing: 15px">心情留言</h1>
-                                    <textarea style="position: absolute; top: 60%; transform: translateY(-50%);"></textarea>
-                                    <img src="assets/envolope_send.svg" title="點我！" class="send" style="width: 10%;position: absolute; bottom: 15%;right: 15%; cursor: pointer;">
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="footer">
-                        <div class="end">
-                            <p style="margin-top: 10px;">製作 / 劉有容 徐慶毅 林哲如</p>
-                            <p>指導老師 / 謝吉隆</p>
-                            <p>部分素材使用- www.freepik.com</p>
-                            <p>Copyright©2021 版權所有 禁止擅自轉貼節錄</p>
-                        </div>
-                    </section>
-
-
-                    <!-- partial -->
-                    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js'></script>
-                    <script src='relayout/skrollr.min.js'></script>
-                    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-                    <script src="./script.js"></script>
-
-                </body>
-
-                </html>
+    <div class="nav_column">
+      <div class="content {{section}}" v-for="section in sections"></div>
+    </div>
+  </div>
+</div>
+<section id="cat_explain">
+  <div class="explain">
+    <div class="content"> 
+      <p class="title">&#x5BE6;&#x8CEA;&#x85AA;&#x8CC7;VS&#x540D;&#x76EE;&#x85AA;&#x8CC7;</p>
+      <p><br>            &#x540D;&#x76EE;&#x85AA;&#x8CC7;&#x662F;&#x6211;&#x5011;&#x6D88;&#x8CBB;&#x7576;&#x4E0B;&#x7684;&#x91D1;&#x984D;&#xFF0C;&#x800C;&#x5BE6;&#x8CEA;&#x85AA;&#x8CC7;&#x5247;&#x8981;&#x8003;&#x616E;&#x901A;&#x8CA8;&#x81A8;&#x8139;&#x3002;&#x8209;&#x4F8B;&#x800C;&#x8A00;&#xFF0C;&#x4E00;&#x5305;&#x885B;&#x751F;&#x7D19;&#x5728;10&#x5E74;&#x524D;&#x53EA;&#x9700;&#x8981;20&#x5143;&#x5C31;&#x80FD;&#x8CB7;&#x5230;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5982;&#x4ECA;&#x53EF;&#x80FD;&#x9700;&#x8981;50&#x5143;&#xFF0C;&#x9019;&#x5C31;&#x662F;&#x6240;&#x8B02;&#x7684;&#x901A;&#x8CA8;&#x81A8;&#x8139;&#x3002;&#x63DB;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;&#x5BE6;&#x8CEA;&#x85AA;&#x8CC7;&#x6BD4;&#x8D77;&#x540D;&#x76EE;&#x85AA;&#x8CC7;&#x66F4;&#x80FD;&#x9AD4;&#x73FE;&#x85AA;&#x8CC7;&#x7684;&#x6A23;&#x8C8C;&#x4EE5;&#x53CA;&#x6211;&#x5011;&#x7684;&#x85AA;&#x8CC7;&#x662F;&#x5426;&#x6709;&#x6240;&#x6210;&#x9577;&#x3002;</p>
+    </div><img class="bg" src="assets/spec_frame.svg" alt=""><img class="close" src="assets/check.png">
+  </div>
+</section><img id="cat_waveHand" title="點我！" src="assets/catHand.png" alt="">
+<header id="header">
+  <div class="container-fluid">
+    <video class="banner_video" src="assets/1_videoNew.mp4" autoplay=""></video>
+    <div class="note"><img class="note_1" src="assets/1_keynote.svg" alt=""><img class="band_1" src="assets/1_band.jpg" alt=""></div>
+    <div class="explore">SCROLL</div>
+  </div>
+</header>
+<section id="section_notes">
+  <div class="container-fluid"><img class="note_2" src="assets/2_note.svg" alt="">
+    <p class="word_goodBand" data-300="transform: translateX(-50%) translateY(100%) ;opacity: 0" ="" data-center="transform: translateX(-50%) translateY(0) ;opacity: 1">&#x597D;&#x6A02;&#x5718;&#x8FD1;&#x671F;&#x4E00;&#x9996;&#x300C;&#x4ED6;&#x5011;&#x8AAA;&#x6211;&#x662F;&#x6C92;&#x6709;&#x7528;&#x7684;&#x5E74;&#x8F15;&#x4EBA;&#x300D;&#x5728;&#x7368;&#x7ACB;&#x97F3;&#x6A02;&#x5E73;&#x53F0;&#x5EE3;&#x7372;&#x5E74;&#x8F15;&#x807D;&#x773E;&#x7684;&#x6B61;&#x8FCE;&#xFF0C;&#x6B4C;&#x8A5E;&#x4E2D;&#x5BEB;&#x76E1;&#x4E86;&#x5E74;&#x8F15;&#x4EBA;&#x7684;&#x82E6;&#x695A;&#xFF0C;&#x300C;&#x6211;&#x5011;&#x53EA;&#x559C;&#x6B61;&#x5C0F;&#x78BA;&#x5E78;&#xFF0C;&#x653E;&#x68C4;&#x53BB;&#x6539;&#x8B8A;&#x4E0D;&#x516C;&#x5E73;&mldr;&#x300D;&#x548C;&#x53AD;&#x4E16;&#x8A9E;&#x9304;&#x4E00;&#x822C;&#xFF0C;&#x6216;&#x8A31;&#x9019;&#x6A23;&#x7684;&#x984C;&#x6750;&#x6B63;&#x53CD;&#x6620;&#x4E86;&#x9019;&#x500B;&#x6642;&#x4EE3;&#x4F4E;&#x85AA;&#x7D50;&#x69CB;&#x4E0B;&#x8AAA;&#x4E0D;&#x51FA;&#x7684;&#x8F9B;&#x9178;&#x8207;&#x7121;&#x5948;&#x3002;<br><br>&#x300C;&#x53AD;&#x300D;&#x4E16;&#x4EE3;&#x9019;&#x500B;&#x8A5E;&#x6CDB;&#x6307;35&#x6B72;&#x4EE5;&#x4E0B;&#xFF0C;&#x752B;&#x5728;&#x8077;&#x5834;&#x7AD9;&#x7A69;&#x8173;&#x6B65;&#x7684;&#x5E74;&#x8F15;&#x4EBA;&#xFF1B;&#x4ED6;&#x5011;&#x7169;&#x60F1;&#x8457;&#x5982;&#x4F55;&#x624D;&#x80FD;&#x7A4D;&#x7D2F;&#x66F4;&#x591A;&#x7684;&#x793E;&#x6703;&#x3001;&#x7D93;&#x6FDF;&#x8CC7;&#x6E90;&#xFF0C;&#x4F86;&#x904E;&#x4E0A;&#x597D;&#x4E00;&#x9EDE;&#x9EDE;&#x7684;&#x4EBA;&#x751F;&#xFF1B;&#x4ED6;&#x5011;&#x7CFE;&#x7D50;&#x8457;&#x672A;&#x4F86;&#xFF0C;&#x601D;&#x8003;&#x8457;&#x5982;&#x4F55;&#x624D;&#x80FD;&#x8D70;&#x5F97;&#x66F4;&#x9060;&#xFF0C;&#x800C;&#x8CB7;&#x623F;&#x3001;&#x7D50;&#x5A5A;&#x751F;&#x5B50;&#x5247;&#x6210;&#x4E86;&#x4E0D;&#x6562;&#x60F3;&#x50CF;&#x7684;&#x4E8B;&#x60C5;&mldr;</p>
+  </div>
+</section>
+<section id="section_conflict">
+  <div class="container-fluid"><img class="old" src="assets/3_old.svg" alt=""><img class="young" src="assets/3_young.svg" alt="">
+    <div class="conversation">
+      <div class="line line1"><img src="assets/talk1.svg" alt=""></div>
+      <div class="line line2"><img src="assets/talk2.svg" alt=""></div>
+      <div class="line line3"><img src="assets/talk3.svg" alt=""></div>
+      <div class="line line4"><img src="assets/talk4.svg" alt=""></div>
+      <div class="line line5"><img src="assets/talk5.svg" alt=""></div>
+      <div class="line line6"><img src="assets/talk6.svg" alt=""></div>
+    </div>
+  </div>
+</section>
+<section id="section_simple">
+  <div class="container-fluid">
+    <div class="photo"><img class="photo0" src="assets/5_note.svg" alt=""><img class="photo1" src="assets/5_youTube.svg" alt=""></div>
+    <div class="contentDouble">
+      <h3 class="title">&#x7576;&#x55AE;&#x7D14;&#x4E0D;&#x518D;&#x55AE;&#x7D14;</h3>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&#x55AE;&#x7D14;&#xFF0C;&#x662F;&#x5F88;&#x591A;&#x9019;&#x4E00;&#x8F29;&#x4E2D;&#x5E74;&#x4EBA;&#x5C0D;&#x65BC;&#x904E;&#x53BB;&#x7684;&#x5F62;&#x5BB9;&#x8A5E;&#x3002;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&#x5728;&#x90A3;&#x500B;&#x53F0;&#x7063;&#x7D93;&#x6FDF;&#x6B63;&#x8981;&#x8D77;&#x6B65;&#x7684;&#x5E74;&#x4EE3;&#xFF0C;&#x5F88;&#x591A;&#x9752;&#x5E74;&#x53D7;&#x9650;&#x65BC;&#x7D93;&#x6FDF;&#x689D;&#x4EF6;&#x4E0D;&#x4F73;&#xFF0C;&#x64FA;&#x5728;&#x773C;&#x524D;&#x7684;&#x9078;&#x64C7;&#x4E26;&#x4E0D;&#x591A;&#xFF0C;&#x300C;&#x6211;&#x5011;&#x4EE5;&#x524D;&#x7684;&#x751F;&#x6D3B;&#x5F88;&#x55AE;&#x7D14;&#xFF0C;&#x5C31;&#x662F;&#x5E0C;&#x671B;&#x53EF;&#x4EE5;&#x5B78;&#x5F97;&#x4E00;&#x6280;&#x4E4B;&#x9577;&#xFF0C;&#x51FA;&#x53BB;&#x5DE5;&#x4F5C;&#x8CA0;&#x64D4;&#x5BB6;&#x8A08;&#x300D;&#xFF0C;&#x767D;&#x624B;&#x8D77;&#x5BB6;&#x7684;&#x9AD8;&#x96C4;&#x9435;&#x5DE5;&#x5EE0;&#x6797;&#x8001;&#x95C6;&#x56DE;&#x61B6;&#x5230;&#x3002;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&#x6797;&#x8001;&#x95C6;&#x8208;&#x8A31;&#x80FD;&#x4EE3;&#x8868;&#x81FA;&#x7063;&#x516D;&#x96F6;&#x5E74;&#x4EE3;&#x7D93;&#x6FDF;&#x98DB;&#x901F;&#x767C;&#x5C55;&#x7684;&#x5927;&#x74B0;&#x5883;&#x4E0B;&#x3001;&#x53EA;&#x8981;&#x80AF;&#x52AA;&#x529B;&#x5C31;&#x80FD;&#x51FA;&#x982D;&#x5929;&#x7684;&#x7E2E;&#x5F71;&#x3002;&#x5728;&#x904E;&#x53BB;&#xFF0C;&#x96D6;&#x7136;&#x9078;&#x64C7;&#x4E0D;&#x591A;&#xFF0C;&#x4F46;&#x52AA;&#x529B;&#x5373;&#x6709;&#x6240;&#x6210;&#x662F;&#x5927;&#x5BB6;&#x5C0D;&#x793E;&#x6703;&#x7684;&#x5171;&#x611F;&#xFF1B;&#x800C;&#x4ECA;&#xFF0C;&#x591A;&#x6578;&#x7684;&#x5E74;&#x8F15;&#x4E00;&#x4EE3;&#x537B;&#x53D7;&#x56F0;&#x65BC;&#x5B9A;&#x578B;&#x7684;&#x7D93;&#x6FDF;&#x74B0;&#x5883;&#xFF0C;&#x666E;&#x904D;&#x8A8D;&#x70BA;&#x52AA;&#x529B;&#x4E0D;&#x518D;&#x80FD;&#x8207;&#x6210;&#x529F;&#x756B;&#x4E0A;&#x7B49;&#x865F;&#x3002;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&#x7E31;&#x7136;&#x5982;&#x662F;&#xFF0C;&#x6797;&#x8001;&#x95C6;&#x8A8D;&#x70BA;&#x73FE;&#x5728;&#x5E74;&#x8F15;&#x4EBA;&#x4E26;&#x975E;&#x6C92;&#x6709;&#x51FA;&#x982D;&#x7684;&#x6A5F;&#x6703;&#xFF0C;&#x800C;&#x662F;&#x8981;&#x5982;&#x4F55;&#x628A;&#x63E1;&#xFF0C;&#x300C;&#x4E0D;&#x6703;&#x8AAA;&#x73FE;&#x5728;&#x7684;&#x5E74;&#x8F15;&#x4EBA;&#x4E0D;&#x8A8D;&#x771F;&#xFF0C;&#x4F46;&#x8981;&#x8B19;&#x865B;&#x3001;&#x540C;&#x6642;&#x5B78;&#x6703;&#x8B93;&#x5225;&#x4EBA;&#x770B;&#x898B;&#x81EA;&#x5DF1;&#xFF0C;&#x53EA;&#x6709;&#x5F97;&#x5230;&#x8A8D;&#x53EF;&#x7684;&#x52AA;&#x529B;&#x624D;&#x6709;&#x7528;&#xFF0C;&#x57CB;&#x982D;&#x82E6;&#x5E79;&#x4E0D;&#x662F;&#x771F;&#x7684;&#x52AA;&#x529B;&#x3002;&#x300D;  </p>
+      <h3 class="title">&#x8CC7;&#x8A0A;&#x8B8A;&#x591A;&#xFF0C;&#x8A98;&#x60D1;&#x4E5F;&#x8DDF;&#x8457;&#x8B8A;&#x591A;</h3>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&#x76F8;&#x6BD4;&#x65BC;&#x904E;&#x53BB;&#x90A3;&#x500B;&#x6C92;&#x6709;&#x624B;&#x6A5F;&#x3001;&#x6C92;&#x6709;&#x7DB2;&#x8DEF;&#x7684;&#x5E74;&#x4EE3;&#xFF0C;&#x8CC7;&#x8A0A;&#x767C;&#x5C55;&#x4F3C;&#x4E4E;&#x4FC3;&#x4F7F;&#x5E74;&#x8F15;&#x4EBA;&#x6025;&#x65BC;&#x8FFD;&#x6C42;&#x6210;&#x529F;&#x6A21;&#x677F;&#xFF1B;&#x904E;&#x5EA6;&#x63A5;&#x89F8;&#x6210;&#x529F;&#x8A0A;&#x606F;&#xFF0C;&#x53CD;&#x800C;&#x5FFD;&#x7565;&#x5931;&#x6557;&#x548C;&#x8015;&#x8018;&#x65B9;&#x70BA;&#x5E38;&#x614B;&#x3002;&#x6797;&#x8001;&#x95C6;&#x8A8D;&#x70BA;&#x73FE;&#x5728;&#x7684;&#x8A0A;&#x606F;&#x6C3E;&#x6FEB;&#xFF0C;&#x300C;&#x5C0E;&#x81F4;&#x5E74;&#x8F15;&#x4EBA;&#x559C;&#x6B61;&#x6F02;&#x6F02;&#x4EAE;&#x4EAE;&#x7684;&#x6771;&#x897F;&#xFF0C;&#x537B;&#x6C92;&#x6709;&#x597D;&#x597D;&#x7684;&#x7BA1;&#x7406;&#x81EA;&#x5DF1;&#x6240;&#x64C1;&#x6709;&#x7684;&#x8CC7;&#x6E90;&#xFF0C;&#x89BA;&#x5F97;&#x8CFA;&#x5230;&#x7684;&#x9322;&#x4E0D;&#x591A;&#x4E0D;&#x5982;&#x5C31;&#x62FF;&#x4F86;&#x4EAB;&#x6A02;&#x3002;&#x300D;&#x53E6;&#x4E00;&#x4F4D;&#x4EFB;&#x8077;&#x65BC;&#x516C;&#x5BB6;&#x6A5F;&#x95DC;&#x7684;&#x5289;&#x5148;&#x751F;&#x4E5F;&#x8AAA;:&#x300C;&#x8CC7;&#x8A0A;&#x6D41;&#x901A;&#x5FEB;&#x901F;&#x5C0E;&#x81F4;&#x6709;&#x80A1;&#x96B1;&#x5F62;&#x7684;&#x58D3;&#x529B;&#x5B58;&#x5728;&#xFF0C;&#x4FC3;&#x4F7F;&#x5E74;&#x8F15;&#x4EBA;&#x4E0B;&#x610F;&#x8B58;&#x8A8D;&#x70BA;&#x4ED8;&#x51FA;&#x516D;&#x500B;&#x6708;&#x5C31;&#x6703;&#x7372;&#x5F97;&#x7B49;&#x50F9;&#x7684;&#x6536;&#x7A6B;&#xFF0C;&#x7136;&#x800C;&#x4E8B;&#x5BE6;&#x4E0A;&#x6536;&#x7A6B;&#x5F80;&#x5F80;&#x662F;&#x5448;&#x6307;&#x6578;&#x578B;&#x6210;&#x9577;&#x3002;&#x300D;<br><br>                    &nbsp;&nbsp;&nbsp;&nbsp;&#x8CC7;&#x8A0A;&#x6642;&#x4EE3;&#x5E36;&#x4F86;&#x7684;&#x5F71;&#x97FF;&#x6709;&#x5229;&#x6709;&#x5F0A;&#xFF0C;&#x5B83;&#x5275;&#x9020;&#x4E86;&#x8A31;&#x591A;&#x65B0;&#x7684;&#x6A5F;&#x6703;&#x7B49;&#x5F85;&#x4EBA;&#x5011;&#x6316;&#x6398;&#xFF0C;&#x4F46;&#x4E5F;&#x540C;&#x6642;&#x88FD;&#x9020;&#x4E86;&#x7121;&#x5F62;&#x7684;&#x58D3;&#x529B;&#x9A45;&#x4F7F;&#x8457;&#x9019;&#x500B;&#x6642;&#x4EE3;&#x5411;&#x524D;&#xFF0C;&#x8B93;&#x4EBA;&#x5011;&#x8D95;&#x8457;&#x524D;&#x884C;&#xFF0C;&#x800C;&#x5FD8;&#x4E86;&#x4EBA;&#x969B;&#x4E92;&#x52D5;&#x7684;&#x6EAB;&#x5EA6;&#xFF0C;&#x5982;&#x540C;&#x55AA;&#x5C4D;&#x4E00;&#x822C;&#xFF1B;&#x8B93;&#x4EBA;&#x5011;&#x770B;&#x898B;&#x5FEB;&#x6A02;&#xFF0C;&#x4E5F;&#x4E0D;&#x81EA;&#x89BA;&#x5730;&#x9677;&#x5165;&#x8CC7;&#x672C;&#x4E3B;&#x7FA9;&#x7684;&#x6CE5;&#x6DD6;&#x4E0D;&#x53EF;&#x81EA;&#x62D4;&#x3002;</p>
+    </div>
+  </div>
+</section>
+<section id="section_lowWage_question">
+  <div class="container-fluid">
+    <div class="question"> <img class="paperNote1" src="assets/5_keynote.svg" alt="">
+      <h3 class="green-title">&#x4F4E;&#x85AA;&#xFF1F;&#x73FE;&#x5728;&#x771F;&#x7684;&#x662F;&#x4F4E;&#x85AA;&#x4E16;&#x4EE3;&#x55CE;&#xFF1F;</h3>
+    </div>
+    <div class="content"> 
+      <p>&#x300C;&#x5982;&#x4F55;&#x8D70;&#x51FA;&#x5D29;&#x4E16;&#x4EE3;&#x53AD;&#x4E16;&#x4EE3;&#x7684;&#x5BBF;&#x547D;&#x300D;&#x3001;&#x300C;&#x9752;&#x5E74;&#x4F4E;&#x85AA;&#x56F0;&#x5883;&#x300D;&#xFF0C;&#x9019;&#x4E9B;&#x65B0;&#x805E;&#x6A19;&#x984C;&#x5DF2;&#x4E0D;&#x8DB3;&#x70BA;&#x5947;&#xFF0C;&#x4F3C;&#x4E4E;&#x662F;&#x9019;&#x500B;&#x793E;&#x6703;&#x65E9;&#x5DF2;&#x63A5;&#x53D7;&#x7684;&#x4E8B;&#x5BE6;&#x3002;&#x7136;&#x800C;&#x5728;&#x8ABF;&#x67E5;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x767C;&#x73FE;&#x8A8D;&#x70BA;&#x4F4E;&#x85AA;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x4EBA;&#x4E26;&#x4E0D;&#x5728;&#x5C11;&#x6578;&#xFF0C;&#x751A;&#x6709;&#x4EBA;&#x8A8D;&#x70BA;&#x662F;&#x5A92;&#x9AD4;&#x7684;&#x64CD;&#x4F5C;&#xFF1B;&#x90A3;&#x7A76;&#x7ADF;&#x9019;&#x8FD1;&#x4E09;&#x5341;&#x5E74;&#x5BE6;&#x969B;&#x7684;&#x85AA;&#x8CC7;&#x6210;&#x9577;&#x5E45;&#x5EA6;&#x662F;&#x4EC0;&#x9EBC;&#x5462;&#xFF1F;</p>
+    </div>
+  </div>
+</section>
+<section id="section_realWage_1">
+  <div class="container-fluid">
+    <div class="figure"> <img src="assets/6_data.png" scrolling="no" frameborder="0" width="100%" alt=""></div>
+    <div class="content"> 
+      <p class="p1">&#x5F9E;&#x6578;&#x64DA;&#x4E2D;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x770B;&#x898B;&#x4EBA;&#x5011;&#x7684;&#x85AA;&#x8CC7;&#x4E0D;&#x65B7;&#x5F80;&#x4E0A;&#x5347;&#xFF0C;&#x4F46;&#x70BA;&#x4EC0;&#x9EBC;&#x5E74;&#x8F15;&#x4EBA;&#x4F9D;&#x820A;&#x611F;&#x5230;&#x4F4E;&#x85AA;&#xFF1F;</p>
+      <p class="p2">&#x5176;&#x4E2D;&#x7684;&#x539F;&#x56E0;&#x5728;&#x65BC;&#xFF0C;&#x85AA;&#x8CC7;&#x589E;&#x9577;&#x5E45;&#x5EA6;&#x4E26;&#x6C92;&#x6709;&#x9AD8;&#x65BC;&#x7269;&#x50F9;&#x6210;&#x9577;&#x7684;&#x5E45;&#x5EA6;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x901A;&#x8CA8;&#x81A8;&#x8139;&#x7387;&#xFF09;&#xFF0C;&#x4E5F;&#x5C31;&#x4EE3;&#x8868;&#xFF0C;&#x4EBA;&#x5011;&#x771F;&#x5BE6;&#x62FF;&#x5230;&#x7684;&#x85AA;&#x8CC7;&#x4E26;&#x4E0D;&#x5982;&#x4E0A;&#x5716;&#x7684;&#x6578;&#x64DA;&#x4E00;&#x6A23;&#x4E0D;&#x65B7;&#x4E0A;&#x5347;&#x3002;</p>
+      <p class="p3">&#x300C;&#x90A3;&#x771F;&#x5BE6;&#x7684;&#x85AA;&#x8CC7;&#x6578;&#x64DA;&#x5462;&#xFF1F;&#x300D;</p>
+    </div>
+  </div>
+</section>
+<section id="section_realWage_2">
+  <div class="container-fluid">
+    <iframe src="https://cutt.ly/QbKuelf"></iframe>
+  </div>
+</section>
+<section id="section_reason">
+  <div class="container-fluid">
+    <div class="content1"><img class="paperNote1" src="assets/6_paper1.png" alt="">
+      <h3>&#x5BE6;&#x8CEA;&#x85AA;&#x8CC7;&#x505C;&#x6EEF;&#x5169;&#x5927;&#x4E3B;&#x56E0;: &#x9AD8;&#x6559;&#x64F4;&#x5F35;&amp;&#x79D1;&#x6280;&#x5316;</h3>
+      <p class="p1">&#x81FA;&#x5927;&#x7D93;&#x6FDF;&#x7CFB;&#x5ED6;&#x73EE;&#x5982;&#x6559;&#x6388;&#x6307;&#x51FA;&#xFF0C;&#x8FC5;&#x901F;&#x64F4;&#x5F35;&#x7684;&#x9AD8;&#x7B49;&#x6559;&#x80B2;&#x662F;&#x85AA;&#x8CC7;&#x505C;&#x6EEF;&#x7684;&#x4E00;&#x5927;&#x4E3B;&#x56E0;&#xFF0C;2000&#x5E74;&#x7684;&#x5927;&#x5B78;&#x9304;&#x53D6;&#x7387;&#x5C07;&#x8FD1;60%&#xFF0C;&#x5230;&#x4E86;2009&#x5E74;&#x6642;&#x5DF2;&#x9054;97%&#x3002;&#x5927;&#x5B78;&#x7562;&#x696D;&#x5F8C;&#xFF0C;&#x591A;&#x6578;&#x9752;&#x5E74;&#x6295;&#x8EAB;&#x65BC;&#x8FA6;&#x516C;&#x5BA4;&#x767D;&#x9818;&#x968E;&#x7D1A;&#xFF0C;&#x7576;&#x4F01;&#x696D;&#x7684;&#x4EBA;&#x529B;&#x9700;&#x6C42;&#x4E26;&#x6C92;&#x6709;&#x56E0;&#x70BA;&#x9AD8;&#x6559;&#x64F4;&#x5F35;&#x589E;&#x52A0;&#xFF0C;&#x4E0D;&#x50C5;&#x62C9;&#x4F4E;&#x4E86;&#x85AA;&#x8CC7;&#xFF0C;&#x5927;&#x91CF;&#x7684;&#x5927;&#x5B78;&#x6587;&#x6191;&#x4E5F;&#x4F7F;&#x4F01;&#x696D;&#x96E3;&#x4EE5;&#x5206;&#x8FA8;&#x597D;&#x58DE;&#xFF0C;&#x5C0E;&#x81F4;&#x5404;&#x7522;&#x696D;&#x7686;&#x63A1;&#x6700;&#x4F4E;&#x85AA;&#x8CC7;&#x8058;&#x7528;&#x65B0;&#x9032;&#x9752;&#x5E74;&#x52DE;&#x5DE5;&#xFF0C;&#x9032;&#x800C;&#x4FC3;&#x4F7F;&#x85AA;&#x8CC7;&#x505C;&#x6EEF;&#x7684;&#x73FE;&#x8C61;&#x767C;&#x751F;&#x3002;</p>
+      <p class="p1">&#x96A8;&#x8457;&#x8CC7;&#x8A0A;&#x767C;&#x5C55;&#xFF0C;&#x6A5F;&#x68B0;&#x8207;&#x81EA;&#x52D5;&#x5316;&#x5927;&#x91CF;&#x53D6;&#x4EE3;&#x4EBA;&#x529B;&#xFF0C;&#x7531;&#x65BC;&#x4EBA;&#x7684;&#x53EF;&#x66FF;&#x4EE3;&#x6027;&#x6FC0;&#x589E;&#xFF0C;&#x4F7F;&#x5F97;&#x4F01;&#x696D;&#x5927;&#x5E45;&#x964D;&#x4F4E;&#x5C0D;&#x4EBA;&#x529B;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x5C0E;&#x81F4;&#x85AA;&#x8CC7;&#x96E3;&#x4EE5;&#x4E0A;&#x6F32;&#x3002;&#x540C;&#x6642;&#xFF0C;&#x8A31;&#x591A;&#x7D50;&#x69CB;&#x6027;&#x7684;&#x56E0;&#x7D20;&#x5982;&#x5168;&#x7403;&#x5316;&#x3001;&#x570B;&#x5167;&#x7522;&#x696D;&#x8F49;&#x578B;&#x74F6;&#x9838;&#x90FD;&#x5F37;&#x5316;&#x4E86;&#x6B64;&#x4E00;&#x8DA8;&#x52E2;&#xFF0C;&#x4F7F;&#x5F97;&#x73FE;&#x5728;&#x7684;&#x5BE6;&#x8CEA;&#x85AA;&#x8CC7;&#x518D;&#x96E3;&#x5982;1990&#x5E74;&#x4EE3;&#x4E00;&#x6A23;&#x4E0D;&#x65B7;&#x4E0A;&#x5347;&#x3002;</p>
+    </div>
+    <div class="content2"><img class="paperNote2" src="assets/6_paper2.png" alt="">
+      <h3>&#x70BA;&#x4EC0;&#x9EBC;&#x5BE6;&#x8CEA;&#x85AA;&#x8CC7;&#x505C;&#x6EEF;&#x8B93;&#x5E74;&#x8F15;&#x4EBA;&#x9019;&#x9EBC;&#x75DB;&#xFF1F;</h3>
+      <p class="p1">&#x8FD1;&#x5169;&#x5E74;&#x7684;&#x5BE6;&#x8CEA;&#x85AA;&#x8CC7;&#x5118;&#x7BA1;&#x9010;&#x6B65;&#x56DE;&#x5347;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x5FFD;&#x8996;&#x7684;&#x662F;&#x5728;2009&#x5F8C;&#x7684;&#x9019;&#x5341;&#x5E74;&#x5167;&#xFF0C;&#x5BE6;&#x8CEA;&#x85AA;&#x8CC7;&#x76F8;&#x6BD4;&#x8207;1990&#x5E74;&#x4EE3;&#x662F;&#x5012;&#x9000;&#x8A31;&#x591A;&#x7684;&#xFF0C;&#x800C;&#x5C0D;&#x65BC;&#x525B;&#x51FA;&#x793E;&#x6703;&#x7684;&#x5E74;&#x8F15;&#x4EBA;&#x4F86;&#x8AAA;25-35&#x6B72;&#x662F;&#x7D2F;&#x7A4D;&#x8CC7;&#x672C;&#x7684;&#x4E00;&#x5927;&#x9EC3;&#x91D1;&#x6642;&#x671F;&#xFF0C;&#x6216;&#x8A31;&#x6B63;&#x8C61;&#x5FB5;&#x8457;&#x4F4E;&#x85AA;&#x6642;&#x4EE3;&#x7684;&#x5F37;&#x52E2;&#x4F86;&#x8972;&#x3002;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x5ED6;&#x73EE;&#x5982;&#x6559;&#x6388;&#x4EA6;&#x6307;&#x51FA;&#x6642;&#x4EE3;&#x7684;&#x6539;&#x8B8A;&#xFF0C;&#x4F7F;&#x5F97;&#x9019;&#x500B;&#x4E16;&#x4EE3;&#x7684;&#x5E74;&#x8F15;&#x4EBA;&#x66F4;&#x96E3;&#x4EE5;&#x7D2F;&#x7A4D;&#x8CC7;&#x672C;&#x3002;&#x5728;&#x904E;&#x53BB;&#xFF0C;&#x4E0D;&#x6703;&#x6709;&#x6EFF;&#x8857;&#x7684;&#x9910;&#x5EF3;&#x3001;&#x98F2;&#x6599;&#x5E97;&#xFF0C;&#x66F4;&#x4E0D;&#x9700;&#x8981;&#x4EBA;&#x4EBA;&#x4E00;&#x53F0;&#x624B;&#x6A5F;&#x3001;&#x5E73;&#x677F;&#xFF0C;&#x73FE;&#x4EE3;&#x9700;&#x8981;&#x6D88;&#x8CBB;&#x7684;&#x7269;&#x54C1;&#x66F4;&#x591A;&#xFF0C;&#x56E0;&#x6B64;&#x6D88;&#x8CBB;&#x578B;&#x614B;&#x7684;&#x8B8A;&#x5316;&#x8207;&#x5BE6;&#x8CEA;&#x85AA;&#x8CC7;&#x505C;&#x6EEF;&#x7684;&#x4EA4;&#x7E54;&#x4E0B;&#xFF0C;&#x624D;&#x6703;&#x4F7F;&#x5E74;&#x8F15;&#x4EBA;&#x7684;&#x75DB;&#x611F;&#x66F4;&#x6DF1;&#x3002;</p>
+    </div>
+  </div>
+</section>
+<section id="section_todo">
+  <div class="container-fluid">
+    <div class="content3"><img src="assets/8_todo.svg" alt="">
+      <h3>&#x5E74;&#x8F15;&#x4EBA;&#x8A72;&#x600E;&#x9EBC;&#x505A;&#xFF1F;</h3>
+      <p>&#x300C;&#x4F4E;&#x85AA;&#x662F;&#x73FE;&#x5728;&#x793E;&#x6703;&#x7D50;&#x69CB;&#x4E0B;&#x7684;&#x5E73;&#x5747;&#x73FE;&#x8C61;&#x300D;&#x5ED6;&#x73EE;&#x5982;&#x6559;&#x6388;&#x80AF;&#x5B9A;&#x5730;&#x8AAA;&#xFF0C;&#x7531;&#x65BC;&#x793E;&#x6703;&#x4E2D;&#x4ECD;&#x5B58;&#x5728;&#x8457;&#x9AD8;&#x85AA;&#x7D50;&#x69CB;&#xFF0C;&#x5982;&#x7814;&#x767C;&#x5C08;&#x696D;&#x4EBA;&#x54E1;&#xFF1B; &#x76F8;&#x8F03;&#x4E4B;&#x4E0B;&#x88FD;&#x9020;&#x696D;&#x5728;&#x904E;&#x53BB;&#x53D7;&#x5230;&#x7522;&#x696D;&#x5916;&#x79FB;&#x5F71;&#x97FF;&#xFF0C;&#x4F7F;&#x5F97;&#x5E73;&#x5747;&#x85AA;&#x8CC7;&#x8F03;&#x4F4E;&#xFF1B;&#x670D;&#x52D9;&#x696D;&#x5247;&#x53D7;&#x5230;&#x9AD8;&#x6559;&#x64F4;&#x5F35;&#x8207;&#x79D1;&#x6280;&#x5316;&#x7684;&#x5F71;&#x97FF;&#xFF0C;&#x85AA;&#x6C34;&#x6709;&#x4E0B;&#x964D;&#x7684;&#x8DA8;&#x52E2;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5ED6;&#x73EE;&#x5982;&#x6559;&#x6388;&#x5EFA;&#x8B70;&#x5E74;&#x8F15;&#x4EBA;&#x80FD;&#x591A;&#x589E;&#x52A0;&#x81EA;&#x8EAB;&#x9644;&#x52A0;&#x50F9;&#x503C;&#xFF0C;&#x53BB;&#x62B5;&#x6297;&#x9AD8;&#x6559;&#x64F4;&#x5F35;&#x3001;&#x5168;&#x7403;&#x5316;&#x3001;&#x79D1;&#x6280;&#x5316;&#x7B49;&#x4E0D;&#x53EF;&#x9006;&#x7684;&#x793E;&#x6703;&#x73FE;&#x8C61;&#xFF0C;&#x4EE5;&#x7A81;&#x7834;&#x73FE;&#x72C0;&#x5BE6;&#x73FE;&#x81EA;&#x8EAB;&#x7406;&#x60F3;&#x3002;</p>
+    </div>
+  </div>
+</section>
+<section id="section_road">
+  <iframe class="juxtapose" frameborder="0" width="100%" height="100%" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e5dd0764-5520-11eb-83c8-ebb5d6f907df"></iframe>
+</section>
+<section id="section_youngPpl">
+  <div class="container-fluid">
+    <div class="people">
+      <div class="youngs p1">
+        <p>&#x90B1;&#x5C0F;&#x59D0;&#xFF0C;27&#x6B72;&#xFF0C;&#x96FB;&#x8996;&#x53F0;&#x5F9E;&#x696D;&#x4EBA;&#x54E1;&#xFF0C;&#x5927;&#x5B78;&#x7562;&#x696D;&#x5F8C;&#x5373;&#x9078;&#x64C7;&#x6295;&#x8EAB;&#x8077;&#x5834;&#xFF0C;&#x6BCF;&#x5929;&#x65E9;&#x4E0A;&#x5F9E;&#x6843;&#x5712;&#x901A;&#x52E4;&#x5230;&#x53F0;&#x5317;&#x4E0A;&#x73ED;&#xFF0C;&#x4E00;&#x8DEF;&#x5F9E;&#x65E9;&#x5DE5;&#x4F5C;&#x5230;&#x665A;&#xFF0C;&#x4E8B;&#x60C5;&#x4E00;&#x4EF6;&#x63A5;&#x8457;&#x4E00;&#x4EF6;&#xFF0C;&#x8D95;&#x8173;&#x672C;&#x3001;&#x806F;&#x7D61;&#x4EBA;&#x4E8B;&#x3001;&#x9032;&#x68DA;&#x9304;&#x5F71;&mldr;&#x5DE5;&#x4F5C;&#x5E7E;&#x4E4E;&#x8017;&#x5149;&#x4E00;&#x5929;&#x5FC3;&#x529B;&#x3002;&#x5979;&#x7121;&#x5948;&#x5730;&#x8AAA;:&#x300C;&#x6211;&#x5176;&#x5BE6;&#x6C92;&#x6709;&#x4E0D;&#x611B;&#x6211;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x6211;&#x4E00;&#x76F4;&#x90FD;&#x89BA;&#x5F97;&#x6211;&#x9078;&#x64C7;&#x4E86;&#x6211;&#x60F3;&#x52AA;&#x529B;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x4F46;&#x5DE5;&#x4F5C;&#x771F;&#x7684;&#x4F54;&#x4E86;&#x6EFF;&#x591A;&#x6642;&#x9593;&#x8207;&#x5FC3;&#x529B;&#x300D;&#x804A;&#x5230;&#x85AA;&#x6C34;&#xFF0C;&#x5979;&#x53CD;&#x6620;&#x4F4E;&#x85AA;&#x662F;&#x5979;&#x771F;&#x5BE6;&#x6240;&#x898B;&#x7684;&#x666E;&#x904D;&#x73FE;&#x8C61;&#xFF0C;&#x5305;&#x62EC;&#x81EA;&#x5DF1;&#x53E6;&#x4E00;&#x4F34;&#x548C;&#x8EAB;&#x908A;&#x7684;&#x670B;&#x53CB;&#x5011;&#xFF0C;&#x540C;&#x6642;&#x4E5F;&#x8868;&#x793A;&#x81EA;&#x5DF1;&#x771F;&#x7684;&#x8981;&#x5F88;&#x52AA;&#x529B;&#x4E00;&#x5E74;&#x624D;&#x80FD;&#x5B58;&#x4E0B;&#x500B;10&#x4F86;&#x842C;&#xFF0C;&#x5E73;&#x5E38;&#x5149;&#x662F;&#x4F4F;&#x5BBF;&#x3001;&#x4EA4;&#x901A;&#x4F19;&#x98DF;&#x7B49;&#x5FC5;&#x8981;&#x82B1;&#x8CBB;&#x5C31;&#x4F54;&#x6389;&#x5FEB;&#x516B;&#x6210;&#xFF0C;&#x4E00;&#x6210;&#x62FF;&#x4F86;&#x7292;&#x8CDE;&#x81EA;&#x5DF1;&#x5E7E;&#x4E4E;&#x5C31;&#x5DF2;&#x7D93;&#x5FEB;&#x5403;&#x4E0D;&#x6D88;&#xFF0C;&#x4E0D;&#x904E;&#x5979;&#x4E5F;&#x5F88;&#x80AF;&#x5B9A;&#x5730;&#x8AAA;: &#x300C;&#x6BD4;&#x8D77;&#x85AA;&#x6C34;&#xFF0C;&#x6211;&#x5176;&#x5BE6;&#x66F4;&#x5728;&#x610F;&#x6211;&#x6709;&#x6C92;&#x6709;&#x5728;&#x505A;&#x6211;&#x60F3;&#x505A;&#x7684;&#x4E8B;&#x3002;&#x300D;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x96A8;&#x8457;&#x53F0;&#x7063;&#x6574;&#x9AD4;&#x7D93;&#x6FDF;&#x74B0;&#x5883;&#x7684;&#x6539;&#x5584;&#xFF0C;&#x5C0D;&#x73FE;&#x5728;&#x7684;&#x5E74;&#x8F15;&#x4E16;&#x4EE3;&#x4F86;&#x8AAA;&#xFF0C;&#x751F;&#x6D3B;&#x53EF;&#x80FD;&#x4E0D;&#x518D;&#x662F;&#x4E3B;&#x8981;&#x7684;&#x7169;&#x60F1;&#xFF0C;&#x66F4;&#x5927;&#x7684;&#x7169;&#x60F1;&#x6216;&#x8A31;&#x4F86;&#x81EA;&#x4E0D;&#x77E5;&#x9053;&#x8A72;&#x8D70;&#x54EA;&#x689D;&#x8DEF;&#xFF0C;&#x54EA;&#x689D;&#x8DEF;&#x624D;&#x80FD;&#x8D70;&#x5F97;&#x66F4;&#x9060;&#x3002;&#x554F;&#x5230;&#x6709;&#x6C92;&#x6709;&#x5275;&#x696D;&#x5922;&#x60F3;&#xFF0C;&#x90B1;&#x5C0F;&#x59D0;&#x7D66;&#x4E86;&#x500B;&#x6709;&#x8DA3;&#x7684;&#x7B54;&#x6848;:&#x300C;&#x6709;&#x60F3;&#x904E;&#xFF0C;&#x4F46;&#x5275;&#x696D;&#x7562;&#x7ADF;&#x8981;&#x6295;&#x8CC7;&#x4E0D;&#x5C11;&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x81EA;&#x5DF1;&#x7576;&#x8001;&#x95C6;&#x5F88;&#x5BB9;&#x6613;&#x6C92;&#x6709;&#x65B9;&#x5411;&#xFF0C;&#x6240;&#x4EE5;&#x6C92;&#x6709;&#x771F;&#x7684;&#x8E0F;&#x51FA;&#x90A3;&#x4E00;&#x6B65;&#xFF0C;&#x4E0D;&#x904E;&#x73FE;&#x5728;&#x6709;&#x5728;&#x7D93;&#x71DF;&#x81EA;&#x5DF1;&#x4E3B;&#x6301;&#x4EBA;&#x7684;&#x500B;&#x4EBA;&#x54C1;&#x724C;&#xFF0C;&#x4E5F;&#x8A31;&#x4E5F;&#x7B97;&#x662F;&#x53E6;&#x985E;&#x7684;&#x5275;&#x696D;&#x5427;&#xFF01;&#x300D;&#x5C0D;&#x65BC;&#x4F4E;&#x85AA;&#x7684;&#x5E74;&#x8F15;&#x4E00;&#x65CF;&#x4F86;&#x8AAA;&#xFF0C;&#x8981;&#x7528;&#x5275;&#x696D;&#x4F86;&#x70BA;&#x751F;&#x6D3B;&#x5275;&#x9020;&#x65B0;&#x7684;&#x53EF;&#x80FD;&#x4E5F;&#x8A31;&#x4E0D;&#x518D;&#x5982;&#x904E;&#x53BB;&#x5BB9;&#x6613;&#xFF0C;&#x4F46;&#x7D93;&#x71DF;&#x500B;&#x4EBA;&#x54C1;&#x724C;&#x537B;&#x6210;&#x70BA;&#x8CC7;&#x8A0A;&#x6642;&#x4EE3;&#x7684;&#x65B0;&#x9078;&#x64C7;&#x3002;</p><br>
+        <p class="short">&#x5728;&#x8A2A;&#x8AC7;&#x7684;&#x6700;&#x5F8C;&#xFF0C;&#x90B1;&#x5C0F;&#x59D0;&#x63D0;&#x5230;&#x672A;&#x4F86;&#x6253;&#x7B97;&#x66AB;&#x6642;&#x96E2;&#x958B;&#x96FB;&#x8996;&#x5708;&#xFF0C;&#x91CD;&#x65B0;&#x56DE;&#x5230;&#x6821;&#x5712;&#x5B78;&#x7FD2;&#x5FC3;&#x7406;&#x8AEE;&#x5546;&#x76F8;&#x95DC;&#x7684;&#x77E5;&#x8B58;&#xFF0C;&#x671F;&#x671B;&#x80FD;&#x7528;&#x5225;&#x7684;&#x89D2;&#x5EA6;&#x70BA;&#x4EBA;&#x751F;&#x589E;&#x6DFB;&#x8272;&#x5F69;&#x3002;&#x300C;&#x6211;&#x6C92;&#x6709;&#x7D93;&#x6B77;&#x904E;&#x904E;&#x53BB;&#x7684;&#x6642;&#x4EE3;&#xFF0C;&#x4E0D;&#x80FD;&#x5984;&#x4E0B;&#x5B9A;&#x8AD6;&#xFF0C;&#x4F46;&#x60F3;&#x5FC5;&#x6BCF;&#x500B;&#x6642;&#x4EE3;&#x5FC5;&#x7136;&#x6709;&#x5404;&#x81EA;&#x7684;&#x56F0;&#x96E3;&#x8207;&#x6311;&#x6230;&#x9700;&#x8981;&#x52AA;&#x529B;&#x9762;&#x5C0D;&#x300D;&#x5979;&#x6DE1;&#x6DE1;&#x5730;&#x8AAA;&#x3002;</p><img class="background" src="assets/11_paper.svg" alt=""><img class="man" src="assets/pic1.png" alt="">
+      </div>
+      <div class="youngs p2">
+        <p>&#x300C;&#x300E;&#x8CFA;&#x9019;&#x9EBC;&#x591A;&#x9322;&#x6709;&#x4EC0;&#x9EBC;&#x7528;&#xFF0C;&#x90FD;&#x82B1;&#x5728;&#x91AB;&#x85E5;&#x8CBB;&#x8EAB;&#x4E0A;&#x4E86;&#x300F;&#x4ED6;&#x7576;&#x6642;&#x5C31;&#x662F;&#x9019;&#x9EBC;&#x8DDF;&#x6211;&#x8AAA;&#x7684;&#x300D;&#x5169;&#x5E74;&#x524D;&#x5C0F;&#x8349;&#x7684;&#x53CB;&#x4EBA;&#x56E0;&#x70BA;&#x9AD8;&#x58D3;&#x9AD8;&#x6642;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x8EAB;&#x9AD4;&#x627F;&#x53D7;&#x4E0D;&#x4F4F;&#x800C;&#x4F4F;&#x9032;&#x91AB;&#x9662;&#xFF0C;&#x4F5C;&#x70BA;&#x4E8B;&#x4EF6;&#x7684;&#x65C1;&#x89C0;&#x8005;&#xFF0C;&#x770B;&#x8457;&#x670B;&#x53CB;&#x5728;&#x51FA;&#x793E;&#x6703;&#x5F8C;&#x7684;&#x77ED;&#x77ED;&#x5E7E;&#x5E74;&#x5167;&#xFF0C;&#x5065;&#x5EB7;&#x88AB;&#x5DE5;&#x4F5C;&#x6162;&#x6162;&#x541E;&#x566C;&#xFF0C;&#x5979;&#x770B;&#x6E05;&#x4E86;&#x793E;&#x6703;&#x7684;&#x73FE;&#x5BE6;&#x3002;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x8AF7;&#x523A;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x4ECA;&#x5C0F;&#x8349;&#x4E5F;&#x6210;&#x70BA;&#x4E86;&#x9019;&#x4E9B;&#x4E8B;&#x4EF6;&#x7684;&#x5176;&#x4E2D;&#x4E00;&#x54E1;&#xFF0C;&#x300C;&#x5F9E;&#x8F49;&#x9032;&#x884C;&#x92B7;&#x696D;&#x5F8C;&#xFF0C;&#x8EAB;&#x9AD4;&#x958B;&#x59CB;&#x5BB9;&#x6613;&#x751F;&#x75C5;&#x3001;&#x514D;&#x75AB;&#x529B;&#x4E0B;&#x964D;&#x4E86;&#x5F88;&#x591A;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x5E73;&#x5747;&#x6BCF;&#x65E5;&#x5DE5;&#x4F5C;10-12&#x5C0F;&#x6642;&#xFF0C;&#x540C;&#x671F;&#x7684;&#x670B;&#x53CB;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x5927;&#x5BB6;&#x90FD;&#x5DE5;&#x4F5C;&#x5230;&#x5F88;&#x665A;&#xFF0C;&#x4F46;&#x662F;&#x70BA;&#x4E86;&#x628A;&#x5DE5;&#x4F5C;&#x505A;&#x597D;&#x4E5F;&#x7121;&#x53EF;&#x5948;&#x4F55;&#x300D;&#xFF0C;&#x4ED6;&#x843D;&#x5BDE;&#x5730;&#x8AAA;&#xFF0C;&#x300C;&#x76F4;&#x5230;&#x958B;&#x59CB;&#x795E;&#x7D93;&#x5931;&#x8ABF;&#x9023;&#x5E36;&#x80C3;&#x75D9;&#x6523;&#xFF0C;&#x6211;&#x624D;&#x771F;&#x6B63;&#x610F;&#x8B58;&#x5230;&#x8EAB;&#x9AD4;&#x4E0D;&#x884C;&#x4E86;&#x3002;&#x300D;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x56E0;&#x70BA;&#x5DE5;&#x4F5C;&#x800C;&#x4F7F;&#x5065;&#x5EB7;&#x60E1;&#x5316;&#x7684;&#x5C0F;&#x8349;&#x4E0D;&#x662F;&#x55AE;&#x4E00;&#x500B;&#x6848;&#xFF0C;&#x79D1;&#x6280;&#x5316;&#x6642;&#x4EE3;&#x8B93;&#x73FE;&#x5E36;&#x4EBA;&#x534A;&#x591C;&#x6216;&#x662F;&#x5047;&#x65E5;&#x90FD;&#x6703;&#x63A5;&#x5230;&#x5DE5;&#x4F5C;&#x76F8;&#x95DC;&#x7684;&#x96FB;&#x8A71;&#x6216;&#x6D88;&#x606F;&#xFF0C;&#x6642;&#x6642;&#x8655;&#x5728;&#x4E00;&#x500B;&#x7DCA;&#x7E43;&#x7684;&#x72C0;&#x614B;&#xFF0C;&#x5404;&#x500B;&#x56E0;&#x7D20;&#x52A0;&#x5728;&#x4E00;&#x8D77;&#x52A0;&#x901F;&#x4E86;&#x5065;&#x5EB7;&#x7684;&#x60E1;&#x5316;&#x3002;</p><br>
+        <p class="short">&#x5118;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x5C0F;&#x8349;&#x537B;&#x4E0D;&#x5F8C;&#x6094;&#x4F86;&#x5230;&#x9019;&#x500B;&#x884C;&#x696D;&#xFF0C;&#x300C;&#x5728;&#x9019;&#x4EFD;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x6240;&#x5F97;&#x5230;&#x7684;&#x78E8;&#x7DF4;&#x5F88;&#x591A;&#xFF0C;&#x6A5F;&#x6703;&#x4E5F;&#x5F88;&#x591A;&#xFF0C;&#x883B;&#x50CF;&#x9B54;&#x9B3C;&#x8A13;&#x7DF4;&#x7684;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x51FA;&#x53BB;&#x5F8C;&#x7D2F;&#x7A4D;&#x4E0B;&#x4F86;&#x7684;&#x7D93;&#x9A57;&#x8CC7;&#x672C;&#x90FD;&#x975E;&#x5E38;&#x8C50;&#x5BCC;&#x3002;&#x300D;&#x4ED6;&#x7B11;&#x8457;&#x8AAA;&#x3002;&#x300E;&#x6562;&#x8B1B;&#x624D;&#x6703;&#x6562;&#x9762;&#x5C0D;&#x300F;&#x662F;&#x5C0F;&#x8349;&#x5C0D;&#x65BC;&#x53AD;&#x4E16;&#x6642;&#x4EE3;&#x7684;&#x60F3;&#x6CD5;&#x8207;&#x6A19;&#x8A9E;&#xFF0C;&#x300C;&#x6211;&#x5E0C;&#x671B;&#x4ED6;&#x5011;(&#x6307;&#x4E0A;&#x4E00;&#x8F29;)&#x4E5F;&#x80FD;&#x770B;&#x5230;&#x6211;&#x5011;&#x7684;&#x52AA;&#x529B;&#xFF0C;&#x6BCF;&#x4E00;&#x4EE3;&#x90FD;&#x6709;&#x6BCF;&#x4E00;&#x4EE3;&#x4E0D;&#x540C;&#x7684;&#x554F;&#x984C;&#xFF0C;&#x4E0A;&#x4E00;&#x4EE3;&#x4E5F;&#x4E00;&#x6A23;&#x6709;&#x4ED6;&#x5011;&#x8F9B;&#x82E6;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x9019;&#x662F;&#x80AF;&#x5B9A;&#x7684;&#x3002;&#x300D;&#x5728;&#x51FA;&#x793E;&#x6703;&#x7684;&#x9019;&#x5E7E;&#x5E74;&#xFF0C;&#x4ED6;&#x898B;&#x8B49;&#x540C;&#x5115;&#x52AA;&#x529B;&#x5EA6;&#x904E;&#x8FF7;&#x832B;&#x6642;&#x523B;&#xFF0C;&#x4E26;&#x4E14;&#x5728;&#x9019;&#x8CC7;&#x8A0A;&#x6C3E;&#x6FEB;&#x7684;&#x6642;&#x4EE3;&#x4E0B;&#x4F9D;&#x820A;&#x52AA;&#x529B;&#x4FDD;&#x6301;&#x5404;&#x81EA;&#x7684;&#x521D;&#x8877;&#x8207;&#x71B1;&#x60C5;&#x3002;</p><img class="background" src="assets/11_paper.svg" alt=""><img class="man" src="assets/pic2.png" alt="">
+      </div>
+      <div class="youngs p3">
+        <p>&#x752B;&#x8E0F;&#x5165;&#x8077;&#x5834;&#x7684;&#x4F55;&#x5C0F;&#x59D0;&#x8AAA;&#xFF0C;&#x5F9E;&#x5B78;&#x751F;&#x6642;&#x671F;&#x5979;&#x4FBF;&#x662F;&#x500B;&#x76F8;&#x5C0D;&#x52D9;&#x5BE6;&#x7684;&#x4EBA;&#xFF0C;&#x64D4;&#x5FC3;&#x5B78;&#x696D;&#x6210;&#x7E3E;&#x3001;&#x898F;&#x5283;&#x8077;&#x6DAF;&#x767C;&#x5C55;&#xFF0C;&#x52AA;&#x529B;&#x53C3;&#x52A0;&#x8AB2;&#x7A0B;&#x53CA;&#x6D3B;&#x52D5;&#x5145;&#x5BE6;&#x81EA;&#x5DF1;&#x3002;&#x96D6;&#x7136;&#x77E5;&#x9053;&#x5373;&#x4F7F;&#x5FD9;&#x7684;&#x7126;&#x982D;&#x721B;&#x984D;&#xFF0C;&#x4E5F;&#x4E0D;&#x4E00;&#x5B9A;&#x80FD;&#x78BA;&#x4FDD;&#x672A;&#x4F86;&#x4E00;&#x7247;&#x5149;&#x660E;&#xFF0C;&#x4F46;&#x6BD4;&#x8D77;&#x5F85;&#x5728;&#x5BBF;&#x820D;&#x5B89;&#x9038;&#xFF0C;&#x5979;&#x4ECD;&#x9078;&#x64C7;&#x56DB;&#x8655;&#x5C0B;&#x8993;&#x6A5F;&#x6703;&#x3002;&#x76F8;&#x5C0D;&#x5BE6;&#x969B;&#x7684;&#x5979;&#x6C92;&#x6709;&#x592A;&#x591A;&#x6D6E;&#x6FEB;&#x7684;&#x5922;&#x60F3;&#x6CE1;&#x6CE1;&#xFF0C;&#x53EA;&#x5E0C;&#x671B;&#x80FD;&#x76E1;&#x5FC3;&#x5B8C;&#x6210;&#x5206;&#x5167;&#x5DE5;&#x4F5C;&#xFF0C;&#x597D;&#x597D;&#x52AA;&#x529B;&#x63D0;&#x5347;&#x81EA;&#x5DF1;&#xFF0C;&#x82E5;&#x884C;&#x6709;&#x9918;&#x529B;&#xFF0C;&#x518D;&#x4EE5;&#x81EA;&#x8EAB;&#x5F71;&#x97FF;&#x529B;&#x8CA2;&#x737B;&#x95DC;&#x6CE8;&#x5DF2;&#x4E45;&#x7684;&#x5FC3;&#x7406;&#x5065;&#x5EB7;&#x9818;&#x57DF;&#x3002;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x8AC7;&#x5230;&#x521D;&#x5165;&#x8077;&#x5834;&#x906D;&#x9047;&#x7684;&#x56F0;&#x96E3;&#xFF0C;&#x300C;&#x6700;&#x56F0;&#x96E3;&#x4E0D;&#x662F;&#x4EFB;&#x4F55;&#x4E00;&#x9805;&#x55AE;&#x4E00;&#x4E8B;&#x4EF6;&#xFF0C;&#x800C;&#x662F;&#x8A8D;&#x77E5;&#x8F49;&#x8B8A;&#x3002;&#x5C0F;&#x6642;&#x5019;&#x5C0D;&#x4E16;&#x754C;&#x6709;&#x7F8E;&#x597D;&#x7684;&#x60F3;&#x50CF;&#xFF0C;&#x9577;&#x5927;&#x624D;&#x767C;&#x73FE;&#xFF0C;&#x73FE;&#x5BE6;&#x662F;&#x5B89;&#x8EAB;&#x5EA6;&#x65E5;&#x90FD;&#x4E0D;&#x5BB9;&#x6613;&#x3002;&#x300D;&#x4F46;&#x5979;&#x4E5F;&#x8AAA;&#x5373;&#x4F7F;&#x8A8D;&#x77E5;&#x5230;&#x73FE;&#x5BE6;&#x4E0D;&#x76E1;&#x7406;&#x60F3;&#xFF0C;&#x4E5F;&#x4E0D;&#x5C07;&#x81EA;&#x5DF1;&#x6EEF;&#x7559;&#x65BC;&#x8CA0;&#x9762;&#x60C5;&#x7DD2;&#xFF0C;&#x800C;&#x662F;&#x76E1;&#x91CF;&#x53C3;&#x52A0;&#x6D3B;&#x52D5;&#x3001;&#x8AB2;&#x7A0B;&#x722D;&#x53D6;&#x6A5F;&#x6703;&#xFF0C;&#x8173;&#x8E0F;&#x5BE6;&#x5730;&#x7684;&#x904E;&#x5B8C;&#x6BCF;&#x4E00;&#x5929;&#x3002;</p><br>
+        <p class="short">&#x300C;&#x53EA;&#x4EE5;&#x7D50;&#x679C;&#x8AD6;&#xFF0C;&#x6216;&#x8A31;&#x771F;&#x7684;&#x4E00;&#x4EE3;&#x4E0D;&#x5982;&#x4E00;&#x4EE3;&#xFF0C;&#x5728;20&#x4E16;&#x7D00;&#x7684;&#x73FE;&#x5728;&#xFF0C;&#x524D;&#x4EBA;&#x5DF2;&#x7D93;&#x5B8C;&#x6210;&#x592A;&#x591A;&#x95DC;&#x9375;&#x6027;&#x7684;&#x9032;&#x6B65;&#xFF0C;&#x8981;&#x518D;&#x6709;&#x4E00;&#x500B;&#x7A81;&#x98DB;&#x731B;&#x9032;&#x7684;&#x6642;&#x523B;&#x4E26;&#x50CF;&#x5F9E;&#x524D;&#x5BB9;&#x6613;&#xFF0C;&#x73FE;&#x5728;&#x5C31;&#x696D;&#x74B0;&#x5883;&#x5C0D;&#x5E74;&#x8F15;&#x4EBA;&#x4E0D;&#x50CF;&#x4EE5;&#x524D;&#x90A3;&#x9EBC;&#x53CB;&#x5584;&#xFF0C;&#x7D93;&#x6FDF;&#x4E0D;&#x518D;&#x80FD;&#x5982;&#x5F9E;&#x524D;&#x822C;&#x98DB;&#x8E8D;&#x6210;&#x9577;&#x3002;&#x96D6;&#x7136;&#x5982;&#x6B64;&#xFF0C;&#x9019;&#x6A23;&#x7684;&#x6642;&#x4EE3;&#x53C8;&#x6709;&#x8A31;&#x591A;&#x65B0;&#x8208;&#x4E8B;&#x7269;&#x6B63;&#x5728;&#x767C;&#x751F;&#xFF0C;&#x5E74;&#x8F15;&#x4EBA;&#x4E5F;&#x6B63;&#x52AA;&#x529B;&#x4EE5;&#x81EA;&#x8EAB;&#x5B78;&#x7FD2;&#x80FD;&#x529B;&#x9069;&#x61C9;&#x8457;&#x9019;&#x500B;&#x74B0;&#x5883;&#x300D;&#x5979;&#x6DE1;&#x6DE1;&#x5730;&#x8AAA;&#x3002;</p><img class="background" src="assets/11_paper.svg" alt=""><img class="man" src="assets/pic3.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section_conclusion">
+  <div class="conclusion">
+    <div class="word">&#x300C; &#x5728;&#x5922;&#x60F3;&#x7684;&#x6CE5;&#x6CBC;&#x4E2D;&#x8F9B;&#x82E6;&#x6253;&#x6EFE;&#xFF0C;<br>&#x537B;&#x5F9E;&#x4F86;&#x6C92;&#x6709;&#x653E;&#x68C4;&#x5E0C;&#x671B;&#xFF0C;<br>&#x4F60;&#x4E5F;&#x662F;&#x5427;&#xFF1F;&#x300D;</div><img class="right_dark" src="assets/10_com_off.svg" alt=""><img class="left_dark" src="assets/10_tab_off.svg" alt="">
+  </div>
+</section>
+<section id="section_contact">
+  <div class="container-fluid">
+    <div class="great">&#x300C;&#x7B11;&#x4E00;&#x500B;&#x5427;&#xFF01;&#x300D;</div>
+    <div class="mail">
+      <div class="mailCover"><img src="assets/envelope.svg" alt=""></div>
+      <div class="mailBody"><img class="paper" src="assets/envelope_paper.svg" alt="">
+        <h1>&#x5FC3;&#x60C5;&#x7559;&#x8A00;</h1>
+        <textarea></textarea><img class="send" src="assets/envelope_send.svg" title="點我！">
+      </div>
+    </div>
+  </div>
+</section>
+<section id="footer">
+  <div class="end">
+    <p>&#x88FD;&#x4F5C; / &#x5289;&#x6709;&#x5BB9; &#x5F90;&#x6176;&#x6BC5; &#x6797;&#x54F2;&#x5982;</p>
+    <p>&#x6307;&#x5C0E;&#x8001;&#x5E2B; / &#x8B1D;&#x5409;&#x9686;</p>
+    <p>&#x90E8;&#x5206;&#x7D20;&#x6750;&#x4F7F;&#x7528;-ww.freepik.com</p>
+    <p>Copyright&copy;2021 &#x7248;&#x6B0A;&#x6240;&#x6709; &#x7981;&#x6B62;&#x64C5;&#x81EA;&#x8F49;&#x8CBC;&#x7BC0;&#x9304;</p>
+  </div>
+</section>
+<!-- partial-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
