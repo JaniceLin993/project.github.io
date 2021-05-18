@@ -22,6 +22,14 @@
     100%
         transform: translateX(0)
 
+@keyframes cat_wavehand 
+  0% 
+    transform: rotate(0deg)
+  50% 
+    transform: rotate(-10deg)
+  100% 
+    transform: rotate(0deg)
+
 @font-face 
   font-family: 'Gen Jyuu Gothic Bold'
   src: url(assets/font/1.ttf)
@@ -37,7 +45,8 @@
 
 *
     position: relative
-    border: solid .5px black
+    transition: .5s
+    // border: solid .5px black
     font-family: 'Gen Jyuu Gothic Bold', 'Gen Jyuu Gothic Meduim', 'Gen Jyuu Gothic Regular'
 
 p
@@ -51,6 +60,7 @@ html, body
     
 body
     background-image: url("assets/2_backnew.png")
+    background-size: cover
 
 section 
     height: 100vh
@@ -63,6 +73,8 @@ section
     display: flex
     justify-content: space-between
     z-index: 1
+    opacity: 0
+    transition: .5s
     a
         margin-left: .5vw
         display: flex
@@ -80,7 +92,8 @@ section
     .line
         .line1, .line2, .line3
             background-color: #e5e5e5
-
+.nav_bar.show
+    opacity: 1
     
 // .nav_bar img.icon:hover 
 //     background-color: #e3e82d
@@ -325,6 +338,8 @@ section
     color: white
     height: 200vh
     background-image: url("assets/4_back.svg")
+    background-size: cover
+    border: solid #2e343b .5px
 #section_simple .container-fluid
     padding: 0
     height: 100%
@@ -381,6 +396,7 @@ section
 #section_lowWage_question
     background-image: url("assets/4_back.svg")
     background-size: cover
+    border: solid #2e343b 0.5px
 #section_lowWage_question .container-fluid
     height: 100vh
     display: flex
@@ -671,6 +687,7 @@ section
     flex-direction: column
     align-items: center
     justify-content: space-around
+    transition: 1s
     .paper
         position: absolute
 #section_contact .container-fluid .mail .mailBody textarea 
@@ -684,6 +701,7 @@ section
     position: absolute
     bottom: 4%
     right: 12%
+    cursor: pointer
 
 section#footer
     height: 30vh
@@ -704,17 +722,78 @@ section#footer
             font-size: 1.5vh
 
 
+section#cat_explain 
+    height: 100vh
+    width: 100vw
+    position: fixed
+    top: 0
+    background-color: rgba(0, 0, 0, 0.3)
+    transition: 1s
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: -1
+    opacity: 0
 
-section
-    display: none
-#cat_waveHand
-    display: none
+section#cat_explain .explain 
+    width: 50%
+    height: 60%
+    display: flex
+    justify-content: center
+    align-items: center
+    .content
+        height: 80%
+        width: 80%
+        z-index: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        p.title
+            font-size: 3vh
+        p
+            line-height: 200%
+            font-size: 2vh
+    .bg
+        position: absolute
+        top: 0
+    
+
+section#cat_explain .explain .close 
+  width: 8%
+  cursor: pointer
+  position: absolute
+  bottom: 15%
+  left: 85%
+  transform: translateX(-50%)
+  opacity: 1
+  z-index: 5
+
+img#cat_waveHand 
+  z-index: 10
+  right: -50%
+  bottom: 10%
+  position: fixed
+  width: 10vw
+  transform: rotate(0deg)
+  transform-origin: right bottom
+  animation: cat_wavehand 1.5s infinite
+  cursor: pointer
+  transition: .5s
+
+img#cat_waveHand.show
+  right: -3%
+
+
+
+section, section#footer
+    // display: none
+
 header
     // display: none
 
 #footer, #section_contact, #section_conclusion, #section_youngPpl, #section_conclusion, #section_road, #section_todo, #section_reason, #section_realWage_2, #section_realWage_1, #section_conflict, #section_simple, #section_notes, #section_lowWage_question
     display: block
-
-#footer
+#cat_explain
     display: block
 

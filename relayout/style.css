@@ -31,6 +31,17 @@
     transform: translateX(0);
   }
 }
+@keyframes cat_wavehand {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 @font-face {
   font-family: "Gen Jyuu Gothic Bold";
   src: url(assets/font/1.ttf);
@@ -45,7 +56,7 @@
 }
 * {
   position: relative;
-  border: solid 0.5px black;
+  transition: 0.5s;
   font-family: "Gen Jyuu Gothic Bold", "Gen Jyuu Gothic Meduim", "Gen Jyuu Gothic Regular";
 }
 
@@ -62,6 +73,7 @@ html, body {
 
 body {
   background-image: url("assets/2_backnew.png");
+  background-size: cover;
 }
 
 section {
@@ -76,6 +88,8 @@ section {
   display: flex;
   justify-content: space-between;
   z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
 }
 .nav_bar a {
   margin-left: 0.5vw;
@@ -96,6 +110,10 @@ section {
 }
 .nav_bar.white .menu .line .line1, .nav_bar.white .menu .line .line2, .nav_bar.white .menu .line .line3 {
   background-color: #e5e5e5;
+}
+
+.nav_bar.show {
+  opacity: 1;
 }
 
 .nav_bar .nav_column {
@@ -392,6 +410,8 @@ section {
   color: white;
   height: 200vh;
   background-image: url("assets/4_back.svg");
+  background-size: cover;
+  border: solid #2e343b 0.5px;
 }
 
 #section_simple .container-fluid {
@@ -463,6 +483,7 @@ section {
 #section_lowWage_question {
   background-image: url("assets/4_back.svg");
   background-size: cover;
+  border: solid #2e343b 0.5px;
 }
 
 #section_lowWage_question .container-fluid {
@@ -824,6 +845,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  transition: 1s;
 }
 #section_contact .container-fluid .mail .mailBody .paper {
   position: absolute;
@@ -841,6 +863,7 @@ section {
   position: absolute;
   bottom: 4%;
   right: 12%;
+  cursor: pointer;
 }
 
 section#footer {
@@ -864,18 +887,80 @@ section#footer .end p {
   font-size: 1.5vh;
 }
 
-section {
-  display: none;
+section#cat_explain {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
 }
 
-#cat_waveHand {
-  display: none;
+section#cat_explain .explain {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#cat_explain .explain .content {
+  height: 80%;
+  width: 80%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section#cat_explain .explain .content p.title {
+  font-size: 3vh;
+}
+section#cat_explain .explain .content p {
+  line-height: 200%;
+  font-size: 2vh;
+}
+section#cat_explain .explain .bg {
+  position: absolute;
+  top: 0;
+}
+
+section#cat_explain .explain .close {
+  width: 8%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 15%;
+  left: 85%;
+  transform: translateX(-50%);
+  opacity: 1;
+  z-index: 5;
+}
+
+img#cat_waveHand {
+  z-index: 10;
+  right: -50%;
+  bottom: 10%;
+  position: fixed;
+  width: 10vw;
+  transform: rotate(0deg);
+  transform-origin: right bottom;
+  animation: cat_wavehand 1.5s infinite;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+img#cat_waveHand.show {
+  right: -3%;
 }
 
 #footer, #section_contact, #section_conclusion, #section_youngPpl, #section_conclusion, #section_road, #section_todo, #section_reason, #section_realWage_2, #section_realWage_1, #section_conflict, #section_simple, #section_notes, #section_lowWage_question {
   display: block;
 }
 
-#footer {
+#cat_explain {
   display: block;
 }

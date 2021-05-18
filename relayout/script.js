@@ -1,4 +1,4 @@
-// var current_pos = $(window).scrollTop();
+var explain_on = false;
 var window_h_half = $(window).height() / 2;
 var section_notes_pos = $("#section_notes").offset().top;
 var section_conflict_pos = $("#section_conflict").offset().top;
@@ -13,9 +13,18 @@ var section_youngPpl_pos = $("#section_youngPpl").offset().top;
 var section_conclusion_pos = $("#section_conclusion").offset().top;
 var section_contact_pos = $("#section_contact").offset().top;
 
+var vh = $(window).outerHeight();
 
+$(window).resize(function(){
+	vh = $(window).outerHeight();
+});
 
 function NavColor(current_pos){
+	if(current_pos >= section_notes_pos){
+		$(".nav_bar").addClass("show");
+	}else{
+		$(".nav_bar").removeClass("show");
+	}
 	if(current_pos >= section_simple_pos){
 		$(".nav_bar a .icon").attr("src","assets/Banner_icon_white.png");
 		$(".nav_bar").addClass("white");
@@ -38,6 +47,37 @@ function NavColor(current_pos){
 	}else{
 		$(".nav_bar a .icon").attr("src","assets/Banner_icon.png");
 		$(".nav_bar").removeClass("white");	
+	}
+}
+
+function CatHand(current_pos){
+	var section_lowWage_question_h = $("#section_lowWage_question").outerHeight();
+	var section_realWage_1_h = $("#section_realWage_1").outerHeight();
+	if(current_pos >= section_lowWage_question_pos &&current_pos<= section_lowWage_question_pos + section_realWage_1_h +section_lowWage_question_h){
+		$("#cat_waveHand").addClass("show");
+	}else{
+		$("#cat_waveHand").removeClass("show");
+	}
+}
+function Explain(){
+	explain_on = true;
+	$("section#cat_explain .explain .close").on("click", function () {
+		explain_on = false;
+		if (explain_on) {
+			$("#cat_explain").css("z-index", 3);
+			$("#cat_explain").css("opacity", 1);
+		} else {
+			$("#cat_explain").css("z-index", -1);
+			$("#cat_explain").css("opacity", 0);
+		}
+	});
+
+	if (explain_on) {
+		$("#cat_explain").css("z-index", 3);
+		$("#cat_explain").css("opacity", 1);
+	} else {
+		$("#cat_explain").css("z-index", -1);
+		$("#cat_explain").css("opacity", 0);
 	}
 }
 
@@ -202,7 +242,48 @@ function YoungPplMove(current_pos, vh){
 	};
 };
 
+function Send(){
+	$(".mail .mailCover").css("transform", "translate(0%,0%) rotate(27deg) scale(0.3)");
+	$(".mail").animate(
+	{
+		left: "-20vw",
+		top: "20vh"
+		// width: "10vw",
+		// height: "15vh"
+	},
+	1000
+	);
+	$(".mail .mailBody").css("opacity", "0")
+	$(".mail .mailBody").css("transform", "scale(0.1)");
 
+	$(".mail").delay(500).animate(
+	{
+		left: "0vw"
+	},
+	1000
+	);
+	$(".mail").delay(500).animate(
+	{
+		top: "-100vh"
+	},
+	500
+	);
+	$(".great").delay(3000).animate(
+	{
+		opacity: "1"
+	},
+	800
+	);
+	$(".mail").delay(100).animate(
+		{
+			opacity: "0"
+		},
+		500
+	);
+	$('#section_contact').css("background-image","none");
+	$(".nav_bar a .icon").attr("src","assets/Banner_icon.png");
+	$(".nav_bar").removeClass("white");
+}
 
 //control menu
 $(document).on("click", ".menu", function () {
@@ -229,12 +310,12 @@ var sections = [
 
 ];
 
-var vm = new Vue({
-	el: "#app",
-	data: {
-		sections: sections
-	}
-});
+// var vm = new Vue({
+// 	el: "#app",
+// 	data: {
+// 		sections: sections
+// 	}
+// });
 
 // smooth section jump
 $(document).on("click", "a", function (e) {
@@ -248,12 +329,8 @@ $(document).on("click", "a", function (e) {
 	);
 });
 
-// video fixed/abs & explore
-$(window).scroll(function () {
-
-	
-	
-});
+//CatExplain
+$("#cat_waveHand").on("click", Explain);
 
 // control video
 $(".banner_video").on("timeupdate", function(){
@@ -266,12 +343,16 @@ $(".banner_video").on("timeupdate", function(){
 $(window).scroll(function () {
 
 	var current_pos = $(window).scrollTop();
-	var vh = $(window).outerHeight();
 
 	//Nav
 	NavColor(current_pos);
+
+	//Explain
+	CatHand(current_pos);
+
 	//Video
 	ControlVideo(current_pos, vh);
+
 	//sectionConflict --> Fixed or not & move & wordShow
 	ConflictFixed(current_pos, vh);
 	ConflictMove(current_pos);
@@ -291,3 +372,6 @@ $(window).scroll(function () {
 	YoungPplFixed(current_pos, vh);
 	YoungPplMove(current_pos, vh);
 });
+
+//LetterSend
+$(".mail .mailBody .send").on("click", Send);
